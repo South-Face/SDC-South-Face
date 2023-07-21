@@ -1,11 +1,20 @@
 import React from 'react'
 
+import NavBar from './components/NavBar'
+import ProductDetails from './components/ProductDetails'
+import Reviews from './components/Reviews'
+import Footer from './components/Footer'
+
+
 function App() {
   
   return (
-      <div>
-        <h1>Testing</h1>
-      </div> 
+      <>
+        <NavBar />
+        <ProductDetails />
+        <Reviews />
+        <Footer />
+      </> 
   )
 }
 
