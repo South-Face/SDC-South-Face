@@ -2,7 +2,7 @@
 
 DROP TABLE IF EXISTS product;
 DROP TABLE IF EXISTS reviews;
--- DROP TABLE IF EXISTS recommendedProducts;
+DROP TABLE IF EXISTS recommendedProducts;
 
 CREATE TABLE reviews (
     reviewId serial PRIMARY KEY,
@@ -21,14 +21,12 @@ CREATE TABLE products (
     averageRating numeric,
 );
 
--- CREATE TABLE recommendedProducts ( 
---     productId serial PRIMARY KEY,
---     name VARCHAR,
---     description VARCHAR,
---     price numeric,
---     imageUrl VARCHAR,
---     averageRating numeric,
--- );
+CREATE TABLE recommendedProducts ( 
+    recommendedProductsId serial PRIMARY KEY,
+    name VARCHAR,
+    price numeric,
+    imageUrl VARCHAR,
+);
 
 
 -- Data to be seeded into the reviews table
@@ -60,9 +58,9 @@ INSERT INTO products (name, description, price, imageUrl, averageRating) VALUES 
 
 
 -- Data to be seeded into recommendedProducts table(Optional at this point)
--- INSERT INTO recommendedProducts (name, description, price, imageUrl, averageRating) VALUES (`Women’s Borealis Backpack`, `The Women’s Borealis Backpack is a best-seller for good reason. With its iconic bungee cord system, women-specific FlexVent™ suspension system and large interior compartment, you can keep your items secure, inside and out. This go-anywhere pack also features a stand-up design, sternum strap, removable waist belt and protective laptop compartment.`, 99.00, `https://images.thenorthface.com/is/image/TheNorthFace/NF0A52SI_22B_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0`, 4.5);
--- INSERT INTO recommendedProducts (name, description, price, imageUrl, averageRating) VALUES (`Women’s Recon Backpack`, `An icon reimagined, the Women’s Recon excels as a daypack with its women-specific suspension, large mesh storage pocket, and daisy-chain attachment points.`, 109.00, `https://images.thenorthface.com/is/image/TheNorthFace/NF0A52SU_Q4C_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0`, 4.5);
--- INSERT INTO recommendedProducts (name, description, price, imageUrl, averageRating) VALUES (`Women’s Antora Jacket`, `Made with 100% recycled fabrics, the Women’s Antora Jacket is a modern silhouette inspired by our iconic Mountain Light Jacket. This water-repellent, breathable, and windproof shell also features secure-zip pockets and an adjustable hood.`, 99.00, `https://images.thenorthface.com/is/image/TheNorthFace/NF0A7QEU_856_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0`, 4.75);
--- INSERT INTO recommendedProducts (name, description, price, imageUrl, averageRating) VALUES (`Women’s Antora Parka`, `Made with 100% recycled fabrics, the Women’s Antora Parka is a bold, thigh-length silhouette inspired by our iconic Mountain Light Jacket. This water-repellent, breathable, and windproof shell features an adjustable hem and hood so you can customize your fit to the adventure.`, 120.00, `https://images.thenorthface.com/is/image/TheNorthFace/NF0A7QEW_N0T_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0`, 5);
--- INSERT INTO recommendedProducts (name, description, price, imageUrl, averageRating) VALUES ();
+INSERT INTO recommendedProducts (name, price, imageUrl) VALUES (`Women’s Borealis Backpack`, 99.00, `https://images.thenorthface.com/is/image/TheNorthFace/NF0A52SI_22B_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0`);
+INSERT INTO recommendedProducts (name, price, imageUrl) VALUES (`Women’s Recon Backpack`, 109.00, `https://images.thenorthface.com/is/image/TheNorthFace/NF0A52SU_Q4C_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0`);
+INSERT INTO recommendedProducts (name, price, imageUrl) VALUES (`Women’s Antora Jacket`, 99.00, `https://images.thenorthface.com/is/image/TheNorthFace/NF0A7QEU_856_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0`);
+INSERT INTO recommendedProducts (name, price, imageUrl) VALUES (`Women’s Antora Parka`, 120.00, `https://images.thenorthface.com/is/image/TheNorthFace/NF0A7QEW_N0T_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0`);
+-- INSERT INTO recommendedProducts (name, price, imageUrl) VALUES ();
 
