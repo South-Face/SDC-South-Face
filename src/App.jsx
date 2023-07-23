@@ -6,8 +6,8 @@ import NavBar from './components/NavBar/NavBar'
 import ProductPage from './components/ProductDetailComponent/ProductPage'
 import AddPhoto from './components/AddPhoto'
 import Reviews from './components/Reviews/Reviews'
-import FeedBack from './components/FeedBack'
-import Message from './components/Message'
+import FeedBack from './components/PinnedComps/FeedBack'
+import Message from './components/PinnedComps/Message'
 import ReccProducts from './components/ReccProducts'
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
         <Reviews />
         <ReccProducts />
         <Footer />
-        <Message />
         <FeedBack />
+        <Message />
       </> 
   )
 }

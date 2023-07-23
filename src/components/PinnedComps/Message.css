@@ -1,0 +1,6 @@
+.chatbubble {
+    position: fixed; 
+    bottom: 8px; 
+    right: 22px;
+    cursor: pointer;
+}

@@ -12,7 +12,7 @@ const FooterBottomItems = () => {
                             <span className="footerColumnTitle">Store Locator</span>
                         </h2>
                         <p className="footerColumnParagraph">Explore a retail store or outlet near you.</p>
-                        <button className="storelocator-button"><a className="storelocator-link" href="/en-us/more/store-locator" > Find a Store</a></button>
+                        <button className="storelocator-button"><a className="storelocator-link" href="/en-us/more/store-locator">|</a>Find a Store</button>
                     </div>
                     <div className='FB-socialmedia'>
                         <h2>
@@ -74,7 +74,7 @@ const FooterBottomItems = () => {
                 <div className='footerBottom-Bar'>
                     <div className='FBB-info'>
                         <div className='FBBI-logo'>
-                            <img src={logo} loading='lazy' alt='scroll to top'></img>
+                            <img className="south-face-logo" src={logo} loading='lazy' alt='scroll to top'></img>
                         </div>
                         <div className='FBBI-wrap'>
                             <div  className='copyrights'><span>Ⓒ The South Face, A VF Company</span></div>
