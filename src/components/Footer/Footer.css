@@ -15,7 +15,6 @@
 }
 
 .footerColumnTitle {
-    padding: 0;
     text-align: left;
     color: #2a2a2a;
     font-size: 1.125rem;
@@ -26,12 +25,21 @@
 /* ----------------------- Footer Menu Section ----------------------- */
 
 .footerMenuColumn {
-    margin: 0 0.625rem;
+    display: block;
+    margin: 0.625rem;
+    width: 100%;
+    padding-right: 0.625rem;
+    max-height: 200vh;
 }
+
+/* .footerMenuColumnContent {
+    max-height: 200vh;
+    overflow: hidden;
+} */
 
 .FMCC-list {
     list-style: none;
-    padding: 0;
+    padding-left: 0;
 }
 
 .FMCC-listItem {
@@ -39,7 +47,8 @@
     color:#2A2A2A;
     text-decoration: none;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+
 }
 .FMCC-listItem:hover {
     color:#64686B;
@@ -49,7 +58,7 @@
 
 .footerBottom {
     background-color: #f8f8f8;
-    
+    width: 100vw;
 }
 
 .footerBottom-3Columns {
@@ -59,8 +68,40 @@
     flex-wrap: no-wrap;
     justify-content: space-between;
     margin-top: 0;
-    /* padding-left: 30px; */
     width: 100%;
+}
+
+.FB-storelocator {
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    width: 25%;
+    /* padding-left: 50px; */
+    justify-content: space-between;
+} 
+
+
+.storelocator-button {
+    background-color: #000;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 0.95rem 2rem;
+    cursor: pointer;
+    transition: background-color .3s ease,color .3s ease;
+    width: 188px;
+}
+.storelocator-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.icons-container {
+    display: flex;
+}
+.FB-socialmedia {
+    width: 25%;
 }
 
 .icon .FB-socialmedia {
@@ -79,22 +120,98 @@
     color: black;
 }
 
+/* ---- Email subscription ---- */
+.subscriptionForm-inputWrapper {
+    display: flex;
+}
+.subscriptionForm-checkbox {
+    display: flex;
+}
 
-/* -- Email subscription -- */
+.input__wrapper {
+    position: relative;
+}
+
+.input__wrapper input {
+    padding: 8px;
+    border: 1px solid #8f8f8f;
+    border-radius: 2px;
+    width: 200px;
+}
+
+.input__wrapper label {
+    position: absolute;
+    top: -8px; /* Adjust the top position to place the label inside the border */
+    left: 8px; /* Adjust the left position to place the label inside the border */
+    background-color: #fff;
+    padding: 0 4px;
+    color: #2A2A2A;
+    font-size: 10px;
+    pointer-events: none; 
+}
+
 .FB-emaillist {
     margin: 0;
-    max-width: 225px, 100%;
+    min-width: 16rem; 
     align-items: flex-start;
     padding-bottom: 0;
     width: 25%;
     flex-basis: 0;
-    min-width: 16rem;
     display: flex;
     flex-direction: column;
 }
 
+.checkbox-input {
+    border-color: #8f8f8f;
+    border-radius: 2px;
+    width: 1.3rem;
+    height: 1.3rem;
+    cursor: pointer;
+  }
+  
+  .checkbox-input::before {
+    content: "";
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #f0f0f0; /* Background color of the checkbox */
+    border: 1px solid #8f8f8f; /* Border color of the checkbox */
+    border-radius: 2px;
+  }
+  
+  .checkbox-input:checked::before {
+    background-color: black; /* Fill color when the checkbox is checked */
+  }
+  
+
+
+/* .checkbox-input {
+    border-color: #8f8f8f;
+    border-radius: 2px;
+    height: 1.5rem;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+
+}
+input[type="checkbox"]:checked + .checkbox-input::after {
+    background-color: black;  
+} */
+
+.email-subInput {
+    outline: none;
+    border-color: #8f8f8f;
+    height: 39px;
+    background: #fff;
+    box-sizing: border-box;
+    display: block;
+    /* padding: 0.5rem, 3.4rem, 0.5rem, 0.5rem; */
+    width: 100%;
+}
+
 .footerColumnParagraph {
     font-size: 14px;
+    color: #1c1c1c;
+    font-family: Lato, sans-serif;
 }
 .checkbox-label {
     font-size: 14px;
@@ -104,13 +221,99 @@
 }
 
 .email-button {
-    color: #cccccc;
+    background-color: #ccc;
+    border: 1px solid #ccc
+}
+
+.privacy-terms {
+    color: black;
+    cursor: pointer;
+}
+.privacy-terms:hover {
+    color: #64686B;
 }
 
 .FBBI-wrapLink {
     color: black;
     cursor: pointer;
+    margin-top: 10px;
 }
 .FBBI-wrapLink:hover {
     color: #64686B;
+}
+
+.FBBI-logo {
+    height: 43px;
+    width: 94px; 
+}
+
+.FBB-info {
+    display: flex;
+    padding-left: 25px;
+    padding-bottom: 45px;
+}
+
+.copyrights {
+    padding-bottom: 5px;
+}
+
+
+
+
+/* ------------- When screen width drops below 1024px ------------ */
+
+
+@media (max-width: 1024px) {
+    .footerBottom-3Columns {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100vw;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .FB-storelocator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .icons-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .FBB-info {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+    .FBBI-wrap {
+        display: none;
+    }
+    .footerColumnParagraph {
+        display: none;
+    }
+    .footerColumnTitle {
+        font-size: 0.9375rem;
+    }
+    .footerBottom {
+        background-color: #fff;
+        width: 100vw;
+    }
+    .checkbox-input::before {
+        content: "";
+        display: block;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-color: #fff; /* Background color of the checkbox */
+        border: 1px solid #8f8f8f; /* Border color of the checkbox */
+        border-radius: 2px;
+      }
+
 }
