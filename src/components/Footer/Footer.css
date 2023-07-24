@@ -283,6 +283,8 @@ input[type="checkbox"]:checked + .checkbox-input::after {
 @media (max-width: 1024px) {
     .footerContainer {
         flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
     }
     .dropdown {
         display: contents;
@@ -291,19 +293,20 @@ input[type="checkbox"]:checked + .checkbox-input::after {
         justify-content: space-between; 
         align-items: center;
         cursor: pointer;
-        padding-bottom: 10px;
-        padding-left: 10px
+        /* padding-bottom: 10px;
+        padding-left: 10px; */
+        padding: 13px 10px;
     }
     #SHOP, #Help, #About-TNF, #Discover, #Explore {
-        border: 1px solid #ddd;
-        border-top: none;
+        /* border: 1px solid #dbddda; */
+        border-top: 1px solid #dbddda;
         border-left: none;
         border-right: none;
         font-weight: 200;
         font-size: 0.9375rem;
         flex-direction: column;
         display: flex;
-        padding-left: 10px;
+        /* padding-left: 10px; */
     }
     #apple, #google {
         display: none;
@@ -311,21 +314,28 @@ input[type="checkbox"]:checked + .checkbox-input::after {
     .footerColumnTitle {
         display: none;
     }
+    .FMCC-litag {
+        border-bottom: 1px solid #dbddda;
+        padding-bottom: 12px;
+        background-color: #f8f8f8;
+    }
+    .MKFEBG {
+        padding-top: 12px;
+    }
     .FMCC-listItem {
-        border: 1px solid #ddd;
-        border-top: none;
         border-left: none;
         border-right: none;
         font-weight: 200;
         font-size: 0.9375rem;
     }
     .footerMenuColumn {
-        margin: 0.625rem 0;
+        margin: 0;
         /* display: flex;
         flex-direction: column; */
     }
     .footerMenuColumnContent {
         display: block;
+        background-color: #f8f8f8;
     }
 
 /* -------------Bottom-Section--------------- */

@@ -52,13 +52,13 @@ const FooterMenu = () => {
                             {expandedColumns['SHOP'] && (
                             <div className='footerMenuColumnContent'>
                                 <ul className='FMCC-list'>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/womens'>Women's</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/mens'>Men's</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/kids'>Kids'</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/shop-all/footwear-c747784'>Footwear</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/equipment'>Equipment</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/activity'>By Activity</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/more/gift-card'>Gift Cards</a></li>
+                                    <li className='FMCC-litag'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/womens'>Women's</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/mens'>Men's</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/kids'>Kids'</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/shop-all/footwear-c747784'>Footwear</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/equipment'>Equipment</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/activity'>By Activity</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/more/gift-card'>Gift Cards</a></li>
                                 </ul>
                             </div>
                             )}
@@ -76,13 +76,13 @@ const FooterMenu = () => {
                             {expandedColumns['Help'] && (
                             <div className='footerMenuColumnContent'>
                                 <ul className='FMCC-list'>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/bags-and-gear/technical-packs/climbing-c224523/verto-27-backpack-pNF0A52DD#'>Live Chat</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help'>Help Center</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/account/order-history'>Order Status</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/size-charts'>Size Chart</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/returns-policy'>Returns & Warranty</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help'>Contact Us</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.essentialaccessibility.com/the-north-face?utm_source=thenorthfacehomepage&utm_medium=iconlarge&utm_term=eachannelpage&utm_content=header&utm_campaign=thenorthface'>Accessibility Statement</a></li>
+                                    <li className='FMCC-litag'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/bags-and-gear/technical-packs/climbing-c224523/verto-27-backpack-pNF0A52DD#'>Live Chat</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help'>Help Center</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/account/order-history'>Order Status</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/size-charts'>Size Chart</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/returns-policy'>Returns & Warranty</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help'>Contact Us</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.essentialaccessibility.com/the-north-face?utm_source=thenorthfacehomepage&utm_medium=iconlarge&utm_term=eachannelpage&utm_content=header&utm_campaign=thenorthface'>Accessibility Statement</a></li>
                                 </ul>
                             </div>
                             )}
@@ -100,14 +100,14 @@ const FooterMenu = () => {
                             {expandedColumns['About TNF'] && (
                             <div className='footerMenuColumnContent'>
                                 <ul className='FMCC-list'>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/about-us'>About Us</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/sustainability'>Sustainability</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthfacerenewed.com/?_gl=1*1l8tlwq*_ga*NTczNjQ4MzgzLjE2ODk3OTQ3MzQ.*_ga_950L7P08N5*MTY5MDMzMjQ1Mi4xMy4xLjE2OTAzMzI3ODUuNTYuMC4w&_ga=2.249891905.692132825.1690327141-573648383.1689794734&_gac=1.26605007.1689794737.Cj0KCQjwk96lBhDHARIsAEKO4xbuR3btVmRHIrnGLJJqJ7xlFCrdNc1NOwSEabqh2StkPKpzfpaWfmoaAhnPEALw_wcB'>TNF Renewed</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/about-us/technology-innovation'>Technology & Innovation</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/approach'>Explore our Stories</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/about-us/athletes'>Athletes</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/about-us/outdoor-exploration/about-the-explore-fund'>Explore Fund</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/about-us/careers'>Careers</a></li>
+                                    <li className='FMCC-litag'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/about-us'>About Us</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/sustainability'>Sustainability</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthfacerenewed.com/?_gl=1*1l8tlwq*_ga*NTczNjQ4MzgzLjE2ODk3OTQ3MzQ.*_ga_950L7P08N5*MTY5MDMzMjQ1Mi4xMy4xLjE2OTAzMzI3ODUuNTYuMC4w&_ga=2.249891905.692132825.1690327141-573648383.1689794734&_gac=1.26605007.1689794737.Cj0KCQjwk96lBhDHARIsAEKO4xbuR3btVmRHIrnGLJJqJ7xlFCrdNc1NOwSEabqh2StkPKpzfpaWfmoaAhnPEALw_wcB'>TNF Renewed</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/about-us/technology-innovation'>Technology & Innovation</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/approach'>Explore our Stories</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/about-us/athletes'>Athletes</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/about-us/outdoor-exploration/about-the-explore-fund'>Explore Fund</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/about-us/careers'>Careers</a></li>
                                 </ul>
                             </div>
                             )}
@@ -125,13 +125,13 @@ const FooterMenu = () => {
                             {expandedColumns['Discover'] && (
                             <div className='footerMenuColumnContent'>
                                 <ul className='FMCC-list'>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/bags-and-gear/technical-packs/hike-c224525'>Hiking Backpacks</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/womens/womens-jackets-and-vests/womens-rainwear-c299273'>Women's Rain Jackets</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/mens/mens-jackets-and-vests/mens-rainwear-c299284'>Men's Rain Jackets</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/womens/womens-footwear/womens-trail-run-c213489'>Women's Trail Running Shoes</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/mens/mens-footwear/mens-trail-run-c213281'>Men's Trail Running Shoes</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/bags-and-gear/luggage-and-duffels/rolling-luggage-c224545'>Rolling Diffel Bags</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/womens/womens-jackets-and-vests/womens-windbreakers-c299281'>Women's Windbreakers</a></li>
+                                    <li className='FMCC-litag'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/bags-and-gear/technical-packs/hike-c224525'>Hiking Backpacks</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/womens/womens-jackets-and-vests/womens-rainwear-c299273'>Women's Rain Jackets</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/mens/mens-jackets-and-vests/mens-rainwear-c299284'>Men's Rain Jackets</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/womens/womens-footwear/womens-trail-run-c213489'>Women's Trail Running Shoes</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/mens/mens-footwear/mens-trail-run-c213281'>Men's Trail Running Shoes</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/bags-and-gear/luggage-and-duffels/rolling-luggage-c224545'>Rolling Diffel Bags</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/womens/womens-jackets-and-vests/womens-windbreakers-c299281'>Women's Windbreakers</a></li>
                                 </ul>
                             </div>
                             )}
@@ -149,13 +149,13 @@ const FooterMenu = () => {
                             {expandedColumns['Explore'] && (
                             <div className='footerMenuColumnContent'>
                                 <ul className='FMCC-list'>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/xplrpass'>XPLR Pass</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/events'>Events</a></li>
-                                    <li><a className='FMCC-listItem' href='https://thenorthfacepro.com/en/pro'>TNF Pro Program</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/the-north-face-student-discount-program'>Student Discount</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/the-north-face-military-discount-program'>Military Discount</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/the-north-face-healthcare-workers-discount-program'>Healthcare Worker Discount</a></li>
-                                    <li><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/the-north-face-first-responder-discount-program'>First Responder Discount</a></li>
+                                    <li className='FMCC-litag'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/xplrpass'>XPLR Pass</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/events'>Events</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://thenorthfacepro.com/en/pro'>TNF Pro Program</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/the-north-face-student-discount-program'>Student Discount</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/the-north-face-military-discount-program'>Military Discount</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/the-north-face-healthcare-workers-discount-program'>Healthcare Worker Discount</a></li>
+                                    <li className='FMCC-litag MKFEBG'><a className='FMCC-listItem' href='https://www.thenorthface.com/en-us/help/the-north-face-first-responder-discount-program'>First Responder Discount</a></li>
                                     <li id="apple"><a className='FMCC-listItem' title="" target="" rel="noopener" href="https://smart.link/2qb8pqni8nya2"><img src="https://www.thenorthface.com/content/publish/caas/v1/media/223216/data/6c6952d89d8568fc6277b282c7ec552c/apple-store.svg" loading="lazy" alt="apple store" width={"119px"} height={"40px"}></img></a></li>
                                     <li id="google"><a className='FMCC-listItem' title='' target='' rel='noopener' href='https://smart.link/2qb8pqni8nya2'><img src='https://www.thenorthface.com/content/publish/caas/v1/media/246222/data/bced8703ad9b85238c37474cd089948e/google-play-button-scaled.png' loading='lazy' alt='google play button' width={'119px'} height={'35px'}></img></a></li>
                                 </ul>
