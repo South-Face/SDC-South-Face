@@ -9,14 +9,14 @@ const FooterBottomItems = () => {
                 <div className='footerBottom-3Columns'>
                     <div className='FB-storelocator'>
                         <h2>
-                            <span className="footerColumnTitle">Store Locator</span>
+                            <span className="BfooterColumnTitle">Store Locator</span>
                         </h2>
                         <p className="footerColumnParagraph">Explore a retail store or outlet near you.</p>
                         <button className="storelocator-button"><a className="storelocator-link" href="/en-us/more/store-locator">|</a>Find a Store</button>
                     </div>
                     <div className='FB-socialmedia'>
                         <h2>
-                            <span className="footerColumnTitle">Follow The South Face</span>
+                            <span className="BfooterColumnTitle">Follow The South Face</span>
                         </h2>
                         <div className='icons-container'>
                             <div className='icons'>
@@ -38,7 +38,7 @@ const FooterBottomItems = () => {
                     </div>
                     <div className='FB-emaillist'>
                         <h2>
-                            <span className="footerColumnTitle">Enter Your Email</span>
+                            <span className="BfooterColumnTitle">Enter Your Email</span>
                         </h2>
                         <div id='Email-signup-description' className='footerColumnParagraph'>
                             <p>Adventure is everywhere.</p>
@@ -77,7 +77,7 @@ const FooterBottomItems = () => {
                             <img className="south-face-logo" src={logo} loading='lazy' alt='scroll to top'></img>
                         </div>
                         <div className='FBBI-wrap'>
-                            <div  className='copyrights'><span>Ⓒ The South Face, A VF Company</span></div>
+                            <div  className='copyrightstatement'><span>Ⓒ The South Face, A VF Company</span></div>
                             <div className='FBBI-wrapLinks'>
                                 <a className='FBBI-wrapLink' rel="noopener" target="_blank" href='https://d1io3yog0oux5.cloudfront.net/_0cbb16da63df2bc454ca964a56de2de0/vfc/files/pages/modern-slavery-statement/Modern_Slavery_and_Human_Rights_Disclosure.pdf'>CA Supply Chains Act</a>
                                 <a className='FBBI-wrapLink' rel="noopener" target="_blank" href="https://www.vfc.com/modern-slavery-statement">UK Slavery Act</a>
