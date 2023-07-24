@@ -1,9 +1,9 @@
 import React from 'react'
 
 import NavBar from './components/NavBar/NavBar'
-import ProductDetails from './components/ProductDetails'
+import ProductDetails from './components/ProductDetailComponent/ProductDetails'
 import AddPhoto from './components/AddPhoto'
-import Reviews from './components/Reviews'
+import Reviews from './components/Reviews/Reviews'
 import Footer from './components/Footer'
 import FeedBack from './components/FeedBack'
 import Message from './components/Message'
