@@ -1,19 +1,12 @@
 import React from 'react'
-
 import NavBar from './components/NavBar'
 import ProductPage from './components/ProductDetailComponent/ProductPage'
-
-
-
-
-
 import AddPhoto from './components/AddPhoto'
-import Reviews from './components/Reviews'
+import Reviews from './components/Reviews/Reviews'
 import Footer from './components/Footer'
 import FeedBack from './components/FeedBack'
 import Message from './components/Message'
 import ReccProducts from './components/ReccProducts'
-
 
 
 
