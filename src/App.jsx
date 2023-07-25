@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar/NavBar.jsx'
 import ProductPage from './components/ProductDetailComponent/ProductPage'
 import AddPhoto from './components/AddPhoto'
 import Reviews from './components/Reviews/Reviews'
