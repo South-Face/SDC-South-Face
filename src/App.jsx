@@ -18,13 +18,14 @@ function App() {
       <NavigationProvider>
         <NavBar />
         <ProductPage />
-        <AddPhoto />
+        <Exploring />  
+{/*         <AddPhoto /> */}
         <Reviews />
         <ReccProducts />
         <Footer />
         <Message />
         <FeedBack />
-        <Exploring />   
+ 
       </NavigationProvider> 
   )
 }
