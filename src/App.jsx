@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import './App.css'
 import Footer from './components/Footer/Footer'
 import React from 'react'
@@ -10,12 +10,12 @@ import FeedBack from './components/FeedBack'
 import Message from './components/Message'
 import ReccProducts from './components/Recommended/ReccProducts'
 import Exploring from './components/Exploring/Exploring'
-
+import {NavigationProvider} from './context/NavigationContext'
 
 function App() {
   
   return (
-      <>
+      <NavigationProvider>
         <NavBar />
         <ProductPage />
         <AddPhoto />
@@ -24,8 +24,8 @@ function App() {
         <Footer />
         <Message />
         <FeedBack />
-        <Exploring />
-      </> 
+        <Exploring />   
+      </NavigationProvider> 
   )
 }
 
