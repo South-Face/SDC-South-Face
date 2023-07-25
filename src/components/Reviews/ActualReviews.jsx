@@ -1,5 +1,5 @@
 import './actualReviews.css'
-import ReviewTopBar from './ReviewsTopBar'
+import ReviewTopBar from './ReviewTopBar'
 import ReviewCont from './ReviewCont'
 import ReviewBottomBar from './ReviewBottomBar'
 
