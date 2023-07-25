@@ -1,14 +1,15 @@
+
 import './Reviews.css'
 
-import ActualReviews from './actualReviews'
+import ActualReviews from './ActualReviews'
 import Summary from './Summary'
 
 const Reviews = () => {
     return (
-        <>
-        <Summary />
-        <ActualReviews />
-        </>
+        <div className='main_Reviews'>
+            <Summary />
+            <ActualReviews />
+        </div>
     )
 }
 

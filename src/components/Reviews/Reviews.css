@@ -1,0 +1,4 @@
+.main_Reviews{
+    display: flex;
+    flex-direction: column;
+}
