@@ -8,7 +8,9 @@ import AddPhoto from './components/AddPhoto'
 import Reviews from './components/Reviews/Reviews'
 import FeedBack from './components/FeedBack'
 import Message from './components/Message'
-import ReccProducts from './components/ReccProducts'
+import ReccProducts from './components/Recommended/ReccProducts'
+import Exploring from './components/Exploring/Exploring'
+
 
 function App() {
   
@@ -22,6 +24,7 @@ function App() {
         <Footer />
         <Message />
         <FeedBack />
+        <Exploring />
       </> 
   )
 }
