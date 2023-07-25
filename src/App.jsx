@@ -9,11 +9,12 @@ import Reviews from './components/Reviews/Reviews'
 import FeedBack from './components/FeedBack'
 import Message from './components/Message'
 import ReccProducts from './components/ReccProducts'
+import {NavigationProvider} from './context/NavigationContext'
 
 function App() {
   
   return (
-      <>
+      <NavigationProvider>
         <NavBar />
         <ProductPage />
         <AddPhoto />
@@ -22,7 +23,7 @@ function App() {
         <Footer />
         <Message />
         <FeedBack />
-      </> 
+      </NavigationProvider> 
   )
 }
 
