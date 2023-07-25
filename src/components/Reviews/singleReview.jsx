@@ -1,4 +1,4 @@
-import './SingleReview.css'
+import './singleReview.css'
 
 let aReview = {
     id: 1,
