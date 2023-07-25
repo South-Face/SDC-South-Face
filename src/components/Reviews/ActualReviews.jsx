@@ -1,4 +1,4 @@
-import './actualReviews.css'
+import './ActualReviews.css'
 import ReviewTopBar from './ReviewsTopBar'
 import ReviewCont from './ReviewCont'
 import ReviewBottomBar from './ReviewBottomBar'
