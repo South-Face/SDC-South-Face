@@ -1,8 +1,7 @@
 .nav-list {
     font-size: 12px;
     font-family: 'Helvetica Neue LT Pro', sans-serif;                                           
-    display: flex;
-    
+    display: flex;  
     color: #2A2A2A;
     font-weight: 500;
     text-decoration: none;
@@ -116,6 +115,7 @@
     font-family: 'Helvetica Neue LT Pro', sans-serif;
     color: rgb(42, 42, 42);
     font-weight: 300;
+    margin-bottom: 5rem;
     display: flex;
     list-style: none;
     margin-left: -40px;
