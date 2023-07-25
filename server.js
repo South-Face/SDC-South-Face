@@ -5,7 +5,7 @@ import cors from 'cors';
 
 dotenv.config(); //this is to read the .env file
 const app = express();// assigning app to express will allow us to use express methods
-const PORT = process.env.PORT || 3000; //this is to read the .env file
+const PORT = process.env.PORT; //this is to read the .env file
 
 app.use(cors()); //this is to allow cross origin requests
 app.use(express.json()); //this is to allow us to read JSON data from the client
@@ -15,7 +15,7 @@ const { Pool } = pkg;
 
 
 // const pool = new Pool({
-    // connectionString: process.env.DATABASE_URL,
+//     connectionString: process.env.DATABASE_URL,
 // });
 
 const pool = new Pool ({
@@ -45,6 +45,21 @@ app.get('/productImages/:id', async (req, res) => {
         const result = await pool.query('SELECT imageUrl FROM productImages WHERE productId = $1', [id]);
         if (result.rowCount === 0){
             res.status(404).json({error: 'Product Images not found'});
+        }else{
+            res.json(result.rows);
+        }
+    }catch(err){
+        console.error(err);
+        res.status(500).json({error: 'Internal server error'});
+    }
+});
+
+app.get('/products/:id', async (req, res) => {
+    const { id } = req.params;
+    try{
+        const result = await pool.query('SELECT name, price, description FROM products WHERE productId = $1', [id]);
+        if (result.rowCount === 0){
+            res.status(404).json({error: 'Product not found'});
         }else{
             res.json(result.rows);
         }
