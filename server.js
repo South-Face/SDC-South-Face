@@ -1,6 +1,22 @@
+import express from 'express';
+import dotenv from 'dotenv';
+import pkg from 'pg';
+import cors from 'cors';
+
+dotenv.config(); //this is to read the .env file
+const app = express();// assigning app to express will allow us to use express methods
+const PORT = process.env.PORT || 3000; //this is to read the .env file
+
+app.use(cors()); //this is to allow cross origin requests
+app.use(express.json()); //this is to allow us to read JSON data from the client
+app.use(express.static('dist'))
+
+const { Pool } = pkg;
 
 
-
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+});
 
 // //These are the routes for the "products" table
 // app.get('/products', async (req, res) => {
@@ -246,29 +262,6 @@ app.get('/products/:id', async (req, res) => {
 // });
 
 
-app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
-})
-
-import express from 'express';
-import dotenv from 'dotenv';
-import pkg from 'pg';
-import cors from 'cors';
-
-dotenv.config(); //this is to read the .env file
-const app = express();// assigning app to express will allow us to use express methods
-const PORT = process.env.PORT || 3000; //this is to read the .env file
-
-app.use(cors()); //this is to allow cross origin requests
-app.use(express.json()); //this is to allow us to read JSON data from the client
-app.use(express.static('dist'))
-
-const { Pool } = pkg;
-
-
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-});
 
 // const pool = new Pool ({
 //     user: 'josephcarrillo',
