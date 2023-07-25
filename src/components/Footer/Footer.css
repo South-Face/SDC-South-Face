@@ -1,0 +1,116 @@
+:root {
+    font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+/* -------------------- Overall Footer Styling -------------------- */
+
+.footerContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    padding: 2rem 2rem;
+}
+
+.footerColumnTitle {
+    padding: 0;
+    text-align: left;
+    color: #2a2a2a;
+    font-size: 1.125rem;
+    align-items: center;
+}
+
+
+/* ----------------------- Footer Menu Section ----------------------- */
+
+.footerMenuColumn {
+    margin: 0 0.625rem;
+}
+
+.FMCC-list {
+    list-style: none;
+    padding: 0;
+}
+
+.FMCC-listItem {
+    font-size: 14px;
+    color:#2A2A2A;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.FMCC-listItem:hover {
+    color:#64686B;
+}
+
+/*----------------------- Footer Bottom Section -----------------------*/
+
+.footerBottom {
+    background-color: #f8f8f8;
+    
+}
+
+.footerBottom-3Columns {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    margin-top: 0;
+    /* padding-left: 30px; */
+    width: 100%;
+}
+
+.icon .FB-socialmedia {
+    /* --icon-size: 18px;
+    --icon-color: var(--vf-footer-social-icon-color); */
+    background: #64686B;
+    border-radius: 2px, 0;
+    color: #fff;
+    display: flex;
+    margin: 0, 0.25rem;
+    padding: 0.5rem;
+    transition: color .15s ease-in-out,color .15s ease-in-out; 
+}
+
+.icons:hover {
+    color: black;
+}
+
+
+/* -- Email subscription -- */
+.FB-emaillist {
+    margin: 0;
+    max-width: 225px, 100%;
+    align-items: flex-start;
+    padding-bottom: 0;
+    width: 25%;
+    flex-basis: 0;
+    min-width: 16rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerColumnParagraph {
+    font-size: 14px;
+}
+.checkbox-label {
+    font-size: 14px;
+}
+.footerBottom-Bar {
+    font-size: 14px;
+}
+
+.email-button {
+    color: #cccccc;
+}
+
+.FBBI-wrapLink {
+    color: black;
+    cursor: pointer;
+}
+.FBBI-wrapLink:hover {
+    color: #64686B;
+}

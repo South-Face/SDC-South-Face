@@ -1,6 +1,7 @@
+
 import './Reviews.css'
 
-import ActualReviews from './actualReviews'
+import ActualReviews from './ActualReviews'
 import Summary from './Summary'
 
 const Reviews = () => {
