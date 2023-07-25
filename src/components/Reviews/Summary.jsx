@@ -4,10 +4,14 @@ import RatingBreakDown from './RatingBreakDown'
 
 const Summary = () => {
     return (
-        <>
-            <Percentage />
-            <RatingBreakDown />
-        </>
+        <div className='summaryContainer'>
+            <p className='summmaryContainer_Title'>Customer Ratings and Reviews</p>
+            <div className='summary_Percentage_Rating_Container'> 
+                <Percentage />
+                <RatingBreakDown />
+            </div>
+
+        </div>
     )
 }
 

@@ -1,9 +1,9 @@
-\c fec_south_face;
+-- \c fec_south_face;
 
-DROP TABLE reviews;
-DROP TABLE recommendedProducts;
-DROP TABLE productImages;
-DROP TABLE products;
+DROP TABLE IF EXISTS reviews;
+DROP TABLE IF EXISTS recommendedProducts;
+DROP TABLE IF EXISTS productImages;
+DROP TABLE IF EXISTS products;
 
 CREATE TABLE reviews (
     reviewId serial PRIMARY KEY,
