@@ -10,7 +10,7 @@ return (
         <ReviewCont />
         <ReviewBottomBar />
         
-    </>
+    </div>
 )
 }
 
