@@ -5,7 +5,7 @@ const ProductImages = ({ productId }) => {
     const [urls, setUrls] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/ProductImages/${productId}`)
+        fetch(`https://southface.onrender.com/${productId}`)
             .then(response => response.json())
             .then(data => {
                 const images = data.map(row => row.imageurl);
