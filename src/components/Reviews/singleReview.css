@@ -1,0 +1,56 @@
+.singleReview{
+    display: flex;
+    width: 100vw;
+    height: 500px;
+    background-color: #f8f8f8;
+}
+
+.singleReview_Review{
+    width: 66%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.singleReview_SubmitedBy{
+    width: 34%;
+    padding-top: 2rem;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #2a2a2a;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1rem;
+}
+.singleReview_SubmitedBy_Info{
+    width: 90%;
+}
+.reviewTitle{
+    font-size: 1.25rem;
+    font-weight: 500;
+    width: 100%;
+    margin: 0 0 24px 0; 
+    color: #111214
+}
+.reviewComment{
+    font-size: .875rem;
+    color: #2a2a2a;
+}
+
+.moreDetailsButton {
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    background-color: transparent;
+    color: #111214;
+    font-size: 1.125rem;
+    border: transparent;
+    pointer-events: none;
+    background-image:url('../../../../FEC-South-Face/public/expand.png'); 
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+}

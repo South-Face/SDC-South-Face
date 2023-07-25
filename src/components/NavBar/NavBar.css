@@ -1,0 +1,49 @@
+.nav-list {
+    margin-left: 18rem;
+    font-size: 12px;
+    font-family: 'Helvetica Neue LT Pro', sans-serif;                                           
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #2A2A2A;
+    font-weight: 500;
+}
+
+.nav-list-item {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.flag {
+    height: 24px;
+    width: 24px;
+}
+
+.search-bar {
+    border: none;
+    outline: none;
+}
+
+.search-comp {
+    border-bottom: #2A2A2A 1px solid;
+}
+
+.nav-header {
+    font-family: 'Helvetica Neue LT Pro', sans-serif;
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0%;
+    padding: 0%;
+    color: #2A2A2A;
+}
+
+.nav-routes {
+    font-size: 14px;
+    font-family: 'Helvetica Neue LT Pro', sans-serif;
+    color: rgb(42, 42, 42);
+    font-weight: 300;
+    
+}
