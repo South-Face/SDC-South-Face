@@ -4,3 +4,233 @@
     right: 22px;
     cursor: pointer;
 }
+
+/* --------- chatbox styling --------------*/
+.message-chat-container {
+    position: absolute; 
+    overflow: hidden; 
+    z-index: 9999999; 
+    left: 427px; 
+    top: 5864px; 
+    height: 510px; 
+    width: 340px;
+}
+.message-chat-background {
+    position: absolute; 
+    overflow: hidden; 
+    z-index: 101; 
+    display: block; 
+    left: 0px; 
+    top: 0px; 
+    height: 480px; 
+    width: 340px;
+}
+.message-chat-topbar {
+    position: absolute; 
+    overflow: hidden; 
+    display: block; 
+    z-index: 9999; 
+    background: rgb(0, 0, 0); 
+    left: 0px; 
+    top: 0px; 
+    height: 60px; 
+    width: 340px;
+}
+.message-chat-logo {
+    position: absolute; 
+    z-index: 101; 
+    display: block; 
+    overflow: visible; 
+    left: 10px; 
+    top: 9px; 
+    height: 43px; 
+    width: 92px;
+}
+
+
+
+/* retry */
+.message-chat-overlay {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.01);
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+}
+.chatbox-container {
+    /* top: 52%;
+    left: 50%; */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    /* transform: translate(5%, 2.5%); */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(57, 55, 55, 0.1);
+    height: 490px; 
+    width: 340px;
+    z-index: 10000;
+    margin: 0;
+    padding: 0;
+}
+.message-chat-btnminimize {
+    display: block;
+    z-index: 102;  
+    /* overflow: visible;  */
+    position: absolute; 
+    left: 265px; 
+    top: 18px; 
+    height: 24px; 
+    width: 24px; 
+    cursor: pointer;
+}
+.message-chat-btnclose {
+    display: block;
+    z-index: 102;  
+    /* overflow: visible;  */
+    position: absolute; 
+    left: 300px; 
+    top: 18px; 
+    height: 24px; 
+    width: 24px; 
+    cursor: pointer;
+}
+.message-chatbox-window {
+    position: absolute; 
+    top: 60px; 
+    left: 0px; 
+    height: 100%; 
+    width: 100%; 
+    /* overflow: hidden scroll; */
+    padding-top: 20px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    height: 350px;
+}
+.message-chatbox-txtinput-bg {
+    position: absolute; 
+    overflow: hidden; 
+    z-index: 101; 
+    display: block; 
+    left: 0px; 
+    top: 395px; 
+    height: 66px; 
+    width: 373px;
+    background-color: #f6f6f6;
+}
+.chatbox-txtinput-area {
+    position: absolute; 
+    z-index: 101; 
+    display: block; 
+    overflow: visible; 
+    left: 17px; 
+    top: 7px; 
+    height: 50px; 
+    width: 305px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 0 rgb(0 0 0 / 9%);
+    border-radius: 4px;
+}
+.chatbox-txtinput-input {
+    background-color: transparent;
+    font-family: "HelveticaNeue", helvetica, sans-serif;
+    font-size: small;
+    color: #000;
+    line-height: 18px;
+    height: 50px;
+    padding: 10px 10px 0 10px;
+    width: 260px;
+    overflow: hidden;
+    border: none;
+    outline-offset: -1px;
+}
+.chatbox-txtinput-btnsend {
+    position: absolute; 
+    z-index: 101; 
+    display: block; 
+    overflow: visible; 
+    height: 24px; 
+    width: 24px; 
+    cursor: pointer;
+    top: 20px;
+    padding: 0px;
+    right: 60px;
+}
+.message-chatbox-navbar {
+    position: absolute;
+    z-index: 101;
+    display: block;
+    left: 0px;
+    top: 460px;
+    height: 30px;
+    width: 375px;
+    background: white;
+    border-top: 1px solid #f6f6f6;
+}
+.chatbox-emailicon {
+    color: #2a2a2a;
+    position: absolute;
+    z-index: 101;
+    display: block;
+    overflow: visible;
+    left: 10px;
+    top: 5px;
+    height: 24px;
+    width: 18px;
+    cursor: pointer;
+}
+.chatbox-printicon {
+    color: #2a2a2a;
+    position: absolute;
+    z-index: 101;
+    display: block;
+    overflow: visible;
+    left: 40px;
+    top: 5px;
+    height: 24px;
+    width: 18px;
+    cursor: pointer;
+}
+.chatbox-lettericon {
+    color:#2a2a2a;
+    position: absolute;
+    z-index: 101;
+    display: block;
+    overflow: visible;
+    left: 68px;
+    width: 22px;
+    height: 22px;
+    top: 7px;
+    cursor: pointer;
+}
+.chatbox-lettericon:hover, .chatbox-emailicon:hover, .chatbox-printicon:hover {
+    color: #c22014;
+}
+.chatbox-volhighicon {
+    color:#2a2a2a;
+    position: absolute;
+    z-index: 101;
+    display: block;
+    overflow: visible;
+    left: 100px;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+    cursor: pointer;
+}
+.chatbox-novolicon {
+    color:#2a2a2a;
+    position: absolute;
+    z-index: 101;
+    display: block;
+    overflow: visible;
+    left: 100px;
+    width: 18px;
+    height: 18px;
+    top: 8px;
+    cursor: pointer;
+}
