@@ -7,8 +7,12 @@
     min-height: 250px;
     max-height: 400px;
     min-width: 250px;
-    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     margin: 2rem ;
+    box-sizing: border-box;
 }
 
 
@@ -18,3 +22,76 @@
         margin: 10px;
     }
   }
+  
+  body {
+    font-family: Arial;
+    margin: 0; 
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  .breakdown_title {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+  }
+  
+
+/* ---------- Table --------------- */
+  .table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .table:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    align-items: center;
+  }
+  
+
+  /* Three column layout */
+  .side {
+    width: 15%;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .middle {
+    width:70%;
+    margin-top: 10px;
+  }
+  
+  .side-right {
+    text-align: right;
+    width: 10%;
+  }
+
+  /* The bar container */
+  .bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin: 5px;
+  }
+  
+  /* Individual bars */
+  .bar-5 {width: 60%; height: 12px; background-color: #64646b; border-radius: 10px;}
+  .bar-4 {width: 30%; height: 12px; background-color: #64646b; border-radius: 10px;}
+  .bar-3 {width: 10%; height: 12px; background-color: #64646b; border-radius: 10px;}
+  .bar-2 {width: 4%; height: 12px; background-color: #64646b; border-radius: 10px;}
+  .bar-1 {width: 15%; height: 12px; background-color: #64646b; border-radius: 10px;}
+  
