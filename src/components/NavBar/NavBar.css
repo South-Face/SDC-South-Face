@@ -1,17 +1,40 @@
 .nav-list {
-    margin-left: 18rem;
     font-size: 12px;
     font-family: 'Helvetica Neue LT Pro', sans-serif;                                           
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    
     color: #2A2A2A;
     font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-list-cont {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .nav-list-item {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    width: 104px;
+    justify-content: center;
+}
+
+.nav-list-text {
+    color: #2A2A2A;
+    text-decoration: none;
+    
+}
+
+.nav-list-item:hover{
+    color: grey;
+    cursor: pointer;
+
 }
 
 .flag {
@@ -19,12 +42,56 @@
     width: 24px;
 }
 
+.nav-compnents {
+    display: flex;
+}
+
+.nav-component-item {
+    display: flex;
+    color: #2A2A2A;
+    margin-right: 32px;
+}
+
+.nav-component-item-link {
+    color: #2A2A2A;
+    text-decoration: none;
+}
+
+.nav-component-item-link :hover {
+    cursor: pointer;
+    font-weight: 500;
+    transition-timing-function: ease-in-out, ease-in-out;
+    border-bottom: #2A2A2A 2px solid;
+}
+
 .search-bar {
     border: none;
-    outline: none;
+    text-decoration: none;
+    height: 40px;
 }
 
 .search-comp {
+    display: flex;
+}
+
+.search-comp-mg {
+    color: #2A2A2A;
+    font-weight: 300;
+    height: 24px;
+    width: 26px;
+    margin-right: 35px;
+}
+
+.search-comp-bag {
+    color: #2A2A2A;
+    font-weight: 300;
+    height: 24px;
+    width: 26px;
+    margin-left: 32px;
+    margin-right: 20px;
+}
+
+.vf-search-bar {
     border-bottom: #2A2A2A 1px solid;
 }
 
@@ -33,11 +100,15 @@
     display: flex;
     font-size: 16px;
     font-weight: 400;
-    align-items: center;
+    align-items: first baseline;
     justify-content: space-between;
     margin: 0%;
     padding: 0%;
     color: #2A2A2A;
+}
+
+.header-actions {
+    display: flex;
 }
 
 .nav-routes {
@@ -45,5 +116,31 @@
     font-family: 'Helvetica Neue LT Pro', sans-serif;
     color: rgb(42, 42, 42);
     font-weight: 300;
-    
+    display: flex;
+    list-style: none;
+    margin-left: -40px;
+}
+
+.nav-routes-link {
+    color: #2A2A2A;
+    text-decoration: none;
+}
+
+.nav-routes-seperator {
+    padding-left: 4px;
+    padding-right: 8px;
+}
+
+.nav-components {
+    display: flex;
+    scroll-margin-left: 64px;
+    margin-right: 130px;
+}
+
+.sale-component-link {
+    color: #2A2A2A;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Helvetica Neue LT Pro', sans-serif; 
+    font-weight: 400;  
 }
