@@ -9,7 +9,7 @@ import Reviews from './components/Reviews/Reviews'
 import FeedBack from './components/FeedBack'
 import Message from './components/Message'
 import ReccProducts from './components/recommended/ReccProducts'
-import Exploring from './components/Exploring/Exploring'
+import Exploring from './components/exploring/Exploring'
 import {NavigationProvider} from './context/NavigationContext'
 
 function App() {
