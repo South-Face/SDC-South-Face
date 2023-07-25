@@ -5,11 +5,10 @@ import Summary from './Summary'
 
 const Reviews = () => {
     return (
-        <>
-        <p> hi </p>
-        <Summary />
-        <ActualReviews />
-        </>
+        <div className='main_Reviews'>
+            <Summary />
+            <ActualReviews />
+        </div>
     )
 }
 

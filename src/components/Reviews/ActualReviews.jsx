@@ -5,7 +5,7 @@ import ReviewBottomBar from './ReviewBottomBar'
 
 const ActualReviews = () => {
 return (
-    <>
+    <div className='reviews_Container'>
         <ReviewTopBar />
         <ReviewCont />
         <ReviewBottomBar />
