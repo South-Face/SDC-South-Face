@@ -9,22 +9,22 @@ const PORT = process.env.PORT || 3000; //this is to read the .env file
 
 app.use(cors()); //this is to allow cross origin requests
 app.use(express.json()); //this is to allow us to read JSON data from the client
-app.use(express.static('public'))
+app.use(express.static('dist'))
 
 const { Pool } = pkg;
 
 
-// const pool = new Pool({
-    // connectionString: process.env.DATABASE_URL,
-// });
-
-const pool = new Pool ({
-    user: 'josephcarrillo',
-    host: 'localhost',
-    database: 'fec_south_face',
-    password: '',
-    port: 5432
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
 });
+
+// const pool = new Pool ({
+//     user: 'josephcarrillo',
+//     host: 'localhost',
+//     database: 'fec_south_face',
+//     password: '',
+//     port: 5432
+// });
 
 
 
