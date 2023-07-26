@@ -1,20 +1,18 @@
 import './ReviewCont.css'
 import SingleReview from './singleReview'
+import { useContext, useState, useEffect } from 'react'
+import ReviewsContext from '../../context/ReviewsContext'
 
 
-let aReview = {
-    id: 1,
-    rating: 2,
-    title: "this is a title",
-    comment: "It's so hard to find a white/cream colored backpack. This is so beautiful and has a sheen in the fabric. Very sturdy and rose gold accents throughout. So elegant yet sporty for school and lugging around girly stuff. Perfectly matches all my Lululemon fit in bone color. This was a hard find but a perfect match. Love!!!",
-    userName: "Garett"
-}
-
-const reviews = [aReview]
 
 const ReviewCont = () => {
-    return reviews.map( (single) => (
-        <SingleReview key={single.id} review = {single}/> 
+    const {currentReviews} = useContext(ReviewsContext)
+    console.log(currentReviews)
+
+    const firstTenReviews = currentReviews.slice(0, 10)
+
+    return firstTenReviews.map( (single) => (
+        <SingleReview key={single.reviewId} review = {single}/> 
         )
 )
 }

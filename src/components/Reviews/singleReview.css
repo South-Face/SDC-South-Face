@@ -1,9 +1,14 @@
 .singleReview{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 500px;
+    min-height: 200px;
+    max-height: 300px;
     background-color: #fefefe;
     font-family: 'Roboto', sans-serif;
+    border-bottom: solid 1px;
+    border-color: rgb(228, 228, 228);
+    margin-bottom: 15px;
 }
 
 .singleReview_Review{
@@ -12,6 +17,7 @@
     margin-bottom: 12px;
     margin-left: 10px;
     margin-right: 10px;
+    min-width: 660px;
 }
 .singleReview_SubmitedBy{
     width: 34%;
@@ -27,7 +33,7 @@
 }
 .singleReview_SubmitedBy_Info{
     width: 90%;
-    min-width: 400px;
+    max-width: 400px;
     font-weight: 300;
     font-size: .875rem;
 }
@@ -88,6 +94,11 @@
     font-size: 1.5rem;
 }
 
+.thumbsContainer{
+    display: flex;
+    flex-direction: row;
+}
+
   .thumbsUp{
     height: 100%;
     width: 3rem;
@@ -95,6 +106,7 @@
     flex-direction: row;
     align-items: center;
     margin-left: 3rem;
+    cursor: pointer;
   }
 
   .thumbsDown{
@@ -104,6 +116,7 @@
     flex-direction: row;
     align-items: center;
     margin-left: 3rem;
+    cursor: pointer;
   }
   .numberOfHelpfuls{
     margin-left: 5px;
@@ -127,4 +140,50 @@
     text-decoration: underline;
     font-weight: 500;
     margin-left: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+    .singleReview { 
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-height: 400px;
+      max-height: none;
+      height: auto;
+    }
+  
+    .singleReview_Review {
+      width: 100%;
+      min-width: auto;
+    }
+  
+    .singleReview_SubmitedBy {
+      width: 100%;
+      align-self: center;
+      height: auto;
+    }
+    .singleReview_SubmitedBy_Info {
+        width: 100%; 
+        max-width: none; 
+      }
+      .reviewHelpful{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
+      .thumbsUp{
+        margin-left: 0;
+      }
+      .thumbsDown{
+        margin-left: 10px;
+      }
+      .thumbsContainer{
+        margin-left: 10px;
+      }
+  }
+
+  @media (min-width: 1023px) {
+    .singleReview {
+      flex-direction: row;
+    }
 }

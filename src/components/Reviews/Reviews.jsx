@@ -1,10 +1,11 @@
 
 import './Reviews.css'
-
 import ActualReviews from './ActualReviews'
 import Summary from './Summary'
 
+
 const Reviews = () => {
+
     return (
         <div className='main_Reviews'>
             <Summary />
@@ -14,3 +15,5 @@ const Reviews = () => {
 }
 
 export default Reviews
+
+
