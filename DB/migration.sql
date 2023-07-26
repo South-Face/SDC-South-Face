@@ -1,9 +1,10 @@
 -- \c fec_south_face;
 
-DROP TABLE IF EXISTS reviews;
-DROP TABLE IF EXISTS recommendedProducts;
-DROP TABLE IF EXISTS productImages;
-DROP TABLE IF EXISTS products;
+DROP TABLE reviews;
+DROP TABLE recommendedProducts;
+DROP TABLE productImages;
+DROP TABLE products;
+DROP TABLE features;
 
 CREATE TABLE reviews (
     reviewId serial PRIMARY KEY,
@@ -33,6 +34,14 @@ CREATE TABLE productImages (
     productId integer REFERENCES products(productId),
     imageUrl VARCHAR
 );
+
+CREATE TABLE features (
+    featuresId serial PRIMARY KEY,
+    productId integer REFERENCES products(productId),
+    feature varchar
+);
+
+
 
 
 -- Data to be seeded into the reviews table
@@ -79,3 +88,15 @@ INSERT INTO productImages (productId, imageUrl) VALUES (1, 'https://images.theno
 INSERT INTO productImages (productId, imageUrl) VALUES (1, 'https://images.thenorthface.com/is/image/TheNorthFace/NF0A81E6_7ZQ_detail1?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0');
 -- INSERT INTO productImages (productId, imageUrl) VALUES (1,);
 
+INSERT INTO features (productId, feature) VALUES (1, 'The Luxe edition features a premium metallic embroidered logo and metallic zipper pulls');
+INSERT INTO features (productId, feature) VALUES (1, 'Our women-specific FlexVent™ suspension system, certified by the American Chiropractic Association, features a flexible yoke built from custom injection-molded shoulder straps; an unbelievably comfortable, padded back panel; and a highly breathable lumbar panel');
+INSERT INTO features (productId, feature) VALUES (1, 'Two webbing top handles make it convenient to open and provide a balanced carry so it doesn''t swing into your side when you''re walking');
+INSERT INTO features (productId, feature) VALUES (1, 'Pack stands on its own for easy loading and unloading');
+INSERT INTO features (productId, feature) VALUES (1, 'Padded 16'' laptop sleeve helps protect laptop from bumps and falls');
+INSERT INTO features (productId, feature) VALUES (1, 'Huge main compartment holds books and binders for a day on campus');
+INSERT INTO features (productId, feature) VALUES (1, 'Front compartment simplifies organization for the modern user while maintaining essential features for storage such as secure-zip pockets, a tablet sleeve and a key clip');
+INSERT INTO features (productId, feature) VALUES (1, 'Two external water bottle pockets');
+INSERT INTO features (productId, feature) VALUES (1, 'Stylish front bungee system for additional storage');
+INSERT INTO features (productId, feature) VALUES (1, '360-degree reflectivity');
+INSERT INTO features (productId, feature) VALUES (1, 'Sternum strap');
+-- INSERT INTO features (productId, feature) VALUES (1, '');

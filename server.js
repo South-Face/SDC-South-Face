@@ -59,6 +59,22 @@ app.get('/products/:id', async (req, res) => {
     }
 });
 
+app.get('/features/:id', async (req, res) => {
+    const { id } = req.params;
+    try{
+        const result = await pool.query('SELECT feature FROM features WHERE productId = $1', [id]);
+        if (result.rowCount === 0){
+            res.status(404).json({error: 'Product Images not found'});
+        }else{
+            res.json(result.rows);
+        }
+    }catch(err){
+        console.error(err);
+        res.status(500).json({error: 'Internal server error'});
+    }
+});
+
+
 // app.post('/products', async (req, res) => {
 //     const { name, description, price, imageUrl, averageRating } = req.body;
 //     try {
