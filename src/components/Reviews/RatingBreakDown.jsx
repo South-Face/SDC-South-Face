@@ -1,9 +1,10 @@
 import './RatingBreakDown.css'
 import'./Summary.css'
-import { useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
+import ReviewsContext from '../../context/ReviewsContext'
 
 const RatingBreakDown = () => {
-
+    const {breakDown} = useContext(ReviewsContext)
 
     return (
         <div className='summary_RatingBreakDown'>
@@ -15,11 +16,11 @@ const RatingBreakDown = () => {
                 </div>
                 <div className="middle">
                     <div className="bar-container">
-                    <div className="bar-5"></div>
+                    <div className="bar-5" style={{width: `${breakDown.fiveStarPercentage}%`}}></div>
                     </div>
                 </div>
                 <div className="side-right">
-                    150
+                {`${breakDown.fiveStar}`}
                 </div>
             </div>
             <div className='column' id='column2'> 
@@ -28,11 +29,11 @@ const RatingBreakDown = () => {
                 </div>
                 <div className="middle">
                     <div className="bar-container">
-                    <div className="bar-4"></div>
+                    <div className="bar-4" style={{width: `${breakDown.fourStarPercentage}%`}}></div>
                     </div>
                 </div>
                 <div className="side-right">
-                    63
+                {`${breakDown.fourStar}`}
                 </div>
             </div>
             <div className='column' id='column3'> 
@@ -41,11 +42,11 @@ const RatingBreakDown = () => {
                 </div>
                 <div className="middle">
                     <div className="bar-container">
-                    <div className="bar-3"></div>
+                    <div className="bar-3" style={{width: `${breakDown.threeStarPercentage}%`}}></div>
                     </div>
                 </div>
                 <div className="side-right">
-                    15
+                {`${breakDown.threeStar}`}
                 </div>
             </div>
             <div className='column' id='column4'> 
@@ -54,11 +55,11 @@ const RatingBreakDown = () => {
                 </div>
                 <div className="middle">
                     <div className="bar-container">
-                    <div className="bar-2"></div>
+                    <div className="bar-2" style={{width: `${breakDown.twoStarPercentage}%`}}></div>
                     </div>
                 </div>
                 <div className="side-right">
-                    6
+                {`${breakDown.twoStar}`}
                 </div>
             </div>
             <div className='column' id='column5'> 
@@ -67,11 +68,11 @@ const RatingBreakDown = () => {
                 </div>
                 <div className="middle">
                     <div className="bar-container">
-                    <div className="bar-1"></div>
+                    <div className="bar-1" style={{width: `${breakDown.oneStarPercentage}%`}}></div>
                     </div>
                 </div>
                 <div className="side-right">
-                    20
+                {`${breakDown.oneStar}`}
                 </div>
             </div>
            

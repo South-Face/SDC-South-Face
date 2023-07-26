@@ -84,7 +84,7 @@
     padding-bottom: 20px;
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 1023px) {
     .review_button{
         width: 98%;
         height: 50px;

@@ -11,6 +11,7 @@ import Message from './components/Message'
 import ReccProducts from './components/recommended/ReccProducts'
 import Exploring from './components/exploring/Exploring'
 import {NavigationProvider} from './context/NavigationContext'
+import {ReviewsProvider} from './context/ReviewsContext'
 
 function App() {
   
@@ -20,7 +21,11 @@ function App() {
         <ProductPage />
         <Exploring />  
 {/*         <AddPhoto /> */}
-        <Reviews />
+
+        <ReviewsProvider>
+            <Reviews />
+        </ReviewsProvider>
+
         <ReccProducts />
         <Footer />
         <Message />

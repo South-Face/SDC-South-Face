@@ -110,15 +110,16 @@ app.get('/products/:id', async (req, res) => {
 
 
 //These are the routes for the "reviews" table
-// app.get('/reviews', async (req, res) => {
-//     try{
-//         const result = await pool.query('SELECT * FROM reviews');
-//         res.json(result.rows);
-//     } catch(err) {
-//         console.error('Error executing query', err);
-//         res.status(500).json({error: 'Internal server error'});
-//     }
-// });
+app.get('/reviews', async (req, res) => {
+    console.log('in the correct area')
+    try{
+        const result = await pool.query('SELECT * FROM reviews');
+        res.json(result.rows);
+    } catch(err) {
+        console.error('Error executing query', err);
+        res.status(500).json({error: 'Internal server error'});
+    }
+});
 
 // app.get('/reviews/:id', async (req, res) => {
 //     const { id } = req.params;
