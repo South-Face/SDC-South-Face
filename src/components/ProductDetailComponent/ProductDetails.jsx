@@ -8,7 +8,7 @@ const ProductDetails = ({ productId }) => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        fetch(`https://southface.onrender.com/${productId}`)
+        fetch(`https://southface.onrender.com/products/${productId}`)
             .then(response => response.json())
             .then(data => {
                 setProduct(data[0]);
