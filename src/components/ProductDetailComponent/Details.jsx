@@ -18,7 +18,7 @@ function Details() {
       </div>
       {isExpanded && (
         <div className="description-content">
-<img src="./public/Images/details.jpg" className="product-detail-image" />
+<img src="./Images/details.jpg" className="product-detail-image" />
         </div>
       )}
     </div>
