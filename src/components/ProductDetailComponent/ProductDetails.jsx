@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import AddToCartButton from './AddToCartButton';
+import Description from './Description';
+import Features from './Features'
+import Details from './Details'
 import './ProductDetail.css'; 
 
 
@@ -31,7 +34,9 @@ const ProductDetails = ({ productId }) => {
             <div className="find-in-store">
                 {/* find in store component*/}
             </div>
-            <h3>{product.description}</h3>
+            <Description title="Description" productId={productId} />
+            <Features title="Features" productId={productId} />
+            <Details title="Details" productId={productId} />
         </div>
     );
 };
