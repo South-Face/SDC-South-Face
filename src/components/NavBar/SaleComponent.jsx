@@ -1,8 +1,9 @@
-
+import './NavBar.css'
 
 const SaleComponent = () => {
     return (
-        <div>
+    <div className="mega-menu">
+        <div className="menu-content">
             <div>
                 <h2>
                     <a className="sale-component-link" href="https://www.thenorthface.com/en-us/sale/womens-sale-c317775">Women's Sale</a>
@@ -39,7 +40,7 @@ const SaleComponent = () => {
                 </h2>
             </div>
         </div>
-        
+     </div>
     )
 }
 
