@@ -1,0 +1,20 @@
+.feedback-div {
+    right: 0px;
+    top: 328px;
+    position: fixed;
+    background-color: #000; 
+    height: 115px;
+    width: 30px;
+}
+
+.feedback-paragraph {
+    transform: rotate(90deg);
+    color: #d0cfcf;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+}
