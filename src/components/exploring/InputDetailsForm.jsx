@@ -25,6 +25,8 @@ const InputDetailsForm = ({ onClose }) => {
     
     onClose();
   };
+  
+  
 
   return (
     <div className="input-details-form">
@@ -33,8 +35,8 @@ const InputDetailsForm = ({ onClose }) => {
       </div>
       <div className="form-content">
         <h2>Add your photo</h2>
-        <p>Please fill out the following information.</p>
-        <p>* Indicates a required field.</p>
+        <p className="description">Please fill out the following information.</p>
+        <p className='required'>* Indicates a required field.</p>
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="displayName">Display Name *</label>
@@ -56,15 +58,16 @@ const InputDetailsForm = ({ onClose }) => {
               required
             />
           </div>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                name="agreeToTerms"
-                checked={formData.agreeToTerms}
-                onChange={handleChange}
-              />
-              I agree to the Privacy Policy & Terms and Conditions *
+          <div className="checkbox-container">
+            <input
+              type="checkbox"
+              name="agreeToTerms"
+              checked={formData.agreeToTerms}
+              onChange={handleChange}
+              className="checkbox-input"
+            />
+            <label htmlFor="agreeToTerms">
+              I agree to the Privacy Policy & Terms and Conditions
             </label>
           </div>
           <button type="submit">Next</button>
