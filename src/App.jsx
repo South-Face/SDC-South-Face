@@ -10,7 +10,7 @@ import FeedBack from './components/PinnedComps/FeedBack'
 import Message from './components/PinnedComps/Message'
 
 import ReccProducts from './components/recommended/ReccProducts'
-import Exploring from './components/Exploring/Exploring'
+import Exploring from './components/exploring/Exploring'
 import {NavigationProvider} from './context/NavigationContext'
 import {ReviewsProvider} from './context/ReviewsContext'
 
