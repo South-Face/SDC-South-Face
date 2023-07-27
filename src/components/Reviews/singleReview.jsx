@@ -1,6 +1,8 @@
 import './singleReview.css'
 import {useState, useEffect, useContext} from 'react'
 import ReviewsContext from '../../context/ReviewsContext'
+import { GoCheckCircle } from "react-icons/go"; 
+
 /*     reviewId serial PRIMARY KEY,
     rating NUMERIC,
     ratingTitle varchar,
@@ -63,7 +65,7 @@ const SingleReview = ({review}) => {
                         </svg>
                     </div>
                 </div>
-                <p className='reviewTitle'>{review.title}</p>
+                <p className='reviewTitle'>{review.ratingtitle}</p>
                 <p className='reviewComment'>{review.comment} </p>
                 <select className='moreDetailsButton'> 
                     <option>More Details</option>
@@ -94,13 +96,14 @@ const SingleReview = ({review}) => {
                         </p>
                     </div>
                      </div>
-
-
                 </div>
             </div>
             <div className='singleReview_SubmitedBy'> 
                 <div className='singleReview_SubmitedBy_Info'> 
                     <p> Submitted <b>13 days ago</b> By <b>{review.userName}</b> from <b> {review.username} </b></p>
+                    <div className='verifiedBuyerContainer'>
+                        <GoCheckCircle />  Verified Buyer
+                    </div>
                     <p> Submitted as part of a sweepstakes entry</p>
                 </div>
             </div>

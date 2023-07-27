@@ -12,26 +12,34 @@ import ReccProducts from './components/recommended/ReccProducts'
 import Exploring from './components/exploring/Exploring'
 import {NavigationProvider} from './context/NavigationContext'
 import {ReviewsProvider} from './context/ReviewsContext'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 function App() {
   
   return (
+    <Router> 
       <NavigationProvider>
         <NavBar />
-        <ProductPage />
-        <Exploring />  
-{/*         <AddPhoto /> */}
-
-        <ReviewsProvider>
-            <Reviews />
-        </ReviewsProvider>
-
-        <ReccProducts />
+        <Routes> 
+          <Route exact path="" element ={
+            <>
+                <ProductPage />
+                <Exploring />  
+                {/* <AddPhoto /> */}
+                <ReviewsProvider>
+                  <Reviews />
+                </ReviewsProvider>            
+                <ReccProducts />
+            </>
+          }>
+          </Route>
+        </Routes>
         <Footer />
-        <Message />
+        <Message /> 
         <FeedBack />
- 
       </NavigationProvider> 
+    </Router>
+
   )
 }
 

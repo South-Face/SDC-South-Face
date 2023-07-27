@@ -1,0 +1,23 @@
+.bottomBarRight{
+    height: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.nextButton {
+    padding-left: 0;
+    padding-top: 20px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    font-size: 1rem;
+  }
+  
+  .nextButton:hover {
+    color: gray;
+    border-color: gray;
+  }

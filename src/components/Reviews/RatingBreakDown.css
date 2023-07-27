@@ -1,6 +1,6 @@
 .summary_RatingBreakDown {
-    width: 40vw;
-    background-color: #f8f8f8;
+    width: 35vw;
+    background-color: #fff;
     border: solid 1px;
     border-color: #AAA;
     border-radius: 2px;
@@ -13,6 +13,7 @@
     padding-right: 2rem;
     margin: 2rem ;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -38,7 +39,7 @@
   }
   
 
-/* ---------- Table --------------- */
+
   .table{
     display: flex;
     flex-direction: column;
@@ -53,32 +54,43 @@
   .column{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 300px;
+    justify-content: center;
+    width: 350px;
     align-items: center;
   }
-  
 
-  /* Three column layout */
-  .side {
-    width: 15%;
-    margin-top: 20px;
+.column:hover .side{
+  background-color: #979797;
+  color:#f8f8f8;
+  transition: 500ms;
+}  
+
+
+  .side {         /* Left */
+    width: 41px;
+    margin-top: 5px;
     text-align: center;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    font-weight: 300;
+    font-size: .875rem;
+    padding-bottom: 20px;
   }
   
   .middle {
     width:70%;
-    margin-top: 10px;
+    padding-bottom: 15px;
   }
   
   .side-right {
     text-align: right;
-    width: 10%;
+    width: 21px;
+    padding-bottom: 20px;
+    font-weight: 300;
+    font-size: .875rem;
   }
 
-  /* The bar container */
+ 
   .bar-container {
     width: 100%;
     background-color: #f1f1f1;
@@ -88,12 +100,11 @@
     margin: 5px;
   }
   
-  /* Individual bars */
-  .bar-5 { height: 12px; background-color: #64646b; border-radius: 10px;}
-  .bar-4 {width: 30%; height: 12px; background-color: #64646b; border-radius: 10px;}
-  .bar-3 {width: 10%; height: 12px; background-color: #64646b; border-radius: 10px;}
-  .bar-2 {width: 4%; height: 12px; background-color: #64646b; border-radius: 10px;}
-  .bar-1 {width: 15%; height: 12px; background-color: #64646b; border-radius: 10px;}
+  .bar-4 {height: 11px; background-color: #64646b; border-radius: 10px;} /* Star 1 */
+  .bar-3 {height: 11px; background-color: #64646b; border-radius: 10px;} /* Star 2 */
+  .bar-2 {height: 11px; background-color: #64646b; border-radius: 10px;} /* Star 3 */
+  .bar-1 {height: 11px; background-color: #64646b; border-radius: 10px;} /* Star 4 */
+  .bar-0 {height: 11px; background-color: #64646b; border-radius: 10px;} /* Star 5 */
   
   @media (max-width: 1023px) {
     .summary_RatingBreakDown{

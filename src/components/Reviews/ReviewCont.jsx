@@ -7,12 +7,11 @@ import ReviewsContext from '../../context/ReviewsContext'
 
 const ReviewCont = () => {
     const {currentReviews} = useContext(ReviewsContext)
-    console.log(currentReviews)
 
     const firstTenReviews = currentReviews.slice(0, 10)
 
-    return firstTenReviews.map( (single) => (
-        <SingleReview key={single.reviewId} review = {single}/> 
+    return firstTenReviews.map( (single, index) => (
+        <SingleReview key={index} review = {single}/> 
         )
 )
 }
