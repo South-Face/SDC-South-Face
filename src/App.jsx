@@ -22,6 +22,7 @@ function App() {
       <NavigationProvider>
     <div className='body'>
         <NavBar />
+        <NavRoutes />
         <Routes> 
           <Route exact path="" element ={
             <>
