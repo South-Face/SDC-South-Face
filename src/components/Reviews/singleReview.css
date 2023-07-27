@@ -1,8 +1,14 @@
 .singleReview{
     display: flex;
-    width: 100vw;
-    height: 500px;
-    background-color: #f8f8f8;
+    flex-direction: column;
+    width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    background-color: #fefefe;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: solid 1px;
+    border-color: rgb(228, 228, 228);
+    margin-bottom: 15px;
 }
 
 .singleReview_Review{
@@ -11,6 +17,7 @@
     margin-bottom: 12px;
     margin-left: 10px;
     margin-right: 10px;
+    min-width: 660px;
 }
 .singleReview_SubmitedBy{
     width: 34%;
@@ -26,6 +33,9 @@
 }
 .singleReview_SubmitedBy_Info{
     width: 90%;
+    max-width: 400px;
+    font-weight: 300;
+    font-size: .875rem;
 }
 .reviewTitle{
     font-size: 1.25rem;
@@ -37,7 +47,10 @@
 .reviewComment{
     font-size: .875rem;
     color: #2a2a2a;
+    font-weight: 300;
 }
+
+
 
 .moreDetailsButton {
     appearance: none;
@@ -53,4 +66,124 @@
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
+}
+
+
+.singleReview_starsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 1rem;
+}
+  .single_star{
+    height: 20px;
+    width: 20px;
+  }
+
+.reviewHelpful{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.reviewHelpful_title{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.thumbsContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+  .thumbsUp{
+    height: 100%;
+    width: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3rem;
+    cursor: pointer;
+  }
+
+  .thumbsDown{
+    height: 100%;
+    width: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3rem;
+    cursor: pointer;
+  }
+  .numberOfHelpfuls{
+    margin-left: 5px;
+  }
+
+.reviewHelpful_flag{
+    display: flex;
+    flex-direction: row;
+    width: 200px; 
+    margin-left: 30px;
+}
+
+.reviewHelpful_flag_image {
+    width: 30px;
+    align-self: center;
+}
+
+.reviewHelpful_flag_text{
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+    .singleReview { 
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-height: 400px;
+      max-height: none;
+      height: auto;
+    }
+  
+    .singleReview_Review {
+      width: 100%;
+      min-width: auto;
+    }
+  
+    .singleReview_SubmitedBy {
+      width: 100%;
+      align-self: center;
+      height: auto;
+    }
+    .singleReview_SubmitedBy_Info {
+        width: 100%; 
+        max-width: none; 
+      }
+      .reviewHelpful{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
+      .thumbsUp{
+        margin-left: 0;
+      }
+      .thumbsDown{
+        margin-left: 10px;
+      }
+      .thumbsContainer{
+        margin-left: 10px;
+      }
+  }
+
+  @media (min-width: 1023px) {
+    .singleReview {
+      flex-direction: row;
+    }
 }

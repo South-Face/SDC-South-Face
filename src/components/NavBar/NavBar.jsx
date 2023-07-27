@@ -9,22 +9,21 @@ import KidsComponent from './KidsComponent'
 import FootwearComponent from './FootwearComponent'
 import BagsGearComponent from './BagsGearComponent'
 import AboutUsComponent from './AboutUsComponent'
+import { useContext } from 'react'
+import NavigationContext from '../../context/NavigationContext'
 
 const NavBar = () => {
+    const {currentNav} = useContext(NavigationContext)
+
+
     return (
         <>
         <NavList />
         <NavHeader />
         <NavRoutes />
-        {/* <SaleComponent /> */}
-        {/* <MensComponent /> */}
-        {/* <WomensComponent /> */}
-        {/* <KidsComponent/> */}
-        {/* <FootwearComponent /> */}
-        {/* <BagsGearComponent /> */}
-        {/* <AboutUsComponent /> */}
         </>
     )
+
 }
 
 export default NavBar

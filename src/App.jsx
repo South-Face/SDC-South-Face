@@ -8,21 +8,31 @@ import AddPhoto from './components/AddPhoto'
 import Reviews from './components/Reviews/Reviews'
 import FeedBack from './components/PinnedComps/FeedBack'
 import Message from './components/PinnedComps/Message'
-import ReccProducts from './components/ReccProducts'
+
+import ReccProducts from './components/recommended/ReccProducts'
+import Exploring from './components/Exploring/Exploring'
+import {NavigationProvider} from './context/NavigationContext'
+import {ReviewsProvider} from './context/ReviewsContext'
 
 function App() {
   
   return (
-      <>
+      <NavigationProvider>
         <NavBar />
         <ProductPage />
-        <AddPhoto />
-        <Reviews />
+        <Exploring />  
+{/*         <AddPhoto /> */}
+
+        <ReviewsProvider>
+            <Reviews />
+        </ReviewsProvider>
+
         <ReccProducts />
         <Footer />
         <FeedBack />
         <Message />
-      </> 
+ 
+      </NavigationProvider> 
   )
 }
 

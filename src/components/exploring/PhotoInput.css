@@ -1,0 +1,93 @@
+/* PhotoInput.css */
+
+.photo-input-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  position: relative;
+}
+
+/* Styles for the "Add your photo" box */
+.photo-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  height: 190px;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+/* Styles for the "+" symbol */
+.plus-symbol {
+  font-size: 30px;
+  margin-right: 5px;
+  width: 20px; /* Adjust the width of the plus symbol */
+}
+
+/* Styles for the "Add your photo" text */
+.add-photo-text {
+  font-size: 12px;
+  color: #080808;
+  text-decoration: underline;
+}
+
+/* Hover effect for the "Add your photo" box */
+.photo-input:hover {
+  background-color: #f2f2f2;
+}
+
+/* Styles for the "Add your photo" button for narrower screens */
+.photo-input-button {
+  display: none; /* Initially hidden for wider screens */
+}
+
+/* Media query for narrower screens */
+@media (max-width: 1023px) {
+  .photo-input {
+    display: none; /* Hide the box for narrower screens */
+  }
+  .photo-input-button {
+    /* Show the button for narrower screens */
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    align-items: center;
+    width: 1000px;
+    height: 50px;
+  }
+  .photo-input-button:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+/* Styles for InputDetailsForm inside the white box */
+.input-details-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-content {
+  margin-top: 20px; 
+}

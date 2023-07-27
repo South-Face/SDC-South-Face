@@ -1,0 +1,129 @@
+/* InputDetailsForm.css */
+
+.input-details-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 355px;
+  height: auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  display: none;
+  
+}
+
+.form-content {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: left;
+  line-height: 1.5;
+  padding: 45px;
+}
+
+.form-content h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.form-content p {
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+.form-content .description{
+  margin-bottom: 0px;
+}
+
+.form-content .required {
+  color:#4d4b4b;
+  font-style: normal;
+  margin-top: 0px;
+}
+
+.form-content label {
+  display: block;
+  font-size: 9px;
+  color: #333;
+  margin-bottom: 0px;
+}
+
+.form-content input[type="text"],
+.form-content input[type="email"],
+.form-content input[type="checkbox"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 11px;
+  font-style: normal;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.form-content .checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-content .checkbox-container input[type="checkbox"] {
+  margin-right: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 14px;
+  height: 14px;
+  border: .5px solid rgb(153, 152, 152);
+  background-color: transparent;
+  border-radius: 2px;
+  position: relative;
+}
+
+/* apply styles to the checkbox when it's checked */
+.form-content .checkbox-container input[type="checkbox"]:checked {
+  background-color: black;
+}
+
+/* Style the custom checkmark using ::before pseudo-element */
+.form-content .checkbox-container input[type="checkbox"]:checked::before {
+  content: '\2713'; /* Unicode checkmark character */
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  font-size: 12px;
+  color: white;
+}
+
+.form-content button {
+  background-color: #090909; 
+  color: white; 
+  border: none; 
+  padding: 10px 40px; 
+  font-size: 14px;
+  border-radius: 30px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-content button:hover {
+  background-color: #767373;
+
+}
+
+.dark-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 9999;
+  display: none; /* Initially hidden */
+}
+
+/* Show the overlay when the component is shown */
+.input-details-form.visible + .dark-overlay {
+  display: block;
+}

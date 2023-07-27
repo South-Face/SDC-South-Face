@@ -1,0 +1,15 @@
+.never-stop-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .never-stop-heading {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .never-stop-text {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+  }
