@@ -1,12 +1,14 @@
 .summaryContainer{
     display: flex;
-    width: 100%;
+    width: 94%;
     height: 50vh;
     flex-direction: column;
     align-items: center ;
-    background-color: #f3f3f3;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
     flex: 1;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .summmaryContainer_Title{
@@ -28,5 +30,6 @@
       align-items: center;
       height: auto;
       margin-bottom: 2rem;
+      padding-bottom: 1rem;
     }
   }

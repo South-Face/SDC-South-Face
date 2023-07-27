@@ -4,6 +4,7 @@ import { useContext, useState, useEffect } from 'react'
 import ReviewsContext from '../../context/ReviewsContext'
 
 
+
 const Percentage = () => {
     const {breakDown} = useContext(ReviewsContext)
     const [starColor, setStarColors] = useState([["gray", "gray", "gray", "gray", "gray"]])
@@ -22,7 +23,7 @@ const Percentage = () => {
 
     return (
     <>
-        <div className='summary_Percentage'>
+        <div className='summary_Percentage' >
             <div className='percentage_text_container'> 
                 <div className='percentage_percenatage_large'> 
                 {`${breakDown.percentage} %`}

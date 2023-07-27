@@ -1,83 +1,93 @@
+/* PhotoInput.css */
+
 .photo-input-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    position: relative;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  position: relative;
+}
+
+/* Styles for the "Add your photo" box */
+.photo-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  height: 190px;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+/* Styles for the "+" symbol */
+.plus-symbol {
+  font-size: 30px;
+  margin-right: 5px;
+  width: 20px; /* Adjust the width of the plus symbol */
+}
+
+/* Styles for the "Add your photo" text */
+.add-photo-text {
+  font-size: 12px;
+  color: #080808;
+  text-decoration: underline;
+}
+
+/* Hover effect for the "Add your photo" box */
+.photo-input:hover {
+  background-color: #f2f2f2;
+}
+
+/* Styles for the "Add your photo" button for narrower screens */
+.photo-input-button {
+  display: none; /* Initially hidden for wider screens */
+}
+
+/* Media query for narrower screens */
+@media (max-width: 1023px) {
   .photo-input {
-    position: relative;
+    display: none; /* Hide the box for narrower screens */
+  }
+  .photo-input-button {
+    /* Show the button for narrower screens */
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    width: 190px;
-    height: 190px;
-    border: 1px solid #999;
-    cursor: pointer;
-  }
-  
-  .plus-symbol {
-    font-size: 30px;
-    margin-right: 5px;
-    width: 20px; /* Adjust the width of the plus symbol */
-  }
-  
-  .add-photo-text {
-    font-size: 12px;
-    color: #080808;
-    text-decoration: underline;
-  }
-  
-  /* Add hover effect */
-  .photo-input:hover {
-    background-color: #f2f2f2;
-  }
-  
-  /* Styles for dark overlay */
-  .dark-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-    z-index: 9999; 
-    display: none; /* Initially hidden */
-  }
-  
-  /* Styles for the white box */
-  .modal-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f6f6f6;
-    width: 500px; 
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 10000; 
-    display: none;
-  }
-  
-  /* Styles for InputDetailsForm inside the white box */
-  .input-details-form {
-    display: flex;
-    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
     align-items: center;
+    width: 1000px;
+    height: 50px;
   }
-  
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
+  .photo-input-button:hover {
+    background-color: black;
+    color: white;
   }
-  
-  .form-content {
-    margin-top: 20px; 
-  }
-  
+}
+
+/* Styles for InputDetailsForm inside the white box */
+.input-details-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-content {
+  margin-top: 20px; 
+}

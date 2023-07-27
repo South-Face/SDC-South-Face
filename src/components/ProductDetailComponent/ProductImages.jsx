@@ -19,7 +19,7 @@ const ProductImages = ({ productId }) => {
             {urls.map((url, index) => (
                 <img 
                     key={index} 
-                    className="product-image" 
+                    id="product-image" 
                     src={url} 
                     alt="" 
                 />

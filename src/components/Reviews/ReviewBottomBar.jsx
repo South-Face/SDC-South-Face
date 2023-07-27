@@ -4,10 +4,10 @@ import BottomBarRight from './BottomBarRight'
 
 const ReviewBottomBar = () => {
     return (
-        <>
-        <BottomBarLeft />
-        <BottomBarRight />
-        </>
+        <div className='bottomBarContainer'>
+            <BottomBarLeft />
+            <BottomBarRight />
+        </div>
     )
 }
 
