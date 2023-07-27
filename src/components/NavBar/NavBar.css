@@ -7,10 +7,24 @@
     text-decoration: none;
 }
 
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.body {
+    padding-top: 5.8rem;
+  }
+
 .nav-list-cont {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-top: 5px;
+    margin-bottom: -5px;
 }
 
 .nav-list-item {
@@ -104,6 +118,7 @@
     margin: 0%;
     padding: 0%;
     color: #2A2A2A;
+    padding-top: 10px;
 }
 
 .header-actions {
@@ -151,9 +166,7 @@
 
 .menu-content {
     position: relative;
-    transition-duration: .15s;
-    transition-property: transform;
-    transition-timing-function: ease-in-out;
+    transition: opacity 0.3s ease-in-out;;
     margin-left: 94px;
     margin-right: 464px;
     padding-top: 40px;
@@ -173,8 +186,54 @@
     position: absolute;
     width: 100vw;
     z-index: 2000;
-    top: 150px;
+    top: 80px;
     display: flex;
     flex-direction: column;
     left: 0;
+}
+
+.navbar-img {
+    height: 68px;
+    aspect-ratio: auto 68 / 68;
+}
+
+.navbar-third {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar-third-product {
+    display: flex;
+}
+
+.navbar-third-buttons {
+    display: flex; 
+    padding-right: 10px;
+    align-items: center;
+}
+
+.navbar-third-cartButton {
+    background-color: black;
+    color: white;
+    font-size: 13pt;
+    font-weight: bold;
+    padding: 17.5px 4rem ;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.navbar-third-heartButton {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 3rem;
+    height: 3rem;
+    border: 1px black solid;
 }

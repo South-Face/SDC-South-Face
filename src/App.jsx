@@ -3,6 +3,7 @@ import './App.css'
 import Footer from './components/Footer/Footer'
 import React from 'react'
 import NavBar from './components/NavBar/NavBar'
+import NavRoutes from './components/NavBar/NavRoutes'
 import ProductPage from './components/ProductDetailComponent/ProductPage'
 import AddPhoto from './components/AddPhoto'
 import Reviews from './components/Reviews/Reviews'
@@ -19,6 +20,7 @@ function App() {
   return (
     <Router> 
       <NavigationProvider>
+    <div className='body'>
         <NavBar />
         <Routes> 
           <Route exact path="" element ={
@@ -37,9 +39,9 @@ function App() {
         <Footer />
         <FeedBack />
         <Message />
-      </NavigationProvider> 
+            </div>
+      </NavigationProvider>      
     </Router>
-
   )
 }
 
