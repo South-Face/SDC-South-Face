@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import AddToCartButton from './AddToCartButton';
 import SelectColor from './SelectColor';
-import FindInStore from './FindInStore'; // It was '/FindInStore', changed to './FindInStore'
+import FindInStore from './FindInStore'; 
+import FavBtn from './FavBtn';
+import Lifetime from './Lifetime';
+import Shipping from './Shipping';
 import Description from './Description';
 import Features from './Features';
 import Details from './Details';
@@ -23,7 +26,7 @@ const ProductDetails = ({ productId }) => {
         <div className="product-details">
             <h1>{product.name}</h1>
             <h2>${product.price}</h2>
-            <p>Pay in 4 interest-free payments of $20.00. Klarna. <a href="#">Learn more</a></p>
+            <p id="interest-free">Pay in 4 interest-free payments of $20.00. Klarna. <a id="learn-more" href="#">Learn more</a></p>
             <div className="reviews-box">
                 {/* review component*/}
             </div>
@@ -31,7 +34,12 @@ const ProductDetails = ({ productId }) => {
                 <SelectColor className="color-description"></SelectColor>
             </div>
             <AddToCartButton text="Add to Cart" />
+            <div className="find-fav">
             <FindInStore text="Find In-Store" /> 
+            <FavBtn />
+            </div>
+            <Lifetime />
+            <Shipping />
             <Description title="Description" productId={productId} />
             <Features title="Features" productId={productId} />
             <Details title="Details" productId={productId} />
