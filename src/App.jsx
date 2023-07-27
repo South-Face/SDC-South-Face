@@ -3,6 +3,7 @@ import './App.css'
 import Footer from './components/Footer/Footer'
 import React from 'react'
 import NavBar from './components/NavBar/NavBar'
+import NavRoutes from './components/NavBar/NavRoutes'
 import ProductPage from './components/ProductDetailComponent/ProductPage'
 import AddPhoto from './components/AddPhoto'
 import Reviews from './components/Reviews/Reviews'
@@ -16,8 +17,10 @@ import {ReviewsProvider} from './context/ReviewsContext'
 function App() {
   
   return (
+    <div className='body'>
       <NavigationProvider>
         <NavBar />
+        <NavRoutes />
         <ProductPage />
         <Exploring />  
 {/*         <AddPhoto /> */}
@@ -32,6 +35,7 @@ function App() {
         <FeedBack />
  
       </NavigationProvider> 
+      </div>
   )
 }
 
