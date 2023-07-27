@@ -70,11 +70,77 @@
 }
 
 .select-color {
-    border: 1px solid #ddd;
-    padding: 1rem;
+    border-top: 1px solid #ddd;
+    padding: 1.25rem;
     height: 120px; 
     margin-top: 1rem;
 }
+
+#color-heading {
+    margin-left: -1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12pt ;
+}
+
+#color-description {
+    margin-left: -1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 11.5pt ;
+}
+
+.color-circle {
+    /* margin-left: -1.25rem; */
+    
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 8px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.color-circle::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 7px);
+    height: calc(100% + 7px);
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.color-circle:hover::after {
+    border-color: black;
+}
+
+.color-selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.size-fit-guide {
+    display: inline-block;
+    margin-top: 30px;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 10.5pt ;
+
+}
+
+#size-fit-guide:hover {
+    color: gray;
+}
+
 
 .addToCartButton {
     background-color: black;
@@ -87,18 +153,30 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-right: -2.30rem;
-    margin-top: 1rem;
+    margin-top: .25rem;
 }
 
 .addToCartButton:hover {
     background-color: gray;
 }
 
-.find-in-store {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    height: 120px; 
+#find-in-store {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 13pt;
+    font-weight: bold;
+    padding: 17.5px 110px ;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: -1.25rem;
     margin-top: 1rem;
+}
+
+#find-in-store:hover {
+    background-color: black;
+    color: white;
 }
 
 .product-details h3 {
@@ -108,36 +186,6 @@
     margin-bottom: 1rem;
     line-height: 1.7;
 }
-
-/* .description-component {
-    border: 1px solid #ddd;
-    border-left: none;
-    border-right: none;
-    padding: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.description-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.description-title span {
-    margin-left: 10px;
-    transition: all 0.3s ease;
-}
-
-.description-content {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-} */
 
 .description-component,
 .features-component,
@@ -179,7 +227,8 @@
 }
 
 .product-detail-image {
-    width: 100%; /* or whatever value you prefer */
+    width: 100%; 
     height: auto;
     object-fit: contain;
   }
+

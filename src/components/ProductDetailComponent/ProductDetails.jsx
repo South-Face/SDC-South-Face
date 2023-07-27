@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import AddToCartButton from './AddToCartButton';
+import SelectColor from './SelectColor';
+import FindInStore from './FindInStore'; // It was '/FindInStore', changed to './FindInStore'
 import Description from './Description';
-import Features from './Features'
-import Details from './Details'
+import Features from './Features';
+import Details from './Details';
 import './ProductDetail.css'; 
-
-
 
 const ProductDetails = ({ productId }) => {
     const [product, setProduct] = useState({});
@@ -28,12 +28,10 @@ const ProductDetails = ({ productId }) => {
                 {/* review component*/}
             </div>
             <div className="select-color">
-                {/* select color component*/}
+                <SelectColor className="color-description"></SelectColor>
             </div>
             <AddToCartButton text="Add to Cart" />
-            <div className="find-in-store">
-                {/* find in store component*/}
-            </div>
+            <FindInStore text="Find In-Store" /> 
             <Description title="Description" productId={productId} />
             <Features title="Features" productId={productId} />
             <Details title="Details" productId={productId} />
