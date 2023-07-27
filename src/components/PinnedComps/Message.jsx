@@ -1,6 +1,6 @@
 import './Message.css'
 // import bubble from "./img/chat_bubble-removebg.png";
-import bubble from "./img/subject.png";
+import bubble from "./img/Subject.png";
 
 const Message = () => {
     return (
