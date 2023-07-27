@@ -8,31 +8,38 @@ import AddPhoto from './components/AddPhoto'
 import Reviews from './components/Reviews/Reviews'
 import FeedBack from './components/PinnedComps/FeedBack'
 import Message from './components/PinnedComps/Message'
-
 import ReccProducts from './components/recommended/ReccProducts'
 import Exploring from './components/exploring/Exploring'
 import {NavigationProvider} from './context/NavigationContext'
 import {ReviewsProvider} from './context/ReviewsContext'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 function App() {
   
   return (
+    <Router> 
       <NavigationProvider>
         <NavBar />
-        <ProductPage />
-        <Exploring />  
-{/*         <AddPhoto /> */}
-
-        <ReviewsProvider>
-            <Reviews />
-        </ReviewsProvider>
-
-        <ReccProducts />
+        <Routes> 
+          <Route exact path="" element ={
+            <>
+                <ProductPage />
+                <Exploring />  
+                {/* <AddPhoto /> */}
+                <ReviewsProvider>
+                  <Reviews />
+                </ReviewsProvider>            
+                <ReccProducts />
+            </>
+          }>
+          </Route>
+        </Routes>
         <Footer />
         <FeedBack />
         <Message />
- 
       </NavigationProvider> 
+    </Router>
+
   )
 }
 
