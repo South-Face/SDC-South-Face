@@ -21,7 +21,7 @@
 
 @media (min-width: 300px) {
     .summary_Percentage {
-        width: 90%;
+        width: 98%;
         margin: 10px;
     }
 
@@ -88,6 +88,8 @@
         width: 98%;
         height: 50px;
         bottom: 10px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
   }
 
@@ -115,3 +117,4 @@
     color: #4c4c4c;
     font-weight: lighter;
 }
+

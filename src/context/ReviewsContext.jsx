@@ -7,15 +7,34 @@ const routeURL = 'https://southface.onrender.com'
 //http://localhost:8000
 
 export const ReviewsProvider = ({children}) => {
+
     const [breakDown, setBreakDown] = useState({}) 
     const [currentReviews, setcurrentReviews] = useState([]);
-/* ------------------ Grab Data ------------------- */
+
+/* -------- Reviews Order State for Routing -------- */    
+    const [sqlCat, setSqlCat] = useState('reviewid')
+    const [sqlOrder, setSqlOrder] = useState('desc')
 
 
+
+
+/* ------ Which Reviews are Showing State ---------- */ 
+
+const [reviewNumbersShowingFirstReview, setReviewNumbersShowingFirstReview] = useState(0)
+const [reviewNumbersShowingLastReview, setReviewNumbersShowingLastReview] = useState(9)
+
+const setReviewsShowing = (number1, number2) => {
+    setReviewNumbersShowingFirstReview(number1)
+    setReviewNumbersShowingLastReview(number2)
+}
+
+
+
+/* ------------------ Grab Reviews ------------------- */
     useEffect(() =>{
         const getData = async () => {
         try{
-                const result = await fetch(`${routeURL}/reviews`)
+                const result = await fetch(`${routeURL}/reviews/${sqlCat}/${sqlOrder}`)
                 const data = await result.json()
                 setcurrentReviews([...data])
               }
@@ -24,7 +43,7 @@ export const ReviewsProvider = ({children}) => {
             }
         }
         getData()
-      }, [])
+      }, [sqlOrder])
 
 
 /* ------------------ Breakdown Data ------------------- */
@@ -39,11 +58,21 @@ export const ReviewsProvider = ({children}) => {
       }, [currentReviews])
 
 
+const routeOrder = (text, cat) => {
+    setSqlCat(cat)
+    setSqlOrder(text)
+}
+
+
 /* ------------------ Set Context Return ------------------- */
     return <ReviewsContext.Provider value={{
         currentReviews,
         setcurrentReviews,
-        breakDown
+        breakDown,
+        routeOrder,
+        setReviewsShowing,
+        reviewNumbersShowingFirstReview,
+        reviewNumbersShowingLastReview
     }}>
         {children}
     </ReviewsContext.Provider>
