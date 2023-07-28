@@ -2,7 +2,7 @@ import {useState, createContext, useEffect} from 'react'
 
 const ReviewsContext = createContext()
 
-const routeURL = 'http://localhost:8000'
+const routeURL = 'https://southface.onrender.com'
 //'https://southface.onrender.com'
 //http://localhost:8000
 
