@@ -157,12 +157,15 @@
     .singleReview_Review {
       width: 100%;
       min-width: auto;
+      height: 225px;
+      overflow: hidden;
     }
   
     .singleReview_SubmitedBy {
       width: 100%;
       align-self: center;
       height: auto;
+      padding-top: 0;
     }
     .singleReview_SubmitedBy_Info {
         width: 100%; 

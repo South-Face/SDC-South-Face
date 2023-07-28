@@ -7,7 +7,7 @@ import './RatingBreakDown_Popover.css'
 const RatingBreakDown_Popover = ({label}) => {
     return (
         <div className='popper' >
-            <Popover  className ="test" title="" visible>
+            <Popover  className ="popperClass" title="" visible>
                 <p>{label}</p>
             </Popover>
         </div>
