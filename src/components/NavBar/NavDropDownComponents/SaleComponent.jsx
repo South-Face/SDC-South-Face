@@ -1,4 +1,4 @@
-import './NavBar.css'
+
 
 const SaleComponent = () => {
     return (

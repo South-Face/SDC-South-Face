@@ -1,12 +1,12 @@
 import { useContext } from "react" 
 import NavigationContext from "../../context/NavigationContext" 
-import SaleComponent from "./SaleComponent"
-import MensComponent from "./MensComponent"
-import WomensComponent from "./WomensComponent"
-import KidsComponent from "./KidsComponent"
-import FootwearComponent from "./FootwearComponent"
-import BagsGearComponent from "./BagsGearComponent"
-import AboutUsComponent from "./AboutUsComponent"
+import SaleComponent from "./NavDropDownComponents/SaleComponent"
+import MensComponent from "./NavDropDownComponents/MensComponent"
+import WomensComponent from "./NavDropDownComponents/WomensComponent"
+import KidsComponent from "./NavDropDownComponents/KidsComponent"
+import FootwearComponent from "./NavDropDownComponents/FootwearComponent"
+import BagsGearComponent from "./NavDropDownComponents/BagsGearComponent"
+import AboutUsComponent from "./NavDropDownComponents/AboutUsComponent"
 
 
 const NavComponent = () => {

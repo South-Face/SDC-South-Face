@@ -4,10 +4,12 @@ import NavList from './NavList'
 import { useContext, useState, useEffect } from 'react'
 import NavigationContext from '../../context/NavigationContext'
 import ThirdNavHeader from './ThirdNavHeader'
+import NavBarSmallWidth from './NavBarSmallWidth'
 
 const NavBar = () => {
     const {currentNav} = useContext(NavigationContext)
     const  [scrolled, setScrolled] = useState("default");
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const scrolledDistance1 = 10;
     const scrolledDistance2 = 500;
@@ -23,15 +25,24 @@ const NavBar = () => {
     }
     }
 
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        // Clean up the event listener when the component unmounts
+        window.addEventListener('resize', handleResize);
         return () => {
           window.removeEventListener('scroll', handleScroll);
+          window.removeEventListener('resize', handleResize);
         };
       }, []);
 
-    if (scrolled === 'default') {
+      const isWindowUnderCertainWidth = () => {
+        return windowWidth < 1023;
+      };
+
+    if (scrolled === 'default' && !isWindowUnderCertainWidth()) {
         return (
         <div className='sticky-header'>
         <NavList />
@@ -40,7 +51,7 @@ const NavBar = () => {
     )
         }
 
-    if (scrolled === "hidden") {
+    if (scrolled === "hidden" && !isWindowUnderCertainWidth()) {
         return (
             <div className='sticky-header'>
         <NavHeader />
@@ -48,11 +59,19 @@ const NavBar = () => {
         )
     }
 
-    if (scrolled === "small") {
+    if (scrolled === "small" && !isWindowUnderCertainWidth()) {
         return (
             <div className='sticky-header'>
         <ThirdNavHeader />
         </div>
+        )
+    }
+
+    if (isWindowUnderCertainWidth()) {
+        return (
+            <div className='sticky-header'>
+            <NavBarSmallWidth />
+            </div>
         )
     }
 
