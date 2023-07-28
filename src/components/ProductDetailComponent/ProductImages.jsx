@@ -17,12 +17,11 @@ const ProductImages = ({ productId }) => {
     return (
         <div className="image-gallery">
             {urls.map((url, index) => (
-                <img 
-                    key={index} 
-                    id="product-image" 
+                <div key={index} className="image-container">
+                    <img className="product-image" 
                     src={url} 
-                    alt="" 
-                />
+                    alt="" />
+                </div>
             ))}
         </div>
     );

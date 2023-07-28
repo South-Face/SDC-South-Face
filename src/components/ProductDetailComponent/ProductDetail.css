@@ -5,32 +5,81 @@
     flex: 2.15;
     margin-left: -.85rem;
     margin-top: 0rem;
-    /* overflow: hidden; */
 }
 
-#product-image {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-    object-fit: cover;
+.image-container {
     overflow: hidden;
-    margin-top: 0rem;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.product-image {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.image-container:hover {
+    transform: scale(2);
 }
 
 #interest-free {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-size: 10.5pt ;
+    color: black;
 }
 
 #learn-more {
     color: black;
+    text-decoration: underline;
 }
 
-#product-image:hover {
-    transform: scale(2);
-    cursor: zoom-in;
-}
+
+.review-section {
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+    background-color: #f7f7fa;
+    margin-right: -.75rem;
+  }
+  
+  #customer-recommended {
+    font-size: 13pt;
+    font-weight: normal;
+    color: black;
+    margin-bottom: -.75rem;
+    margin-left: 1rem;
+  }
+  
+  .star-container {
+    display: flex;
+    margin-left: 1rem;
+  }
+  
+  .single-star {
+    width: 15px;
+    height: 15px;
+    margin-right: -.5px; 
+  }
+  
+  .reviews-link {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: .75rem;
+    margin-bottom: 1rem;
+  }
+
+  .reviews-link:hover {
+    color: gray;
+  }
 
 .product-page {
     display: flex;
@@ -48,55 +97,36 @@
     margin-top: -1.15rem;
 }
 
-/* .product-details h1, 
-.product-details h2 {
-    margin: 0;
-    margin-top: 0rem;
-} */
-
 .product-details h1 {
     font-family: Arial, Helvetica, sans-serif;
+    color: Black;
     font-weight: normal;
     font-size: 17.5pt ;
     margin-bottom: -.15rem;
+    margin-top: 0rem;
 }
 
 .product-details h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-size: 12pt ;
+    font-weight: bold;
     margin-bottom: 0rem;
 }
 
-/* .product-details h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 10.5pt ;
-    margin-bottom: 1rem;
-    line-height: 1.7;
-} */
-
 .product-details p {
     font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: medium; */
-    font-size: 20pt ;
+    font-size: 20pt;
     margin-bottom: .75rem;
     font-size: 0.9rem;
     margin-top: 0rem;
-}
-
-.reviews-box {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    height: 60px; 
-    /* margin-top: -1rem; */
 }
 
 .select-color {
     border-top: 1px solid #ddd;
     padding: 1.25rem;
     height: 120px; 
-    margin-top: 2.5rem;
+    margin-top: 2.25rem;
     margin-bottom: 3.5rem;
 }
 
@@ -104,20 +134,20 @@
     margin-left: -1.5rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 20pt ;
+    font-size: 20pt;
     margin-top: 10rem;
 }
 
 #color-description {
     margin-left: -1.25rem;
     font-family: Arial, Helvetica, sans-serif;
+    color: black;
     font-weight: normal;
     font-size: 11.5pt ;
+    margin-top: -1.5rem;
 }
 
 .color-circle {
-    /* margin-left: -1.25rem; */
-    
     width: 27px;
     height: 27px;
     border-radius: 50%;
@@ -125,13 +155,14 @@
     margin-right: 8px;
     position: relative;
     transition: box-shadow 0.3s ease;
+    margin-bottom: 2rem;
 }
 
 .color-circle::after {
     content: "";
     position: absolute;
-    top: -5px;
-    left: -5px;
+    top: -3.5px;
+    left: -3.5px;
     width: calc(100% + 7px);
     height: calc(100% + 7px);
     border-radius: 50%;
@@ -151,15 +182,29 @@
     gap: 10px;
 }
 
+.size-and-fit {
+    margin-left: -1.25rem;
+} 
+
+.ruler {
+    height: 25px;
+    width: 25px;
+}
+
+.truck {
+    height: 25px;
+    width: 25px;
+}
+
 .size-fit-guide {
-    display: inline-block;
+    display: inline-block, flex;
     margin-top: 30px;
     color: black;
     text-decoration: underline;
     cursor: pointer;
     transition: color 0.3s ease;
     font-size: 10.5pt ;
-
+    font-weight: bold;
 }
 
 #size-fit-guide:hover {
@@ -195,7 +240,7 @@
     border: 1px solid black;
     font-size: 13pt;
     font-weight: bold;
-    padding: 17.5px 105px ;
+    padding: 16px 105px ;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -206,6 +251,14 @@
 #find-in-store:hover {
     background-color: black;
     color: white;
+}
+
+
+
+.checkmark {
+    height: 25px;
+    width: 25px;
+    margin-top: .75rem;
 }
 
 .favBtn {
@@ -228,8 +281,22 @@
     background-color: gray;
 }
 
-.lifetime,
-.shipping {
+.fav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    margin-top: .5rem;
+    height: 27px;
+    width: 27px
+}
+
+/* .heart: {
+    stroke: black;
+} */
+.lifetime {
     display: inline-block;
     margin-top: 23px;
     color: black;
@@ -237,6 +304,21 @@
     cursor: pointer;
     transition: color 0.3s ease;
     font-size: 10.5pt;
+    font-weight: bold;
+    margin-bottom: 0rem;
+}
+
+
+.shipping {
+    display: inline-block;
+    margin-top: 20px;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 10.5pt;
+    font-weight: bold;
+    margin-bottom: .75rem;
 
 }
 
@@ -251,11 +333,12 @@
 .features-component,
 .details-component {
     border: 1px solid #ddd;
-    border-top: none;
+    /* border-top: none; */
     border-left: none;
     border-right: none;
     padding: 20px;
     margin-bottom: 0px;
+    /* margin-top: .75rem; */
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -269,6 +352,8 @@
     font-weight: 200;
     font-size: 18px;
     margin-bottom: 10px;
+    margin-top: 1rem;
+    height: 0rem;
 }
 
 .description-title span,
@@ -276,14 +361,16 @@
 .details-title span {
     margin-left: 10px;
     transition: all 0.3s ease;
+    height: 1.75rem;
 }
 
 .description-content,
 .features-content,
 .details-content {
-    font-size: 16px;
+    font-size: 12.75px;
     line-height: 1.5;
     color: #333;
+    margin-top: 1.75rem;
 }
 
 .product-detail-image {

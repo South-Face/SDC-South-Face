@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReviewSection from './ReviewSection';
 import AddToCartButton from './AddToCartButton';
 import SelectColor from './SelectColor';
 import FindInStore from './FindInStore'; 
@@ -26,10 +27,10 @@ const ProductDetails = ({ productId }) => {
         <div className="product-details">
             <h1>{product.name}</h1>
             <h2>${product.price}</h2>
-            <p id="interest-free">Pay in 4 interest-free payments of $20.00. Klarna. <a id="learn-more" href="#">Learn more</a></p>
-            <div className="reviews-box">
-                {/* review component*/}
-            </div>
+            <p id="interest-free">Pay in 4 interest-free payments of $20.00. Klarna.
+                <a id="learn-more" href="#">Learn more</a>
+            </p>
+            <ReviewSection />
             <div className="select-color">
                 <SelectColor className="color-description"></SelectColor>
             </div>
