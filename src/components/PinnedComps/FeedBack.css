@@ -5,11 +5,17 @@
     background-color: #000; 
     height: 115px;
     width: 30px;
+    border-radius: 3px;
 }
+
+.feedback-div:hover {
+    background-color: #949494;
+}
+
 
 .feedback-paragraph {
     transform: rotate(90deg);
-    color: #d0cfcf;
+    color: #dbdbdb;
     font-size: 13px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
@@ -18,3 +24,11 @@
     padding: 10px;
     cursor: pointer;
 }
+
+
+/* ------------------------------ FORM STYLING ----------------------------- */
+
+.overlayNew { 
+    position: fixed;
+    z-index: 9999; /* Ensure the overlay is above other content */
+  }

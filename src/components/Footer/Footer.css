@@ -14,15 +14,14 @@
     padding: 2rem 2rem;
 }
 
+
+/* ----------------------- Footer Menu Section ----------------------- */
 .footerColumnTitle {
     text-align: left;
     color: #2a2a2a;
     font-size: 1.125rem;
     align-items: center;
 }
-
-
-/* ----------------------- Footer Menu Section ----------------------- */
 
 .footerMenuColumn {
     display: block;
@@ -32,10 +31,22 @@
     max-height: 200vh;
 }
 
-/* .footerMenuColumnContent {
-    max-height: 200vh;
-    overflow: hidden;
-} */
+.dropdown {
+    /* border: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 200; */
+    font-size: 0.9375rem; 
+    display: none;
+}
 
 .FMCC-list {
     list-style: none;
@@ -55,6 +66,12 @@
 }
 
 /*----------------------- Footer Bottom Section -----------------------*/
+.BfooterColumnTitle {
+    text-align: left;
+    color: #2a2a2a;
+    font-size: 1.125rem;
+    align-items: center;
+}
 
 .footerBottom {
     background-color: #f8f8f8;
@@ -253,7 +270,7 @@ input[type="checkbox"]:checked + .checkbox-input::after {
     padding-bottom: 45px;
 }
 
-.copyrights {
+.copyrightstatement {
     padding-bottom: 5px;
 }
 
@@ -264,6 +281,55 @@ input[type="checkbox"]:checked + .checkbox-input::after {
 
 
 @media (max-width: 1024px) {
+    .footerContainer {
+        flex-direction: column;
+    }
+    .dropdown {
+        display: contents;
+        transition: all 0.3s ease;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        cursor: pointer;
+        padding-bottom: 10px;
+        padding-left: 10px
+    }
+    #SHOP, #Help, #About-TNF, #Discover, #Explore {
+        border: 1px solid #ddd;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-weight: 200;
+        font-size: 0.9375rem;
+        flex-direction: column;
+        display: flex;
+        padding-left: 10px;
+    }
+    #apple, #google {
+        display: none;
+    }
+    .footerColumnTitle {
+        display: none;
+    }
+    .FMCC-listItem {
+        border: 1px solid #ddd;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-weight: 200;
+        font-size: 0.9375rem;
+    }
+    .footerMenuColumn {
+        margin: 0.625rem 0;
+        /* display: flex;
+        flex-direction: column; */
+    }
+    .footerMenuColumnContent {
+        display: block;
+    }
+
+/* -------------Bottom-Section--------------- */
+
     .footerBottom-3Columns {
         flex-direction: column;
         align-items: center;
@@ -329,7 +395,7 @@ input[type="checkbox"]:checked + .checkbox-input::after {
     .footerColumnParagraph {
         display: none;
     }
-    .footerColumnTitle {
+    .BfooterColumnTitle {
         font-size: 0.9375rem;
         font-weight: lighter;
     }
