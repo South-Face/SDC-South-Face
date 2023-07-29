@@ -27,8 +27,7 @@ const ProductDetails = ({ productId }) => {
         <div className="product-details">
             <h1>{product.name}</h1>
             <h2>${product.price}</h2>
-            <p id="interest-free">Pay in 4 interest-free payments of $20.00. Klarna.
-                <a id="learn-more" href="#">Learn more</a>
+            <p>Pay in 4 interest-free payments of $20.00. Klarna.<a id="learn-more" href="#">Learn more</a>
             </p>
             <ReviewSection />
             <div className="select-color">
