@@ -63,7 +63,7 @@
     font-size: 1.125rem;
     border: transparent;
     pointer-events: none;
-    background-image:url('../../../../FEC-South-Face/public/expand.png'); 
+    background-image:url('../../../public/Images/expand.png'); 
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: right center;
