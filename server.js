@@ -1,7 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import pkg from 'pg';
-const { Pool } = pkg;
 import cors from 'cors';
 
 
@@ -15,7 +14,11 @@ app.use(cors()); //this is to allow cross origin requests
 app.use(express.json()); //this is to allow us to read JSON data from the client
 app.use(express.static('dist'))
 
-// const { Pool } = require('pg');
+const { Pool } = require('pg');
+
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+});
 
 // const pool = new Pool({
 //   user: 'matthewhopper',
