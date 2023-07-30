@@ -14,7 +14,7 @@ app.use(cors()); //this is to allow cross origin requests
 app.use(express.json()); //this is to allow us to read JSON data from the client
 app.use(express.static('dist'))
 
-const { Pool } = require('pg');
+const { Pool } = pkg;
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
