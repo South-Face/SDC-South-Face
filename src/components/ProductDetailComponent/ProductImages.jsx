@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Images from './Images';
 import './ProductDetail.css'; 
 
 const ProductImages = ({ productId }) => {
@@ -17,12 +18,7 @@ const ProductImages = ({ productId }) => {
     return (
         <div className="image-gallery">
             {urls.map((url, index) => (
-                <img 
-                    key={index} 
-                    id="product-image" 
-                    src={url} 
-                    alt="" 
-                />
+                <Images key={index} url={url} />
             ))}
         </div>
     );
