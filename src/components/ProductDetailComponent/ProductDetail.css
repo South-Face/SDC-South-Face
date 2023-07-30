@@ -306,11 +306,11 @@
 .features-component,
 .details-component {
     border: 1px solid #ddd;
-    /* border-top: none; */
+    border-top: none;
     border-left: none;
     border-right: none;
     /* padding: 20px; */
-    margin-top: .65rem;
+    margin-top: 0rem;
     margin-bottom: 0px;
     margin-right: -1rem;
     cursor: pointer;
@@ -329,6 +329,12 @@
     margin-top: 1rem;
     margin-bottom: 1.45rem;
     color: black;
+}
+
+/* this is to adjust the size of the photo in the features/details drop down.  */
+.product-detail-image {
+    max-width: 100%;
+    height: auto;
 }
 
 /* .description-title span,
