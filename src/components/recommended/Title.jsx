@@ -1,7 +1,12 @@
+import React from 'react';
 import './Title.css';
 
-const Title = () => {
-    return 
-}
+const Title = ({ text }) => {
+  return (
+    <h2 className="title">
+      {text}
+    </h2>
+  );
+};
 
-export default Title
+export default Title;

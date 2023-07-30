@@ -58,7 +58,7 @@ const InputDetailsForm = ({ onClose }) => {
               required
             />
           </div>
-          <div className="checkbox-container">
+          <div className="checkbox_container_1">
             <input
               type="checkbox"
               name="agreeToTerms"

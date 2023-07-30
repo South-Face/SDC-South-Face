@@ -1,0 +1,13 @@
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom class to control image size */
+.banner-image {
+  max-width: 350px; /* You can adjust this value as needed */
+  height: auto;
+  margin: 10px;
+}
