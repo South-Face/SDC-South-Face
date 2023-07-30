@@ -1,3 +1,5 @@
+/* This is the main container */
+
 .summary_RatingBreakDown {
     width: 35vw;
     background-color: #fff;
@@ -23,14 +25,8 @@
         margin: 10px;
     }
   }
-  
-  body {
-    font-family: Arial;
-    margin: 0; 
-    max-width: 100%;
-    padding: 20px;
-  }
-  
+
+  /* This is title of the table */
   .breakdown_title {
     font-size: 1.25rem;
     text-align: center;
@@ -39,7 +35,7 @@
   }
   
 
-
+/* This is the table container */
   .table{
     display: flex;
     flex-direction: column;
@@ -51,6 +47,8 @@
     clear: both;
   }
 
+
+  /* This is the column container */
   .column{
     position: relative;
     display: flex;
@@ -83,7 +81,7 @@
     padding-bottom: 15px;
   }
   
-  .side-right {
+  .side-right {  /* Right */
     text-align: right;
     width: 21px;
     padding-bottom: 20px;

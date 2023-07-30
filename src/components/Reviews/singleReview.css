@@ -157,7 +157,8 @@
     .singleReview_Review {
       width: 100%;
       min-width: auto;
-      height: 225px;
+      min-height: 225px;
+      height: auto;
       overflow: hidden;
     }
   

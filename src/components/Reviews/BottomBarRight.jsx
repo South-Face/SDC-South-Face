@@ -29,6 +29,8 @@ const BottomBarRight = () => {
         checkNext(9, breakDown.totalReviews)
     }
 
+    //Function to cheng if the the next button should be showing
+        //
     function checkNext(currentNum, length) {
         if(currentNum > length) {
             setNextShowing(false)
@@ -48,7 +50,6 @@ const BottomBarRight = () => {
             <button className='nextButton' onClick ={handleNextClick}>
                 Next <BsArrowRight />
             </button>  : <></>}
-
         </div>
     </div>
     )

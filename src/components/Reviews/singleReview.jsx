@@ -3,37 +3,27 @@ import {useState, useEffect, useContext} from 'react'
 import ReviewsContext from '../../context/ReviewsContext'
 import { GoCheckCircle } from "react-icons/go"; 
 
-/*     reviewId serial PRIMARY KEY,
-    rating NUMERIC,
-    ratingTitle varchar,
-    comment text,
-    userName varchar
-    */
 
 const SingleReview = ({review}) => {
 
     const {currentReviews} = useContext(ReviewsContext)
     const [starColor, setStarColors] = useState([["gray", "gray", "gray", "gray", "gray"]])
     
-    /* This function is what is setting the colors in an array then in the array it for each star it calls 
-        the color at the coresponding index i.e. starColor[0] = gray for default, so the fill color is gray */
-        
+/* This function is what is setting the colors in an array then in the array it for each star it calls 
+    the color at the coresponding index i.e. starColor[0] = gray for default, so the fill color is gray */
     useEffect(() =>{
         const newStarColor = updateStarColors(review.rating)
-
         setStarColors(newStarColor)
-        
 
     }, [currentReviews])
 
+    //Dynamically updates the thumgs up/down icon number but does not go into the database
     const handleClick = (e) => {
         let value = parseInt(e.currentTarget.querySelector('.numberOfHelpfuls').textContent)
         value++
         e.currentTarget.querySelector('.numberOfHelpfuls').textContent = JSON.stringify(value)
 
     } 
-
-
 
     return (
         <div className='singleReview'>
