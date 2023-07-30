@@ -1,0 +1,15 @@
+.popper{
+    height: 110px;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+
+    
+}
+
+.popperClass{
+    height: 60px;
+    width: 200px;
+    font-size: 1.5rem;
+}

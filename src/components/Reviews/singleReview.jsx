@@ -1,37 +1,29 @@
 import './singleReview.css'
 import {useState, useEffect, useContext} from 'react'
 import ReviewsContext from '../../context/ReviewsContext'
-/*     reviewId serial PRIMARY KEY,
-    rating NUMERIC,
-    ratingTitle varchar,
-    comment text,
-    userName varchar
-    */
+import { GoCheckCircle } from "react-icons/go"; 
+
 
 const SingleReview = ({review}) => {
 
     const {currentReviews} = useContext(ReviewsContext)
     const [starColor, setStarColors] = useState([["gray", "gray", "gray", "gray", "gray"]])
     
-    /* This function is what is setting the colors in an array then in the array it for each star it calls 
-        the color at the coresponding index i.e. starColor[0] = gray for default, so the fill color is gray */
-        
+/* This function is what is setting the colors in an array then in the array it for each star it calls 
+    the color at the coresponding index i.e. starColor[0] = gray for default, so the fill color is gray */
     useEffect(() =>{
         const newStarColor = updateStarColors(review.rating)
-
         setStarColors(newStarColor)
-        
 
     }, [currentReviews])
 
+    //Dynamically updates the thumgs up/down icon number but does not go into the database
     const handleClick = (e) => {
         let value = parseInt(e.currentTarget.querySelector('.numberOfHelpfuls').textContent)
         value++
         e.currentTarget.querySelector('.numberOfHelpfuls').textContent = JSON.stringify(value)
 
     } 
-
-
 
     return (
         <div className='singleReview'>
@@ -63,10 +55,10 @@ const SingleReview = ({review}) => {
                         </svg>
                     </div>
                 </div>
-                <p className='reviewTitle'>{review.title}</p>
+                <p className='reviewTitle'>{review.ratingtitle}</p>
                 <p className='reviewComment'>{review.comment} </p>
                 <select className='moreDetailsButton'> 
-                    <option>More Details</option>
+                    <option>More Details </option>
                 </select>
                 <div className='reviewHelpful'>
                     <p className='reviewHelpful_title'> Was this review helpful to you? </p>
@@ -94,13 +86,14 @@ const SingleReview = ({review}) => {
                         </p>
                     </div>
                      </div>
-
-
                 </div>
             </div>
             <div className='singleReview_SubmitedBy'> 
                 <div className='singleReview_SubmitedBy_Info'> 
                     <p> Submitted <b>13 days ago</b> By <b>{review.userName}</b> from <b> {review.username} </b></p>
+                    <div className='verifiedBuyerContainer'>
+                        <GoCheckCircle />  Verified Buyer
+                    </div>
                     <p> Submitted as part of a sweepstakes entry</p>
                 </div>
             </div>

@@ -14,15 +14,14 @@
     padding: 2rem 2rem;
 }
 
+
+/* ----------------------- Footer Menu Section ----------------------- */
 .footerColumnTitle {
     text-align: left;
     color: #2a2a2a;
     font-size: 1.125rem;
     align-items: center;
 }
-
-
-/* ----------------------- Footer Menu Section ----------------------- */
 
 .footerMenuColumn {
     display: block;
@@ -32,10 +31,22 @@
     max-height: 200vh;
 }
 
-/* .footerMenuColumnContent {
-    max-height: 200vh;
-    overflow: hidden;
-} */
+.dropdown {
+    /* border: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 200; */
+    font-size: 0.9375rem; 
+    display: none;
+}
 
 .FMCC-list {
     list-style: none;
@@ -55,10 +66,16 @@
 }
 
 /*----------------------- Footer Bottom Section -----------------------*/
+.BfooterColumnTitle {
+    text-align: left;
+    color: #2a2a2a;
+    font-size: 1.125rem;
+    align-items: center;
+}
 
 .footerBottom {
     background-color: #f8f8f8;
-    width: 100vw;
+    width: 100%;
 }
 
 .footerBottom-3Columns {
@@ -89,12 +106,13 @@
     cursor: pointer;
     transition: background-color .3s ease,color .3s ease;
     width: 188px;
-}
-.storelocator-link {
-    text-decoration: none;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
+}
+.storelocator-link {
+    text-decoration: none;
+    color:transparent;
 }
 
 .icons-container {
@@ -200,7 +218,6 @@ input[type="checkbox"]:checked + .checkbox-input::after {
 .email-subInput {
     outline: none;
     border-color: #8f8f8f;
-    height: 39px;
     background: #fff;
     box-sizing: border-box;
     display: block;
@@ -249,11 +266,11 @@ input[type="checkbox"]:checked + .checkbox-input::after {
 
 .FBB-info {
     display: flex;
-    padding-left: 25px;
+    /* padding-left: 25px; */
     padding-bottom: 45px;
 }
 
-.copyrights {
+.copyrightstatement {
     padding-bottom: 5px;
 }
 
@@ -264,34 +281,123 @@ input[type="checkbox"]:checked + .checkbox-input::after {
 
 
 @media (max-width: 1024px) {
+    .footerContainer {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .dropdown {
+        display: contents;
+        transition: all 0.3s ease;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        cursor: pointer;
+        /* padding-bottom: 10px;
+        padding-left: 10px; */
+        padding: 13px 10px;
+    }
+    #SHOP, #Help, #About-TNF, #Discover, #Explore {
+        /* border: 1px solid #dbddda; */
+        border-top: 1px solid #dbddda;
+        border-left: none;
+        border-right: none;
+        font-weight: 200;
+        font-size: 0.9375rem;
+        flex-direction: column;
+        display: flex;
+        /* padding-left: 10px; */
+    }
+    #apple, #google {
+        display: none;
+    }
+    .footerColumnTitle {
+        display: none;
+    }
+    .FMCC-litag {
+        border-bottom: 1px solid #dbddda;
+        padding-bottom: 12px;
+        background-color: #f8f8f8;
+    }
+    .MKFEBG {
+        padding-top: 12px;
+    }
+    .FMCC-listItem {
+        border-left: none;
+        border-right: none;
+        font-weight: 200;
+        font-size: 0.9375rem;
+    }
+    .footerMenuColumn {
+        margin: 0;
+        /* display: flex;
+        flex-direction: column; */
+    }
+    .footerMenuColumnContent {
+        display: block;
+        background-color: #f8f8f8;
+    }
+
+/* -------------Bottom-Section--------------- */
+
     .footerBottom-3Columns {
         flex-direction: column;
         align-items: center;
         height: auto;
-        width: 100vw;
-        margin-bottom: 2rem;
+        width: 100%;
+        /* margin-bottom: 2rem; */
         display: flex;
         justify-content: center;
         text-align: center;
     }
     .FB-storelocator {
-        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .storelocator-button {
+        width: 99%;
+        background-color: transparent;
+        padding: 0.75rem 2rem;
+        color: #131313;
+        font-size: 16px;
+    }
+    .storelocator-button:hover {
+        background-color: black;
+        color: white;
+    }
+  
+    .FB-socialmedia {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .FB-emaillist {
+        width: 100%;
         align-items: center;
         justify-content: center;
-        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    .subscriptionForm {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .subscriptionForm-inputWrapper {
+        margin-bottom: 0.5rem;
+    }
+    .checkbox-label {
+        padding-left: 10px;
     }
     .icons-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
         justify-content: center;
-        text-align: center;
     }
     .FBB-info {
+        display: flex;
         flex-direction: column;
         align-items: center;
         height: auto;
         margin-bottom: 2rem;
+        width:100%;
     }
     .FBBI-wrap {
         display: none;
@@ -299,21 +405,20 @@ input[type="checkbox"]:checked + .checkbox-input::after {
     .footerColumnParagraph {
         display: none;
     }
-    .footerColumnTitle {
+    .BfooterColumnTitle {
         font-size: 0.9375rem;
+        font-weight: lighter;
     }
     .footerBottom {
         background-color: #fff;
-        width: 100vw;
+        width: 100%;
     }
     .checkbox-input::before {
-        content: "";
-        display: block;
-        width: 1.3rem;
-        height: 1.3rem;
-        background-color: #fff; /* Background color of the checkbox */
-        border: 1px solid #8f8f8f; /* Border color of the checkbox */
-        border-radius: 2px;
+        background-color: #fff; 
       }
-
+    .south-face-logo {
+        height: 70px;
+        width: 150px;
+        margin: 0 auto;
+    }
 }

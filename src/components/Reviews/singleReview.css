@@ -18,9 +18,10 @@
     margin-left: 10px;
     margin-right: 10px;
     min-width: 660px;
+    margin-right: 10%;
 }
 .singleReview_SubmitedBy{
-    width: 34%;
+    width: 25%;
     padding-top: 2rem;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -32,10 +33,11 @@
     font-size: 1rem;
 }
 .singleReview_SubmitedBy_Info{
-    width: 90%;
+
+    min-width: 250px;
     max-width: 400px;
     font-weight: 300;
-    font-size: .875rem;
+    font-size: .775rem;
 }
 .reviewTitle{
     font-size: 1.25rem;
@@ -61,7 +63,7 @@
     font-size: 1.125rem;
     border: transparent;
     pointer-events: none;
-    background-image:url('../../../../FEC-South-Face/public/expand.png'); 
+    background-image:url('../../../public/Images/expand.png'); 
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: right center;
@@ -76,8 +78,8 @@
     margin-bottom: 1rem;
 }
   .single_star{
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
   }
 
 .reviewHelpful{
@@ -155,12 +157,16 @@
     .singleReview_Review {
       width: 100%;
       min-width: auto;
+      min-height: 225px;
+      height: auto;
+      overflow: hidden;
     }
   
     .singleReview_SubmitedBy {
       width: 100%;
       align-self: center;
       height: auto;
+      padding-top: 0;
     }
     .singleReview_SubmitedBy_Info {
         width: 100%; 

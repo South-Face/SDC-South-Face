@@ -1,144 +1,307 @@
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.25rem;
-    flex: 2.15;
-    margin-left: -.85rem;
-    /* overflow: hidden; */
-}
-
-.product-image {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-.product-image:hover {
-    transform: scale(2);
-    cursor: zoom-in;
-}
-
+/* the whole page */
 .product-page {
     display: flex;
     gap: 2rem; 
     padding: 1rem;
+    margin-top: 0rem;
 }
 
+/* the ProductDetails component */
 .product-details {
+    width: 32%;
     padding: 1.5rem;
     background-color: #fff;
     flex: 1;
-    margin-left: -3.5rem;
+    margin-left: -2rem;
     margin-right: -2.30rem;
     padding-top: 0rem;
+    margin-top: -1.15rem;
 }
 
-.product-details h1, 
-.product-details h2 {
-    margin: 0;
+.image-gallery {
+    width: 68%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.25rem;
+    margin-left: -1.65rem;
+    margin-top: 0rem;
 }
 
+/* the main heading in product details */
 .product-details h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-size: 17.5pt ;
-    margin-bottom: 1.75rem;
+    color: black;
+    margin-bottom: -.15rem;
 }
 
+/* Price */
 .product-details h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-size: 12pt ;
-    margin-bottom: 1rem;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 0rem;
 }
 
+/* Pay in 4 sentence */
 .product-details p {
     font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: medium; */
-    font-size: 20pt ;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    font-weight: normal;
+    color: black;
+    font-size: 10.5pt ;
+    margin-top: -.25rem;
 }
 
-.reviews-box {
+/* learn more href at the end of p tag */
+#learn-more {
+    color: black;
+    text-decoration: underline;
+}
+
+/* the review section box */
+.review-section {
+    background-color: #F7F7FA;
     border: 1px solid #ddd;
     padding: 1rem;
-    height: 60px; 
-    margin-top: 1rem;
+    height: 5.25rem; 
+    margin-top: .75rem;
+    margin-bottom: -1rem;
+    margin-right: -1rem;
 }
 
+/* the review section h1 88% */
+#customer-recommended {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: normal;
+    font-size: 13.5pt ;
+    margin-top: -1rem;
+    margin-left: -0rem;
+}
+
+/* contains all the stars */
+.star-container {
+    display: flex;
+    /* margin-left: -.75rem; */
+    margin-top: -.5rem;
+  }
+
+  /* each individual star */
+  .single-star {
+    width: 15px;
+    height: 15px;
+    margin-right: -.5px; 
+  }
+
+/* the href next to the stars */
+.reviews-link {
+    margin-left: .5rem;
+    text-decoration: underline;
+    color: black;
+}
+
+/* this is everything inside the color box heading and circles */
 .select-color {
-    border: 1px solid #ddd;
-    padding: 1rem;
+    border-top: 1px solid #ddd;
+    /* border-bottom: 1px solid red; */
+    /* padding: 1.25rem; */
     height: 120px; 
-    margin-top: 1rem;
+    margin-top: 3.15rem;
+    margin-bottom: 3.5rem;
 }
 
+/* #color-heading { 
+    margin-left: -1.5rem; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 20pt;
+    margin-top: 10rem;
+} */
+
+/* this is the heading for the color section */
+#color-description {
+    /* margin-left: -1.25rem; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: normal;
+    font-size: 12.5pt ;
+    margin-top: -.15rem;
+}
+
+/* these are the circles themselves */
+.color-circle {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 8px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+/* this flexes the circles */
+.color-selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+/* these are the black circles that appear over the circles */
+.color-circle::after {
+    content: "";
+    position: absolute;
+    top: -3.5px;
+    left: -3.5px;
+    width: calc(100% + 7px);
+    height: calc(100% + 7px);
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+}
+
+/* this tells the outer circle when to appear */
+.color-circle:hover::after {
+    border-color: black;
+}
+
+
+/* this is the ruler icon*/
+.ruler {
+    height: 25px;
+    width: 25px;
+    color: black;
+    margin-top: -2rem;
+}
+
+/* this is the href next to the ruler */
+.size-fit-guide {
+    color: black;
+    font-size: 11pt;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+/* this is the add to cart button */
 .addToCartButton {
     background-color: black;
     color: white;
     font-size: 13pt;
     font-weight: bold;
-    padding: 17.5px 150px ;
+    padding: 15.5px 158px ;
     border-radius: 30px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-right: -2.30rem;
-    margin-top: 1rem;
+    margin-top: -1rem;
 }
 
+/* this is the hover effect for the button */
 .addToCartButton:hover {
     background-color: gray;
 }
 
-.find-in-store {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    height: 120px; 
+/* this is the fid in store button */
+#find-in-store {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 13pt;
+    font-weight: bold;
+    padding: 15.5px 117px ;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: -1.25rem;
     margin-top: 1rem;
 }
 
-.product-details h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 10.5pt ;
-    margin-bottom: 1rem;
-    line-height: 1.7;
+/* this are the hover function over find in store button */
+#find-in-store:hover {
+    background-color: black;
+    color: white;
 }
 
-/* .description-component {
-    border: 1px solid #ddd;
-    border-left: none;
-    border-right: none;
-    padding: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.description-title {
+/* this is the flex for the find in store and favorite button */
+.find-fav {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
-.description-title span {
-    margin-left: 10px;
-    transition: all 0.3s ease;
+/* this is the favorite button */
+.favBtn {
+    width: 58px;
+    height: 58px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-right: 0rem;
 }
 
-.description-content {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-} */
+/* this is the hover effects over the favorite button */
+.favBtn:hover {
+    background-color: black;
+}
 
+/* this is for when the button is clicked */
+.favBtn.clicked {
+    background-color: gray;
+}
+
+/* this is for the heart inside the hover button */
+.heart {
+    margin-top: .5rem;
+    height: 27px;
+    width: 27px
+}
+
+/* this is for the lifetime and shipping hrefs */
+.lifetime,
+.shipping {
+    display: inline-block;
+    margin-top: -.5rem;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 11pt;
+    font-weight: normal;
+
+}
+
+/* this is the hover effect of the lifetime and shipping buttons */
+.lifetime:hover,
+.shipping:hover {
+    color: lightgray;
+}
+
+/* this is for the checkmark */
+.checkmark {
+    height: 25px;
+    width: 25px;
+    margin-top: -.15rem;
+    color: black;
+}
+
+/* this is for the truck */
+.truck {
+    margin-top: .5rem;
+    height: 25px;
+    width: 25px;
+    color: black;
+}
+
+/* this is for the accordian effect */
 .description-component,
 .features-component,
 .details-component {
@@ -146,40 +309,82 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    padding: 20px;
+    /* padding: 20px; */
+    margin-top: 0rem;
     margin-bottom: 0px;
+    margin-right: 0rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+/* this is to flext the text and chevron on each accordian */
 .description-title,
 .features-title,
 .details-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 200;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1.45rem;
+    color: black;
 }
 
-.description-title span,
+/* this is to adjust the size of the photo in the features/details drop down.  */
+.product-detail-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* .description-title span,
 .features-title span,
 .details-title span {
     margin-left: 10px;
     transition: all 0.3s ease;
-}
+} */
 
+/* this is for the text inside the accordian when expanded */
 .description-content,
 .features-content,
 .details-content {
-    font-size: 16px;
+    font-size: 14.5px;
     line-height: 1.5;
     color: #333;
+    margin-bottom: .75rem;
 }
 
-.product-detail-image {
-    width: 100%; /* or whatever value you prefer */
+
+
+/* **********************PRODUCT IMAGES************************************* */
+
+
+
+.single-image img {
+    width: 100%;
     height: auto;
-    object-fit: contain;
-  }
+}
+
+.image-gallery .single-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-gallery .single-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery .single-image:hover img {
+    transform: scale(2);
+}
+
+.image-gallery .single-image:hover {
+    cursor: zoom-in;
+}
+
+
+
+

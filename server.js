@@ -4,9 +4,12 @@ import pkg from 'pg';
 const { Pool } = pkg;
 import cors from 'cors';
 
-dotenv.config();
-const app = express();
-const PORT = 8000;
+
+
+dotenv.config(); //this is to read the .env file
+const app = express();// assigning app to express will allow us to use express methods
+const PORT = process.env.PORT || 8000; //this is to read the .env file
+
 
 app.use(cors()); //this is to allow cross origin requests
 app.use(express.json()); //this is to allow us to read JSON data from the client
@@ -14,13 +17,13 @@ app.use(express.static('dist'))
 
 // const { Pool } = require('pg');
 
-const pool = new Pool({
-  user: 'matthewhopper',
-  host: 'localhost',
-  database: 'fec_south_face',
-  password: '',
-  port: 5432,
-});
+// const pool = new Pool({
+//   user: 'matthewhopper',
+//   host: 'localhost',
+//   database: 'fec_south_face',
+//   password: '',
+//   port: 5432,
+// });
 
 
 //These are the routes for the "products" table
@@ -131,9 +134,13 @@ app.delete('/products/:id', async (req, res) => {
 
 
 //These are the routes for the "reviews" table
-app.get('/reviews', async (req, res) => {
+
+app.get('/reviews/:category/:order', async (req, res) => {
+    const { order, category } = req.params;
+
     try{
-        const result = await pool.query('SELECT * FROM reviews');
+        const result = await pool.query(`SELECT * FROM reviews ORDER BY ${category} ${order}`);
+        console.log(result)
         res.json(result.rows);
     } catch(err) {
         console.error('Error executing query', err);

@@ -1,84 +1,75 @@
 import './RatingBreakDown.css'
-import'./Summary.css'
-import { useContext, useState, useEffect } from 'react'
+import './Summary.css'
+import { useContext, useState} from 'react'
 import ReviewsContext from '../../context/ReviewsContext'
+import RatingBreakDown_Popover from './RatingBreakDown_Popover'
+
+
 
 const RatingBreakDown = () => {
-    const {breakDown} = useContext(ReviewsContext)
+    const { breakDown } = useContext(ReviewsContext);
+
+///////////// This area is so I can map through the columns in the chart /////////////////
+
+//Each column had a div that renders on top of it, but it will only render when hovered
+    const [isShown, setShown] = useState({
+        column1: false,
+        column2: false,
+        column3: false,
+        column4: false,
+        column5: false,
+      });
+
+
+//Since there is no hover feature in react, this is for mouse leave and enter
+
+    const handleMouse = (columnId) => {
+        setShown((prevState) => ({
+            //gets the previous data
+            ...prevState,
+            //changes the single columnId, with the opposite of the previous
+            [columnId]: !prevState[columnId]
+          }))
+    }
+
+    //info for each column
+    const ratingColumns = [
+        { id: 'column1', label: '5 star', percentage: breakDown.fiveStarPercentage, count: breakDown.fiveStar },
+        { id: 'column2', label: '4 star', percentage: breakDown.fourStarPercentage, count: breakDown.fourStar },
+        { id: 'column3', label: '3 star', percentage: breakDown.threeStarPercentage, count: breakDown.threeStar },
+        { id: 'column4', label: '2 star', percentage: breakDown.twoStarPercentage, count: breakDown.twoStar },
+        { id: 'column5', label: '1 star', percentage: breakDown.oneStarPercentage, count: breakDown.oneStar },
+    ];
+
 
     return (
         <div className='summary_RatingBreakDown'>
-           <div className="breakdown_title"> Ratings Breakdown </div>
-           <div className="table">
-            <div className='column' id='column1'> 
-                <div className="side">
-                    <div>5 star</div>
-                </div>
-                <div className="middle">
-                    <div className="bar-container">
-                    <div className="bar-5" style={{width: `${breakDown.fiveStarPercentage}%`}}></div>
+            <div className="breakdown_title">Ratings Breakdown</div>
+            <div className="table">
+                {ratingColumns.map((column, index) => (
+                    <div className='column' key={column.id} onMouseEnter={() => handleMouse(column.id)}  onMouseLeave={ () => handleMouse(column.id)}>
+                        {isShown[column.id] ? <RatingBreakDown_Popover label = {column.label}/> : <></>}
+                        <div className="side">
+                            <div>{column.label}</div>
+                        </div>
+                        <div className="middle">
+                            <div className="bar-container">
+                                <div className={`bar-${index}`} style={{ width: `${column.percentage}%` }} ></div>
+                            </div>
+                        </div>
+                        <div className="side-right">
+                            {column.count}
+                        </div>
                     </div>
-                </div>
-                <div className="side-right">
-                {`${breakDown.fiveStar}`}
-                </div>
-            </div>
-            <div className='column' id='column2'> 
-                <div className="side">
-                    <div>4 star</div>
-                </div>
-                <div className="middle">
-                    <div className="bar-container">
-                    <div className="bar-4" style={{width: `${breakDown.fourStarPercentage}%`}}></div>
-                    </div>
-                </div>
-                <div className="side-right">
-                {`${breakDown.fourStar}`}
-                </div>
-            </div>
-            <div className='column' id='column3'> 
-            <div className="side">
-                    <div>3 star</div>
-                </div>
-                <div className="middle">
-                    <div className="bar-container">
-                    <div className="bar-3" style={{width: `${breakDown.threeStarPercentage}%`}}></div>
-                    </div>
-                </div>
-                <div className="side-right">
-                {`${breakDown.threeStar}`}
-                </div>
-            </div>
-            <div className='column' id='column4'> 
-                <div className="side">
-                    <div>2 star</div>
-                </div>
-                <div className="middle">
-                    <div className="bar-container">
-                    <div className="bar-2" style={{width: `${breakDown.twoStarPercentage}%`}}></div>
-                    </div>
-                </div>
-                <div className="side-right">
-                {`${breakDown.twoStar}`}
-                </div>
-            </div>
-            <div className='column' id='column5'> 
-                <div className="side">
-                    <div>1 star</div>
-                </div>
-                <div className="middle">
-                    <div className="bar-container">
-                    <div className="bar-1" style={{width: `${breakDown.oneStarPercentage}%`}}></div>
-                    </div>
-                </div>
-                <div className="side-right">
-                {`${breakDown.oneStar}`}
-                </div>
-            </div>
-           
+                ))}
             </div>
         </div>
     )
 }
 
-export default RatingBreakDown
+export default RatingBreakDown;
+
+
+
+
+

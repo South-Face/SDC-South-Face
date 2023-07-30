@@ -4,6 +4,7 @@ import { useContext, useState, useEffect } from 'react'
 import ReviewsContext from '../../context/ReviewsContext'
 
 
+
 const Percentage = () => {
     const {breakDown} = useContext(ReviewsContext)
     const [starColor, setStarColors] = useState([["gray", "gray", "gray", "gray", "gray"]])
@@ -16,13 +17,12 @@ const Percentage = () => {
 
         setStarColors(newStarColor)
         
-
     }, [breakDown])
 
 
     return (
     <>
-        <div className='summary_Percentage'>
+        <div className='summary_Percentage' >
             <div className='percentage_text_container'> 
                 <div className='percentage_percenatage_large'> 
                 {`${breakDown.percentage} %`}
@@ -77,6 +77,9 @@ const Percentage = () => {
 
 export default Percentage
 
+
+//This is a function to chech the percentage of the rating 
+    //Could have used a switch case
 
 function updateStarColors(rating) {
     if (rating === 100) {
