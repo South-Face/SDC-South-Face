@@ -31,7 +31,7 @@ function App() {
                 {/* <AddPhoto /> */}
                 <ReviewsProvider>
                   <Reviews />
-                </ReviewsProvider>            
+                </ReviewsProvider>   
                 <ReccProducts />
             </>
           }>
