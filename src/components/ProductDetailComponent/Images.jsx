@@ -6,8 +6,8 @@ const Image = ({ url }) => {
 
     const handleMouseMove = (e) => {
         const { left, top, width, height } = e.target.getBoundingClientRect();
-        const x = (e.pageX - left - (width / 2)) / 3; // 3 is a scaling factor, adjust for your needs
-        const y = (e.pageY - top - (height / 2)) / 3; // 3 is a scaling factor, adjust for your needs
+        const x = (e.pageX - left - (width / 2)) / 3; 
+        const y = (e.pageY - top - (height / 2)) / 3; 
         imgRef.current.style.transform = `translate(-${x}px, -${y}px) scale(2)`;
     };
 
