@@ -24,6 +24,7 @@
     flex-direction: row;
 }
 
+/* This is what allows the containers to swtch directions when the screen shifts */
 @media (max-width: 1023px) {
     .summary_Percentage_Rating_Container {
       flex-direction: column;

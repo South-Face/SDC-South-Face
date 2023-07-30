@@ -7,13 +7,14 @@ const ReviewTopBar = () => {
     const [order, setOrder] = useState('asc')
     const {routeOrder} = useContext(ReviewsContext)
 
-
+// So this is for changing the order of the sql search in SQL database route in the context API
+    //This takes what the select options are and translates the correct SQL language and the SQL column name
   useEffect(() => {
         if(order === 'Most Recent') {
             routeOrder('desc', 'reviewid')
         } else if (order === 'Most Helpful'){
             routeOrder('desc', 'reviewid')
-            //not implementing right now due to helpfuls not being in the data base
+            //not implementing right now due to helpfuls not being in the data base (nor images one)
         } else if(order === 'Lowest Rated'){
             routeOrder('asc', 'rating')
         } else if(order == 'Highest Rated'){

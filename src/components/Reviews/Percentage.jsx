@@ -17,7 +17,6 @@ const Percentage = () => {
 
         setStarColors(newStarColor)
         
-
     }, [breakDown])
 
 
@@ -78,6 +77,9 @@ const Percentage = () => {
 
 export default Percentage
 
+
+//This is a function to chech the percentage of the rating 
+    //Could have used a switch case
 
 function updateStarColors(rating) {
     if (rating === 100) {

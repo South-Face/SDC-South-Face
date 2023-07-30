@@ -8,6 +8,10 @@ import RatingBreakDown_Popover from './RatingBreakDown_Popover'
 
 const RatingBreakDown = () => {
     const { breakDown } = useContext(ReviewsContext);
+
+///////////// This area is so I can map through the columns in the chart /////////////////
+
+//Each column had a div that renders on top of it, but it will only render when hovered
     const [isShown, setShown] = useState({
         column1: false,
         column2: false,
@@ -16,13 +20,19 @@ const RatingBreakDown = () => {
         column5: false,
       });
 
+
+//Since there is no hover feature in react, this is for mouse leave and enter
+
     const handleMouse = (columnId) => {
         setShown((prevState) => ({
+            //gets the previous data
             ...prevState,
+            //changes the single columnId, with the opposite of the previous
             [columnId]: !prevState[columnId]
           }))
     }
 
+    //info for each column
     const ratingColumns = [
         { id: 'column1', label: '5 star', percentage: breakDown.fiveStarPercentage, count: breakDown.fiveStar },
         { id: 'column2', label: '4 star', percentage: breakDown.fourStarPercentage, count: breakDown.fourStar },
@@ -35,7 +45,6 @@ const RatingBreakDown = () => {
     return (
         <div className='summary_RatingBreakDown'>
             <div className="breakdown_title">Ratings Breakdown</div>
-
             <div className="table">
                 {ratingColumns.map((column, index) => (
                     <div className='column' key={column.id} onMouseEnter={() => handleMouse(column.id)}  onMouseLeave={ () => handleMouse(column.id)}>
