@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-const WomensFeatured = () => {
+const KidsFeatured = () => {
     const [isExpanded, setExpanded] = useState(false);
 
     const toggleExpansion = (event) => {
@@ -25,10 +25,13 @@ const WomensFeatured = () => {
             <a className="navbar-accordian-item-link" href="">Best Sellers</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Plus Sizes</a>
+            <a className="navbar-accordian-item-link" href="">Rain</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Tek Piping</a>
+            <a className="navbar-accordian-item-link" href="">Sets</a>
+            </div>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Backpacks</a>
             </div>
         </div>
       )}
@@ -36,4 +39,4 @@ const WomensFeatured = () => {
     )
 }
 
-export default WomensFeatured
+export default KidsFeatured

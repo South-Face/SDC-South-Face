@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-const WomensFeatured = () => {
+const BagsGearBackPacks = () => {
     const [isExpanded, setExpanded] = useState(false);
 
     const toggleExpansion = (event) => {
@@ -13,27 +13,36 @@ const WomensFeatured = () => {
     return (
         <div onClick={toggleExpansion}>
       <div className="navbar-accodian-level1">
-        Featured
+        Backpacks
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">New Arrivals</a>
+            <a className="navbar-accordian-item-link" href="">Shop all Backpacks</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Best Sellers</a>
-            </div>
+            <a className="navbar-accordian-item-link" href="">Women's</a>
+            </div>     
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Plus Sizes</a>
-            </div>
+            <a className="navbar-accordian-item-link" href="">Men's</a>
+            </div> 
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Tek Piping</a>
-            </div>
+            <a className="navbar-accordian-item-link" href="">School</a>
+            </div>          
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Commuter</a>
+            </div>    
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Kids'</a>
+            </div>    
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Funny Pack & Bags</a>
+            </div>    
         </div>
       )}
     </div>
     )
 }
 
-export default WomensFeatured
+export default BagsGearBackPacks

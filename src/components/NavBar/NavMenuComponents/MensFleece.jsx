@@ -12,20 +12,20 @@ const MensFleece = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div>
+      <div className="navbar-accodian-level1">
         Fleece
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
-        <div>
-            <div>
-            <a href="">Shop All Fleece</a>
+        <div className="Navbar-accordian-items">
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Shop All Fleece</a>
             </div>
-            <div>
-            <a href="">Full Zip</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Full Zip</a>
             </div>
-            <div>
-            <a href="">Pullover</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Pullover</a>
             </div>
         </div>
       )}

@@ -8,7 +8,7 @@ const NavTools = () => {
             <CiSearch className="search-comp-mg"></CiSearch>
             <input className="search-bar" placeholder="Search..." type="text"/>
         </form>
-        <a  href="https://www.thenorthface.com/en-us/cart">
+        <a href="https://www.thenorthface.com/en-us/cart">
             < PiBag className="search-comp-bag" ></PiBag>
         </a>
         </div>

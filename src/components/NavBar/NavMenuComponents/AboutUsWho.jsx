@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-const WomensShopActivity = () => {
+const AboutUsWho = () => {
     const [isExpanded, setExpanded] = useState(false);
 
     const toggleExpansion = (event) => {
@@ -13,33 +13,39 @@ const WomensShopActivity = () => {
     return (
         <div onClick={toggleExpansion}>
       <div className="navbar-accodian-level1">
-        Shop By Activity
+        Who We Are
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Shop By Activity</a>
+            <a className="navbar-accordian-item-link" href="">Who We Are</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Camping</a>
-            </div>
+            <a className="navbar-accordian-item-link" href="">Our History</a>
+            </div>     
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Hike</a>
-            </div>
+            <a className="navbar-accordian-item-link" href="">Our Athletes</a>
+            </div> 
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Trail Run</a>
-            </div>
+            <a className="navbar-accordian-item-link" href="">Athlete Development Program</a>
+            </div>          
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Climb</a>
-            </div>
+            <a className="navbar-accordian-item-link" href="">Our Icons</a>
+            </div>    
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Water / Sun</a>
-            </div>
+            <a className="navbar-accordian-item-link" href="">XPLR Pass</a>
+            </div>    
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">The Approach</a>
+            </div>    
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Explore Fund Council</a>
+            </div>    
         </div>
       )}
     </div>
     )
 }
 
-export default WomensShopActivity
+export default AboutUsWho

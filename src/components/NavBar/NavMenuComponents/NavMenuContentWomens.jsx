@@ -21,17 +21,17 @@ const NavMenuContentWomens = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div>
+      <div className="navbar-accodian-level1">
         Womens's
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
-        <div>
-            <div>
-            <a href="">Shop All</a>
+        <div className="Navbar-accordian-items">
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Shop All</a>
             </div>
-            <div>
-            <a href="">Sale</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Sale</a>
             </div>
             <WomensFeatured />
             <WomensShopActivity />
