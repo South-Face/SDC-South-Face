@@ -245,7 +245,7 @@
     transition: background-color 0.3s ease;
     cursor: pointer;
     margin-top: 1rem;
-    margin-right: -.75rem;
+    margin-right: 0rem;
 }
 
 /* this is the hover effects over the favorite button */
@@ -312,7 +312,7 @@
     /* padding: 20px; */
     margin-top: 0rem;
     margin-bottom: 0px;
-    margin-right: -1rem;
+    margin-right: 0rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
