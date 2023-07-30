@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-const WomensShopActivity = () => {
+const AboutUsTechnology = () => {
     const [isExpanded, setExpanded] = useState(false);
 
     const toggleExpansion = (event) => {
@@ -13,28 +13,37 @@ const WomensShopActivity = () => {
     return (
         <div onClick={toggleExpansion}>
       <div className="navbar-accodian-level1">
-        Shop By Activity
+        Our Technology
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Shop By Activity</a>
+            <a className="navbar-accordian-item-link" href="">Our Technology</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Camping</a>
+            <a className="navbar-accordian-item-link" href="">VECTIV</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Hike</a>
+            <a className="navbar-accordian-item-link" href="">FUTURELIGHT™</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Trail Run</a>
+            <a className="navbar-accordian-item-link" href="">ThermoBall Eco</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Climb</a>
+            <a className="navbar-accordian-item-link" href="">FlashDry</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Water / Sun</a>
+            <a className="navbar-accordian-item-link" href="">DryVent</a>
+            </div>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Fleece</a>
+            </div>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">TKA</a>
+            </div>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Goose Down</a>
             </div>
         </div>
       )}
@@ -42,4 +51,4 @@ const WomensShopActivity = () => {
     )
 }
 
-export default WomensShopActivity
+export default AboutUsTechnology

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-const WomensFeatured = () => {
+const KidsShopActivity = () => {
     const [isExpanded, setExpanded] = useState(false);
 
     const toggleExpansion = (event) => {
@@ -13,22 +13,19 @@ const WomensFeatured = () => {
     return (
         <div onClick={toggleExpansion}>
       <div className="navbar-accodian-level1">
-        Featured
+        Shop By Activity
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">New Arrivals</a>
+            <a className="navbar-accordian-item-link" href="">Water / Sun</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Best Sellers</a>
+            <a className="navbar-accordian-item-link" href="">Hike</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Plus Sizes</a>
-            </div>
-            <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Tek Piping</a>
+            <a className="navbar-accordian-item-link" href="">Camping</a>
             </div>
         </div>
       )}
@@ -36,4 +33,4 @@ const WomensFeatured = () => {
     )
 }
 
-export default WomensFeatured
+export default KidsShopActivity

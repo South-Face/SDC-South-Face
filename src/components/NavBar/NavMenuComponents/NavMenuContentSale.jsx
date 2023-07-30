@@ -10,36 +10,36 @@ const NavMenuContentSale = () => {
       }
 
     return (
-        <div onClick={toggleExpansion}>
-      <div>
+        <div  onClick={toggleExpansion}>
+      <div className="navbar-accodian-level1">
         Sale
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
-        <div>
-            <div>
-            <a href="">Shop Sale</a>
+        <div className="Navbar-accordian-items">
+            <div className="navbar-accordian-item" >
+            <a  className="navbar-accordian-item-link" href="">Shop Sale</a>
             </div>
-            <div>
-            <a href="">Women's Sale</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Women's Sale</a>
             </div>
-            <div>
-            <a href="">Men's Sale</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Men's Sale</a>
             </div>
-            <div>
-            <a href="">Kids' Sale</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Kids' Sale</a>
             </div>
-            <div>
-            <a href="">Bags & Gear Sale</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Bags & Gear Sale</a>
             </div>
-            <div>
-            <a href="">Women's Footwear Sale</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Women's Footwear Sale</a>
             </div>
-            <div>
-            <a href="">Men's Footwear Sale</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Men's Footwear Sale</a>
             </div>
-            <div>
-            <a href="">Shop All Sale</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Shop All Sale</a>
             </div>
         </div>
       )}

@@ -12,23 +12,23 @@ const Collections = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div>
+      <div className="navbar-accodian-level1">
         Collections
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
-        <div>
-            <div>
-            <a href="">Summit Series™</a>
+        <div className="Navbar-accordian-items">
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Summit Series™</a>
             </div>
-            <div>
-            <a href="">Vectiv™</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Vectiv™</a>
             </div>
-            <div>
-            <a href="">Our Icons</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Our Icons</a>
             </div>
-            <div>
-            <a href="">Trailwear</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Trailwear</a>
             </div>           
         </div>
       )}

@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import KidsFeatured from "./KidsFeatured";
+import KidsShopActivity from "./KidsShopActivity";
+import GirlsApparel from "./GirlsApparel";
+import GirlsAccessories from "./GirlsAccessories";
+import BoysApparel from "./BoysApparel";
+import BoysAccessories from "./BoysAccessories";
+import LittleKids from "./LittleKids";
+import Baby from "./Baby";
+import KidsFootwear from "./KidsFootwear";
 
 const NavMenuContentKids = () => {
     const [isExpanded, setExpanded] = useState(false);
@@ -11,18 +20,27 @@ const NavMenuContentKids = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div>
+      <div className="navbar-accodian-level1">
         Kids'
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
-        <div>
-            <div>
-            <a href="">Shop All</a>
+        <div className="Navbar-accordian-items">
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Shop All</a>
             </div>
-            <div>
-            <a href="">Sale</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Sale</a>
             </div>
+            <KidsFeatured />
+            <KidsShopActivity />
+            <GirlsApparel />
+            <GirlsAccessories />
+            <BoysApparel />
+            <BoysAccessories />
+            <LittleKids />
+            <Baby />
+            <KidsFootwear />
         </div>
         
       )}
