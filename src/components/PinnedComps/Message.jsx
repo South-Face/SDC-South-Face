@@ -1,12 +1,28 @@
 import './Message.css'
-// import bubble from "./img/chat_bubble-removebg.png";
+import { useState } from 'react'
 import bubble from "./img/Subject.png";
+import MessageChat from './MessageChat';
 
 const Message = () => {
+    
+    const [chatOpen, setChatOpen] = useState(false);
+
+    const handleChatboxOpen = () => setChatOpen(true);
+    const closeChatbox = () => setChatOpen(false);
+    
     return (
-        <div>
-            <img className="chatbubble" src={bubble} style={{width:'60px', height:'60px'}}></img>
-        </div>
+        <>
+            <div>
+                <img onClick={handleChatboxOpen} className="chatbubble" src={bubble} style={{width:'60px', height:'60px'}}></img>
+            </div>
+
+            {chatOpen && (
+            <MessageChat 
+            closeChatbox={closeChatbox}
+            />
+            )}
+
+        </>
     )
 }
 
