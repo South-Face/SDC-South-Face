@@ -62,13 +62,13 @@
   margin-bottom: 10px;
 }
 
-.form-content .checkbox-container {
+.form-content .checkbox_container_1 {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.form-content .checkbox-container input[type="checkbox"] {
+.form-content .checkbox_container_1 input[type="checkbox"] {
   margin-right: 5px;
   appearance: none;
   -webkit-appearance: none;
@@ -82,12 +82,12 @@
 }
 
 /* apply styles to the checkbox when it's checked */
-.form-content .checkbox-container input[type="checkbox"]:checked {
+.form-content .checkbox_container_1 input[type="checkbox"]:checked {
   background-color: black;
 }
 
 /* Style the custom checkmark using ::before pseudo-element */
-.form-content .checkbox-container input[type="checkbox"]:checked::before {
+.form-content .checkbox_container_1 input[type="checkbox"]:checked::before {
   content: '\2713'; /* Unicode checkmark character */
   position: absolute;
   top: 1px;

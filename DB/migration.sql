@@ -3,8 +3,8 @@
 DROP TABLE reviews;
 DROP TABLE recommendedProducts;
 DROP TABLE productImages;
-DROP TABLE products;
 DROP TABLE features;
+DROP TABLE products;
 
 CREATE TABLE reviews (
     reviewId serial PRIMARY KEY,

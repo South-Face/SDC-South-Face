@@ -1,0 +1,19 @@
+
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .product-item {
+    width: calc(33.33% - 10px); /* Adjust the width and spacing based on your design */
+    margin-bottom: 20px; /* Space below each product item */
+  }
+  
+  .product-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  

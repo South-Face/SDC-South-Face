@@ -1,0 +1,18 @@
+.product-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333; /* You can use the desired color */
+}
+
+.product-price-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #777; /* You can use the desired color */
+}
