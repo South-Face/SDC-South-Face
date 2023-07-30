@@ -58,7 +58,7 @@ const SingleReview = ({review}) => {
                 <p className='reviewTitle'>{review.ratingtitle}</p>
                 <p className='reviewComment'>{review.comment} </p>
                 <select className='moreDetailsButton'> 
-                    <option>More Details</option>
+                    <option>More Details </option>
                 </select>
                 <div className='reviewHelpful'>
                     <p className='reviewHelpful_title'> Was this review helpful to you? </p>
