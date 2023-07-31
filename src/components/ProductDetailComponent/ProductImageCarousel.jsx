@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Images from './Images';
-import './ProductImages.css'; 
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import './ProductImageCarousel.css'; 
 
-const ProductImages = ({ productId }) => {
+const ProductImageCarousel = ({ productId }) => {
     const [urls, setUrls] = useState([]);
 
     useEffect(() => {
@@ -16,12 +17,14 @@ const ProductImages = ({ productId }) => {
     }, [productId]);
 
     return (
-        <div className="image-gallery">
+        <Carousel className="carousel-gallery" showThumbs={false}>
             {urls.map((url, index) => (
-                <Images key={index} url={url} />
+                <div key={index}>
+                    <img src={url} alt={`product-${index}`} />
+                </div>
             ))}
-        </div>
+        </Carousel>
     );
 };
 
-export default ProductImages;
+export default ProductImageCarousel;

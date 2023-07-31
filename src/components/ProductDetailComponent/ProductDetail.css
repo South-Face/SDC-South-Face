@@ -1,33 +1,47 @@
+    /* the whole component */
+    .product-page {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem; 
+        padding: 1rem;
+        margin-top: 0rem;
+        max-width: 1440px;
+    }
 
-/* the whole component */
-.product-page {
-    display: flex;
-    gap: 2rem; 
-    padding: 1rem;
-    margin-top: 0rem;
-}
+    @media (max-width: 1023px) {
+        .product-page {
+            display: block;
+        }
+    }
+    
+    /* the ProductDetails component */
+    .product-details {
+        width: 32%;
+        padding: 1.5rem;
+        background-color: #fff;
+        flex: 1;
+        margin-left: -2rem;
+        margin-right: -2.30rem;
+        padding-top: 0rem;
+        margin-top: -1.15rem;
+    }
 
-/* the ProductDetails component */
-
-.product-details {
-    width: 32%;
-    padding: 1.5rem;
-    background-color: #fff;
-    flex: 1;
-    margin-left: -2rem;
-    margin-right: -2.30rem;
-    padding-top: 0rem;
-    margin-top: -1.15rem;
-}
-
-.image-gallery {
-    width: 68%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.25rem;
-    margin-left: -1.65rem;
-    margin-top: 0rem;
-}
+    @media (max-width: 1023px) {
+        .product-details {
+            width: 100%;
+        }
+    }
+    
+    .image-gallery {
+        width: 68%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.25rem;
+        margin-left: -1.65rem;
+        margin-top: 0rem;
+    }
+    
+    
 
 /* the main heading in product details */
 .product-details h1 {
@@ -193,15 +207,26 @@
 .addToCartButton {
     background-color: black;
     color: white;
-    font-size: 13pt;
+    /* font-size: 13pt; */
     font-weight: bold;
-    padding: 15.5px 158px ;
+    /* padding: 1.3vw 12.2vw ; */
     border-radius: 30px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-right: -2.30rem;
     margin-top: -1rem;
+    height: 57px;
+    font-size: clamp(1.35vw, 1.35vw, 1.35vw);
+    padding: 1em 9.1em ;
+    white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+    .addToCartButton {
+        width: 100%;
+
+    }
 }
 
 /* this is the hover effect for the button */
@@ -212,16 +237,25 @@
 /* this is the fid in store button */
 #find-in-store {
     background-color: white;
+    height: 57px;
+    font-size: clamp(1.35vw, 1.35vw, 1.35vw);
     color: black;
     border: 1px solid black;
-    font-size: 13pt;
+    /* font-size: 13pt; */
     font-weight: bold;
-    padding: 15.5px 117px ;
+    padding: 1em 6.75em ;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-right: -1.25rem;
     margin-top: 1rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+    #find-in-store {
+        width: 100%;
+    }
 }
 
 /* this are the hover function over find in store button */
@@ -233,7 +267,7 @@
 /* this is the flex for the find in store and favorite button */
 .find-fav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-bottom: 1rem;
 }
 
@@ -248,8 +282,8 @@
     transition: background-color 0.3s ease;
     cursor: pointer;
     margin-top: 1rem;
-    margin-left: 0rem;
-    margin-right: 0rem;
+    margin-left: 1.75rem;
+    /* margin-right: 0rem; */
 }
 /* } */
 
@@ -337,10 +371,6 @@
 }
 
 /* this is to adjust the size of the photo in the features/details drop down.  */
-.product-detail-image {
-    max-width: 100%;
-    height: auto;
-}
 
 /* .description-title span,
 .features-title span,
@@ -359,6 +389,10 @@
     margin-bottom: .75rem;
 }
 
+.product-detail-image {
+    max-width: 100%;
+    height: auto;
+}
 
 
 /* **********************PRODUCT IMAGES************************************* */
@@ -390,13 +424,4 @@
     cursor: zoom-in;
 }
 
-
-
-
-
-  
-
-
-
-
-
+/* ****************Reactive Component css********************* */
