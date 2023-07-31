@@ -23,7 +23,7 @@ const NavMenuContentBagsGear = () => {
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Shop All</a>
+            <a className="navbar-accordian-item-link" href="https://www.thenorthface.com/en-us/equipment">Shop All</a>
             </div>           
             <BagsGearFeatured />
             <BagsGearBackPacks />

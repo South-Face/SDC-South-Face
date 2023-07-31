@@ -12,7 +12,7 @@ const NavBar = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const scrolledDistance1 = 10;
-    const scrolledDistance2 = 500;
+    const scrolledDistance2 = 650;
 
     const handleScroll = () => {
         const scrollY = window.scrollY;

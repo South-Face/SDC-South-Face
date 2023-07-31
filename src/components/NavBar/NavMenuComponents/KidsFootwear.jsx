@@ -12,20 +12,20 @@ const KidsFootwear = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div className="navbar-accodian-level1">
+      <div className="navbar-accodian-level2">
         Footwear
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Shop All Footwear</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/kids/footwear-c311774">Shop All Footwear</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Girls' Footwear</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/kids/girls-footwear-c211745">Girls' Footwear</a>
             </div>     
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Boys' Footwear</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/kids/boys-footwear-c211739">Boys' Footwear</a>
             </div>          
         </div>
       )}

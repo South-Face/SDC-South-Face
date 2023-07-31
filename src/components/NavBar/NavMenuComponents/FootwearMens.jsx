@@ -12,32 +12,32 @@ const FootwearMens = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div className="navbar-accodian-level1">
+      <div className="navbar-accodian-level2">
         Men's
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Shop all Men's</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-footwear-c211706">Shop all Men's</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Hike</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-footwear/mens-hike-c263751">Hike</a>
             </div>     
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Trail Run</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-footwear/mens-trail-run-c213281">Trail Run</a>
             </div> 
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Boots</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-footwear/mens-boots-c695280">Boots</a>
             </div>      
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Sneakers</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-footwear/mens-sneakers-c296771">Sneakers</a>
             </div>       
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Slippeers</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-footwear/mens-slippers-c695279">Slippeers</a>
             </div>  
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Sandals</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-footwear/mens-sandals-c313279">Sandals</a>
             </div>  
         </div>
       )}

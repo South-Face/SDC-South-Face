@@ -12,29 +12,29 @@ const MensAccessories = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div className="navbar-accodian-level1">
+      <div className="navbar-accodian-level2">
         Accessories
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Shop All Accessories</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-accessories-c211707">Shop All Accessories</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Hats</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-accessories/mens-hats-c374281">Hats</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Beanies</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-accessories/mens-beanies-c213231">Beanies</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Brimmers & Buckets</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-accessories/mens-brimmers-and-buckets-c829833">Brimmers & Buckets</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Gloves</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-accessories/mens-gloves-c213238">Gloves</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Smartwool Socks</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/mens/mens-accessories/mens-smartwool-socks-c213243">Smartwool Socks</a>
             </div>             
         </div>
       )}

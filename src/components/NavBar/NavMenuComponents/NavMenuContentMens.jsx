@@ -28,10 +28,10 @@ const NavMenuContentMens = () => {
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Shop All</a>
+            <a className="navbar-accordian-item-link" href="https://www.thenorthface.com/en-us/mens">Shop All</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Sale</a>
+            <a className="navbar-accordian-item-link" href="https://www.thenorthface.com/en-us/sale/mens-sale-c317774">Sale</a>
             </div>
             <MensFeatured />
             <MensShopActivity />

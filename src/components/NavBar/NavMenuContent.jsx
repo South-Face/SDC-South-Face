@@ -25,9 +25,9 @@ const NavMenuContent = () => {
             <li className='nav-dropdown-list-item'>
                 <a className='nav-dropdown-list-item-link' href="">Sign In</a>
             </li>
-            <li className='nav-dropdown-list-item'>
+            <li className='nav-dropdown-list-item-english'>
             <img className="flag" src="https://www.thenorthface.com/_nuxt/img/country-us-icon.35f5bdb.svg" />
-                <a className='nav-dropdown-list-item-link' href="">English</a>
+                <a className='nav-dropdown-list-item-link-english' href="">English</a>
             </li>
             <li className='nav-dropdown-list-item'>
                 <a className='nav-dropdown-list-item-link' href="">Order Status</a>

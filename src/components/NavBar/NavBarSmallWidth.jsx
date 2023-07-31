@@ -28,8 +28,8 @@ const NavBarSmallWidth = () => {
                 <img width="80px" height="35px" src={logo}  />
             </a>
             <div>
-                <CiSearch id="search" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-mg"></CiSearch>
-                <a href=""><PiBag className="search-comp-bag"></PiBag></a>
+                <CiSearch id="search" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-sw"></CiSearch>
+                <a href=""><PiBag className="search-comp-bag-sw"></PiBag></a>
                 <CiMenuBurger id="menu" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-menu"></CiMenuBurger>           
             </div>
         </div>
@@ -41,15 +41,16 @@ const NavBarSmallWidth = () => {
             <div>
             <div className="navBar-smallWidth">
             <a className="southface-logo" href="https://www.thenorthface.com/en-us">
-                <img width="90px" height="40px" src={logo}  />
+                <img width="80px" height="35px" src={logo}  />
             </a>
             <div>
-            <GoX id="search" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-menu"></GoX>
-                <a href=""><PiBag className="search-comp-bag"></PiBag></a>
+            <GoX id="search" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-sw"></GoX>
+                <a href=""><PiBag className="search-comp-bag-sw"></PiBag></a>
                 <CiMenuBurger id="menu" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-menu"></CiMenuBurger>           
             </div>           
         </div>
-        <form action="">
+        <form className="search-sw-form" action="">
+            <CiSearch className="serch-comp-sw-active"></CiSearch>
             <input className="search-bar" placeholder="Search..." type="text"/>
             </form>
         </div>
@@ -61,11 +62,11 @@ const NavBarSmallWidth = () => {
             <div>
             <div className="navBar-smallWidth">
                 <a className="southface-logo" href="https://www.thenorthface.com/en-us">
-                    <img width="90px" height="40px" src={logo}  />
+                    <img width="80px" height="35px" src={logo}  />
                 </a>
                 <div>
-                    <CiSearch id="search" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-mg"></CiSearch>
-                    <a href=""><PiBag className="search-comp-bag"></PiBag></a>
+                    <CiSearch id="search" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-sw"></CiSearch>
+                    <a href=""><PiBag className="search-comp-bag-sw"></PiBag></a>
                     <GoX id="menu" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-menu"></GoX>           
                 </div>
                 

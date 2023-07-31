@@ -12,20 +12,20 @@ const AboutUsSustainability = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div className="navbar-accodian-level1">
+      <div className="navbar-accodian-level2">
         Sustainability
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Sustainability</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/sustainability">Sustainability</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Circularity</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/circularity">Circularity</a>
             </div>     
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Warranty</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/help/returns-policy">Warranty</a>
             </div>     
         </div>
       )}
