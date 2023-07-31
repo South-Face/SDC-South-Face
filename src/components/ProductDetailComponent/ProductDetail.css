@@ -1,4 +1,5 @@
-/* the whole page */
+
+/* the whole component */
 .product-page {
     display: flex;
     gap: 2rem; 
@@ -7,6 +8,7 @@
 }
 
 /* the ProductDetails component */
+
 .product-details {
     width: 32%;
     padding: 1.5rem;
@@ -236,6 +238,7 @@
 }
 
 /* this is the favorite button */
+/* @media (min-width: 1024px) { */
 .favBtn {
     width: 58px;
     height: 58px;
@@ -245,8 +248,10 @@
     transition: background-color 0.3s ease;
     cursor: pointer;
     margin-top: 1rem;
+    margin-left: 0rem;
     margin-right: 0rem;
 }
+/* } */
 
 /* this is the hover effects over the favorite button */
 .favBtn:hover {
@@ -384,6 +389,13 @@
 .image-gallery .single-image:hover {
     cursor: zoom-in;
 }
+
+
+
+
+
+  
+
 
 
 
