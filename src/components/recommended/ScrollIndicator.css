@@ -1,0 +1,19 @@
+.scroll-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .scroll-circle {
+    width: 8px;
+    height: 8px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 7px;
+    background-color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .scroll-circle.active {
+    background-color: black;
+  }

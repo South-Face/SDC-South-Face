@@ -9,8 +9,8 @@ import AddPhoto from './components/AddPhoto'
 import Reviews from './components/Reviews/Reviews'
 // import FeedBack from './components/PinnedComps/FeedBack'
 // import Message from './components/PinnedComps/Message'
-import ReccProducts from './components/recommended/ReccProducts'
 import Exploring from './components/exploring/Exploring'
+import RecommendedProducts from './components/recommended/RecommendedProducts'
 import {NavigationProvider} from './context/NavigationContext'
 import {ReviewsProvider} from './context/ReviewsContext'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
@@ -32,7 +32,7 @@ function App() {
                 <ReviewsProvider>
                   <Reviews />
                 </ReviewsProvider>            
-                <ReccProducts />
+                <RecommendedProducts />
             </>
           }>
           </Route>
