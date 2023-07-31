@@ -1,8 +1,7 @@
 import React from 'react';
 import './InputDetailsForm.css';
 
-const InputDetailsForm = ({ onClose }) => {
-  // Dummy state to store form data
+const InputDetailsForm = ({ onClose, showModal }) => {
   const [formData, setFormData] = React.useState({
     displayName: '',
     email: '',
@@ -25,11 +24,10 @@ const InputDetailsForm = ({ onClose }) => {
     
     onClose();
   };
-  
-  
 
   return (
-    <div className="input-details-form">
+    <div className={`dark-overlay-bg ${showModal ? 'visible' : ''}`}>
+      <div className="input-details-form">
       <div className="close-button" onClick={onClose}>
         &times;
       </div>
@@ -73,6 +71,7 @@ const InputDetailsForm = ({ onClose }) => {
           <button type="submit">Next</button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

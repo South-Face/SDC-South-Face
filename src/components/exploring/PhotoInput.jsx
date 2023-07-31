@@ -24,7 +24,7 @@ const PhotoInput = () => {
       <button className="photo-input-button" onClick={handlePhotoInputClick}>
         Add your photo
       </button>
-      {showModal && <InputDetailsForm onClose={handleCloseModal} />}
+      {showModal && <InputDetailsForm onClose={handleCloseModal} showModal={showModal} />}
       {showModal && <div className="dark-overlay" onClick={handleCloseModal}></div>}
     </div>
   );
