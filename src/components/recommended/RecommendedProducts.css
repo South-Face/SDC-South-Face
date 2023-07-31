@@ -1,0 +1,53 @@
+/* Add an outer container for the recommended products */
+.recommended-products-outer {
+    width: 100%; /* Set the desired width of the outer container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  .recommended-products {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent flex items from wrapping to a new row */
+    justify-content: space-around;
+    padding: 0 10px;
+    gap: 15px; /* This will add a 15px gap between the images */
+  }
+  
+  .product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    width: 200px;
+    margin: 0.30rem;
+  }
+  
+  /* Set responsive width for the images */
+  .product-image {
+    width: 110%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  /* Styling for the h2 element */
+  .product-item h2 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    color: rgb(54, 53, 53);
+    margin-top: -12px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the p element */
+  .product-item p {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    color: #343333;
+    margin-top: -14px;
+  }
+
+  @media (max-width: 1023px) {
+    .product-image {
+      width: 220px;
+    }
+}
