@@ -12,29 +12,29 @@ const WomensShopActivity = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div>
+      <div className="navbar-accodian-level1">
         Shop By Activity
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
-        <div>
-            <div>
-            <a href="">Shop By Activity</a>
+        <div className="Navbar-accordian-items">
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Shop By Activity</a>
             </div>
-            <div>
-            <a href="">Camping</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Camping</a>
             </div>
-            <div>
-            <a href="">Hike</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Hike</a>
             </div>
-            <div>
-            <a href="">Trail Run</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Trail Run</a>
             </div>
-            <div>
-            <a href="">Climb</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Climb</a>
             </div>
-            <div>
-            <a href="">Water / Sun</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Water / Sun</a>
             </div>
         </div>
       )}

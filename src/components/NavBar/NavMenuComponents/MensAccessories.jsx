@@ -12,29 +12,29 @@ const MensAccessories = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div>
+      <div className="navbar-accodian-level1">
         Accessories
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
-        <div>
-            <div>
-            <a href="">Shop All Accessories</a>
+        <div className="Navbar-accordian-items">
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Shop All Accessories</a>
             </div>
-            <div>
-            <a href="">Hats</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Hats</a>
             </div>
-            <div>
-            <a href="">Beanies</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Beanies</a>
             </div>
-            <div>
-            <a href="">Brimmers & Buckets</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Brimmers & Buckets</a>
             </div>
-            <div>
-            <a href="">Gloves</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Gloves</a>
             </div>
-            <div>
-            <a href="">Smartwool Socks</a>
+            <div className="navbar-accordian-item">
+            <a className="navbar-accordian-item-link" href="">Smartwool Socks</a>
             </div>             
         </div>
       )}
