@@ -11,7 +11,7 @@
     justify-content: space-between;
     margin: auto;
     width: 100%;
-    padding: 2rem 2rem;
+    padding: 32px 40px 32px 40px;
 }
 
 
@@ -21,6 +21,7 @@
     color: #2a2a2a;
     font-size: 1.125rem;
     align-items: center;
+    margin-bottom: 16px;
 }
 
 .footerMenuColumn {
@@ -68,14 +69,17 @@
 /*----------------------- Footer Bottom Section -----------------------*/
 .BfooterColumnTitle {
     text-align: left;
-    color: #2a2a2a;
+    color: #000;
     font-size: 1.125rem;
     align-items: center;
+    margin-bottom: 16px;
+    font-weight: normal;
 }
 
 .footerBottom {
     background-color: #f8f8f8;
     width: 100%;
+    padding: 0px 40px 32px 40px;
 }
 
 .footerBottom-3Columns {
@@ -110,6 +114,9 @@
     font-size: 16px;
     font-weight: bold;
 }
+.storelocator-button:hover {
+    background-color: #2a2a2a;
+}
 .storelocator-link {
     text-decoration: none;
     color:transparent;
@@ -117,6 +124,8 @@
 
 .icons-container {
     display: flex;
+    margin-left: 4px;
+    margin-right: 8px;
 }
 .FB-socialmedia {
     width: 25%;
@@ -134,16 +143,16 @@
     transition: color .15s ease-in-out,color .15s ease-in-out; 
 }
 
-.icons:hover {
-    color: black;
-}
-
 /* ---- Email subscription ---- */
 .subscriptionForm-inputWrapper {
     display: flex;
 }
 .subscriptionForm-checkbox {
     display: flex;
+}
+
+.subscriptionForm-checkboxWrapper {
+    margin-top: 16px;
 }
 
 .input__wrapper {
@@ -229,9 +238,12 @@ input[type="checkbox"]:checked + .checkbox-input::after {
     font-size: 14px;
     color: #1c1c1c;
     font-family: Lato, sans-serif;
+    margin-top: 4px;
+    margin-bottom: 24px;
 }
 .checkbox-label {
     font-size: 14px;
+    margin-left: 10px;
 }
 .footerBottom-Bar {
     font-size: 14px;
@@ -254,9 +266,14 @@ input[type="checkbox"]:checked + .checkbox-input::after {
     color: black;
     cursor: pointer;
     margin-top: 10px;
+    margin-right: 14px;
 }
 .FBBI-wrapLink:hover {
     color: #64686B;
+}
+.FBBI-wrap {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .FBBI-logo {
@@ -419,6 +436,26 @@ input[type="checkbox"]:checked + .checkbox-input::after {
     .south-face-logo {
         height: 70px;
         width: 150px;
+      
+    }
+}
+
+@media (min-width: 1250px) {
+    .footerContainer {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         margin: 0 auto;
+        width: 1250px;
+        padding: 2rem 2rem;
+    }
+    .footerBottom-3Columns {
+        margin: 0 auto;
+        width: 1250px;
+    }
+    .FBB-info {
+        margin: 0 auto;
+        width: 1250px;
     }
 }
