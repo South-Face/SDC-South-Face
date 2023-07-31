@@ -1,9 +1,7 @@
 import logo from "./img/south_face_removebg.png";
 
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
+
 
 
 const FeedbackForm = ({closeFeedbackForm}) => {

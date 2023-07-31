@@ -3,9 +3,9 @@ import { useState } from 'react';
 import './Message.css'
 import reverselogo from "./img/white-south-face-logo.png";
 import letterIcon from "./img/letter-case.png";
-import { FontAwesomeIcon } from '@fontawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faPrint, faVolumeHigh, faVolumeXmark } from '@fontawesome/free-solid-svg-icons';
+import { faPrint, faVolumeHigh, faVolumeXmark } from '@fortawesome/free-solid-svg-icons';
 
 const MessageChat = ({closeChatbox}) => {
     const [isVolumeOn, setIsVolumeOn] = useState(true);
