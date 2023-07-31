@@ -9,6 +9,7 @@ const NavList = () => (
                 <div className="nav-list-text">English</div>
             </a>
         </li>
+        <li className="nav-list">|</li>
         <li className="nav-list" >
             <div>
                 <a className="nav-list-item" href="https://www.thenorthface.com/en-us/order-status">
@@ -16,12 +17,14 @@ const NavList = () => (
                 </a>
             </div>
         </li>
+        <li className="nav-list">|</li>
         <li className="nav-list" >
             <a className="nav-list-item" href="https://www.thenorthface.com/en-us/order-status#">
-                <PiChatCircleLight />
+                <PiChatCircleLight className="live-chat-bubble"></PiChatCircleLight>
                 <div className="nav-list-text">Live chat</div>
             </a>
         </li>
+        <li className="nav-list">|</li>
         <li className="nav-list" >
             <div>
                 <a className="nav-list-item" href="https://www.thenorthface.com/en-us/xplrpass">
@@ -29,6 +32,7 @@ const NavList = () => (
                 </a>
             </div>
         </li>
+        <li className="nav-list">|</li>
         <li className="nav-list" >
             <div>
                 <a className="nav-list-item" href="https://www.thenorthface.com/en-us/more/store-locator">
@@ -36,6 +40,7 @@ const NavList = () => (
                 </a>
             </div>
         </li>
+        <li className="nav-list">|</li>
         <li className="nav-list" >
             <div>
                 <a className="nav-list-item" href="https://www.thenorthface.com/en-us/more/gift-card">
@@ -43,6 +48,7 @@ const NavList = () => (
                 </a>
             </div>
         </li>
+        <li className="nav-list">|</li>
         <li className="nav-list" >
             <div>
                 <a className="nav-list-item" href="https://www.thenorthface.com/en-us/help">
@@ -50,6 +56,7 @@ const NavList = () => (
                 </a>
             </div>
         </li>
+        <li className="nav-list">|</li>
         <li className="nav-list" >
             <div>
                 <a className="nav-list-item" href="https://www.thenorthface.com/en-us/account/sign-in">

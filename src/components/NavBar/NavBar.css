@@ -1,6 +1,5 @@
 .nav-list {
-    font-size: 12px;
-    font-family: 'Helvetica Neue LT Pro', sans-serif;                                           
+    font-size: 12px;                                      
     display: flex;  
     color: #2A2A2A;
     font-weight: 500;
@@ -20,11 +19,19 @@
     margin-left: .5rem;
     margin-right: 4rem;
     margin-top: .5rem;
+    margin-bottom: .5rem;
+
 }
 
 .body {
     padding-top: 5.8rem;
   }
+
+@media (max-width: 1023px) {
+    .body {
+        padding-top: 4rem;
+    }
+}
 
 .nav-list-cont {
     display: flex;
@@ -35,31 +42,41 @@
 }
 
 .nav-list-item {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
     display: flex;
     align-items: center;
     text-decoration: none;
     font-weight: 500;
-    width: 104px;
+    /* width: 120px; */
     justify-content: center;
 }
 
 .nav-list-text {
     color: #2A2A2A;
     text-decoration: none;
-    
+    font-weight: 800;
+}
+
+.nav-list-text:hover {
+    color: rgb(100, 104, 107);
 }
 
 .nav-list-item:hover{
     color: grey;
     cursor: pointer;
-
+    text-decoration: none;
 }
 
 .flag {
     height: 24px;
     width: 24px;
+    margin-right: .5rem;
+}
+
+.live-chat-bubble {
+    color: #2A2A2A;
+    margin-right: .5rem;
 }
 
 .nav-compnents {
@@ -89,10 +106,18 @@
     text-decoration: none;
 }
 
+.search-sw-form {
+    border-bottom: #2A2A2A 1px solid;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
 .search-bar {
     border: none;
     text-decoration: none;
-    height: 40px;
+    height: 40px;  
 }
 
 .search-comp {
@@ -109,6 +134,21 @@
     margin-right: 35px;
 }
 
+.search-comp-sw {
+    color: #2A2A2A;
+    font-weight: 900;
+    height: 28px;
+    width: 30px;
+}
+
+.serch-comp-sw-active {
+    color: #2A2A2A;
+    font-weight: 900;
+    height: 24px;
+    width: 26px;
+    margin-right: 1rem;
+}
+
 .search-comp-bag {
     color: #2A2A2A;
     font-weight: 300;
@@ -118,16 +158,22 @@
     margin-right: 20px;
 }
 
+.search-comp-bag-sw {
+    color: #2A2A2A;
+    font-weight: 500;
+    height: 28px;
+    width: 30px;
+    margin-left: 30px;
+}
+
 .vf-search-bar {
     border-bottom: #2A2A2A 1px solid;
 }
 
 .nav-header {
-    font-family: 'Helvetica Neue LT Pro', sans-serif;
     display: flex;
     font-size: 16px;
     font-weight: 400;
-    align-items: first baseline;
     justify-content: space-between;
     margin: 0%;
     padding: 0%;
@@ -136,25 +182,29 @@
 
 .header-actions {
     display: flex;
-    align-items: center;
+    align-items: end;
 }
 
 .nav-routes {
     font-size: 14px;
-    font-family: 'Helvetica Neue LT Pro', sans-serif;
     color: rgb(42, 42, 42);
     font-weight: 300;
-    margin-bottom: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     list-style: none;
-    margin-left: -40px;
+    margin-left: -2rem;
     align-items: center;
-    margin-top: 1.5rem;
 }
 
 .nav-routes-link {
     color: #2A2A2A;
     text-decoration: none;
+}
+
+.nav-routes-link:hover {
+    text-decoration: none;
+    color: rgb(100, 104, 107);
 }
 
 .nav-routes-seperator {
@@ -168,16 +218,48 @@
     margin-right: 130px;
 }
 
+.menu-content-headers {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #2A2A2A;
+    margin-right: 1rem;
+}
+
+.menu-content-headers:hover {
+    text-decoration: none;
+    color: rgb(100, 104, 107);
+}
+
 .sale-component-link {
     color: #2A2A2A;
     text-decoration: none;
-    font-size: 18px;
-    font-family: 'Helvetica Neue LT Pro', sans-serif; 
-    font-weight: 400;  
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 1rem;
+}
+
+.sale-component-link:hover {
+    text-decoration: none;
+    color: rgb(100, 104, 107);
+}
+
+.climbing-img {
+    margin-left: 3rem;
 }
 
 .mens-component-divs {
     display: flex;
+    justify-content: space-between;
+}
+
+.aboutus-component-divs  {
+    display: flex;
+}
+
+.component-link-list {
+    list-style: none;
+    margin-left: -2.5rem;
 }
 
 .menu-content {
@@ -202,7 +284,7 @@
     position: absolute;
     width: 100vw;
     z-index: 2000;
-    top: 53px;
+    top: 61px;
     display: flex;
     flex-direction: column;
     left: 0;
@@ -211,6 +293,14 @@
 .navbar-img {
     height: 68px;
     aspect-ratio: auto 68 / 68;
+    margin: .5rem;
+}
+
+.third-nav-productinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .navbar-third {
@@ -241,7 +331,7 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 1rem;
+ 
 }
 
 .navbar-third-heartButton {
@@ -252,6 +342,34 @@
     width: 3rem;
     height: 3rem;
     border: 1px black solid;
+}
+
+.favBtn-navbar {
+    width: 58px;
+    height: 58px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+/* this is the hover effects over the favorite button */
+.favBtn-navbar:hover {
+    background-color: black;
+}
+
+/* this is for when the button is clicked */
+.favBtn-navbar.clicked {
+    background-color: gray;
+}
+
+/* this is for the heart inside the hover button */
+.heart-navbar {
+    margin-top: .5rem;
+    height: 27px;
+    width: 27px;
 }
 
 .navBar-smallWidth {
@@ -265,7 +383,7 @@
     font-weight: 300;
     height: 24px;
     width: 26px;
-    margin-left: 32px;
+    margin-left: 30px;
     margin-right: 20px;
 }
 
@@ -274,6 +392,7 @@
     font-weight: 300;
     height: 24px;
     width: 26px;
+    margin-right: 1pc;
 }
 
 .nav-dropdowns-smallwidth {
@@ -290,14 +409,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 200;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
     padding-left: 10px;
     padding-top: 11px;
     padding-right: 10px;
     padding-bottom: 12px;
     border-top: rgb(204, 204, 204) solid 1px;
     width: 100vw;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+.navbar-accodian-level2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 28px;
+    padding-right: 16px;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    color: #2A2A2A;
+    font-weight: 300;
+    border-top: rgb(204, 204, 204) solid 1px;
+    width: 100vw;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
 }
 
 .Navbar-accordian-items {
@@ -308,10 +444,11 @@
     flex-direction: column;
     font-size: 14px;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .navbar-accordian-item {
-    padding-left: 10px;
+    padding-left: 20px;
     padding-top: 12px;
     padding-right: 16px;
     padding-bottom: 13px;
@@ -319,10 +456,45 @@
     display: block;
     box-sizing: border-box;
     width: 100vw;
+    padding-left: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.navbar-accordian-item2 {
+    padding-left: 80px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 13px;
+    border-top: rgb(204, 204, 204) solid 1px;
+    display: block;
+    box-sizing: border-box;
+    width: 100vw;
+    padding-left: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
 }
 
 .navbar-accordian-item-link {
     color: #2A2A2A;
+    padding-left: 10px;
+    font-weight: 300;
+}
+
+.navbar-accordian-item-link:hover {
+    color: rgb(100, 104, 107);
+    text-decoration: none;
+}
+
+.navbar-accordian-item-link2 {
+    padding-left: 40px;
+    color: #2A2A2A;
+    font-weight: 100;
+}
+
+.navbar-accordian-item-link2:hover {
+    color: rgb(100, 104, 107);
+    text-decoration: none;
 }
 
 .nav-dropdown-list {
@@ -341,6 +513,15 @@
     align-items: center;
 }
 
+.nav-dropdown-list-item-english {
+    box-sizing: border-box;
+    display: list-item;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-left: -1rem;
+}
+
 .nav-dropdown-list-item-link {
     align-items: center;
     color: #2A2A2A;
@@ -353,4 +534,28 @@
     padding-left: 38px;
     padding-top: 13px;
     text-decoration: none;
+}
+
+.nav-dropdown-list-item-link:hover {
+    text-decoration: none;
+    color: rgb(100, 104, 107);
+}
+
+.nav-dropdown-list-item-link-english {
+    align-items: center;
+    color: #2A2A2A;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    list-style-type: none;
+    list-style-position: outside;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    padding-top: 13px;
+    text-decoration: none;
+}
+
+.nav-dropdown-list-item-link-english:hover {
+    text-decoration: none;
+    color: rgb(100, 104, 107);
 }

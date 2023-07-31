@@ -22,16 +22,16 @@ const NavMenuContentWomens = () => {
     return (
         <div onClick={toggleExpansion}>
       <div className="navbar-accodian-level1">
-        Womens's
+        Women's
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Shop All</a>
+            <a className="navbar-accordian-item-link" href="https://www.thenorthface.com/en-us/womens">Shop All</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Sale</a>
+            <a className="navbar-accordian-item-link" href="https://www.thenorthface.com/en-us/sale/womens-sale-c317775">Sale</a>
             </div>
             <WomensFeatured />
             <WomensShopActivity />

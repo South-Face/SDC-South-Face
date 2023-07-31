@@ -12,35 +12,35 @@ const AboutUsWho = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div className="navbar-accodian-level1">
+      <div className="navbar-accodian-level2">
         Who We Are
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Who We Are</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/about-us">Who We Are</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Our History</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/about-us/history">Our History</a>
             </div>     
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Our Athletes</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/about-us/athletes">Our Athletes</a>
             </div> 
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Athlete Development Program</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/about-us/athlete-development-program">Athlete Development Program</a>
             </div>          
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Our Icons</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/all-icons">Our Icons</a>
             </div>    
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">XPLR Pass</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/xplrpass">XPLR Pass</a>
             </div>    
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">The Approach</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/approach">The Approach</a>
             </div>    
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Explore Fund Council</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/about-us/outdoor-exploration/about-the-explore-funds">Explore Fund Council</a>
             </div>    
         </div>
       )}

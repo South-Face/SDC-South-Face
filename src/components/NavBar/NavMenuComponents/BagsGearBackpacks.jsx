@@ -12,32 +12,32 @@ const BagsGearBackPacks = () => {
 
     return (
         <div onClick={toggleExpansion}>
-      <div className="navbar-accodian-level1">
+      <div className="navbar-accodian-level2">
         Backpacks
         <span>{isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}</span>
       </div>
       {isExpanded && (
         <div className="Navbar-accordian-items">
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Shop all Backpacks</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/bags-and-gear/backpacks-c224451">Shop all Backpacks</a>
             </div>
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Women's</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/bags-and-gear/backpacks/womens-backpacks-c268801">Women's</a>
             </div>     
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Men's</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/bags-and-gear/backpacks/mens-backpacks-c298772">Men's</a>
             </div> 
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">School</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/bags-and-gear/backpacks/school-backpacks-c591786">School</a>
             </div>          
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Commuter</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/bags-and-gear/backpacks/commuter-backpacks-c365273">Commuter</a>
             </div>    
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Kids'</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/bags-and-gear/backpacks/kids-backpacks-c224503">Kids'</a>
             </div>    
             <div className="navbar-accordian-item">
-            <a className="navbar-accordian-item-link" href="">Funny Pack & Bags</a>
+            <a className="navbar-accordian-item-link2" href="https://www.thenorthface.com/en-us/bags-and-gear/backpacks/fanny-packs-and-totes-c591785">Funny Pack & Bags</a>
             </div>    
         </div>
       )}
