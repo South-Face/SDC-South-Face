@@ -14,12 +14,12 @@ CREATE TABLE reviews (
     userName varchar
 );
 
--- CREATE TABLE recommendedProducts ( 
---     recommendedProductsId serial PRIMARY KEY,
---     name VARCHAR,
---     price numeric,
---     imageUrl VARCHAR
--- );
+CREATE TABLE recommendedProducts ( 
+    recommendedProductsId serial PRIMARY KEY,
+    name VARCHAR,
+    price numeric,
+    imageUrl VARCHAR
+);
 
 CREATE TABLE products (
     productId serial PRIMARY KEY,
