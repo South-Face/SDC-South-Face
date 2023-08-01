@@ -48,3 +48,5 @@ const ProductDetails = ({ productId }) => {
 };
 
 export default ProductDetails;
+
+

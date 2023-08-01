@@ -1,0 +1,29 @@
+.carousel-gallery {
+    width: 100%;
+    margin-left: -1.65rem;
+    margin-top: 0rem;
+}
+
+.carousel-gallery .slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* .flex-container {
+    display: flex;
+  
+}
+
+.stacked-container {
+    display: block;
+    
+} */
+
+/* .image-gallery {
+    width: 68%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.25rem;
+    margin-left: -1.65rem;
+    margin-top: 0rem;
+} */
