@@ -7,7 +7,7 @@ const NeverStop = () => {
       <h2 className="never-stop-heading">#NeverStopExploring</h2>
       <p className="never-stop-text">
         We love seeing our gear out in the wild. Share your photos with #neverstopexploring,
-        and tag @thenorthface to be featured here.
+        and tag {<a href='#'>@thenorthface</a>} to be featured here.
       </p>
     </div>
   );
