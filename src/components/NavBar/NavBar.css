@@ -147,12 +147,17 @@
     height: 40px;  
 }
 
+.search-bar:focus {
+    outline: none;
+  }
+
 .search-comp {
     position: relative;
     display: flex;
     white-space: nowrap;
     align-items: center;
     right: -10rem;
+    outline: none;
 }
 
 @media (max-width: 1430px) {
@@ -172,7 +177,7 @@
     font-weight: 300;
     height: 24px;
     width: 26px;
-    margin-right: 35px;
+    margin-right: 5px;
 }
 
 .search-comp-sw {
@@ -209,6 +214,8 @@
 
 .vf-search-bar {
     border-bottom: #2A2A2A 1px solid;
+    display: flex;
+    align-items: center;
 }
 
 .nav-routes {
