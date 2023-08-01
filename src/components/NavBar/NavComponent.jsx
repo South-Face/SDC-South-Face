@@ -1,4 +1,4 @@
-import { useContext } from "react" 
+import { useContext, useState, useEffect } from "react" 
 import NavigationContext from "../../context/NavigationContext" 
 import SaleComponent from "./NavDropDownComponents/SaleComponent"
 import MensComponent from "./NavDropDownComponents/MensComponent"
@@ -12,6 +12,20 @@ import AboutUsComponent from "./NavDropDownComponents/AboutUsComponent"
 const NavComponent = () => {
     const {currentNav} = useContext(NavigationContext)
     const {changeNav} = useContext(NavigationContext)
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+          setScrollPosition(window.scrollY);
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+    
+        return () => {
+          window.removeEventListener("scroll", handleScroll);
+        };
+      }, []);
+
 
     if (currentNav === 'none') {
     return (
@@ -49,7 +63,7 @@ const NavComponent = () => {
         <nav className="nav-components">
         <div className="nav-component-item" onMouseLeave={() => {changeNav("none")}}>
             <a className="nav-component-item-link"  href="https://www.thenorthface.com/en-us/sale" >Sale</a>
-            <SaleComponent onMouseOver={(e) => {changeNav(e.target.id)}}  id="sale" ></SaleComponent>
+            <SaleComponent scrollPosition={scrollPosition} onMouseOver={(e) => {changeNav(e.target.id)}}  id="sale" ></SaleComponent>
         </div>
         <div className="nav-component-item">
             <a className="nav-component-item-link"  onMouseOver={(e) => {changeNav(e.target.id)}} onMouseLeave={() => {changeNav("none")}} id="mens" href="https://www.thenorthface.com/en-us/mens">Men's</a>
@@ -84,7 +98,7 @@ const NavComponent = () => {
         </div>
         <div className="nav-component-item" onMouseLeave={() => {changeNav("none")}}>
             <a className="nav-component-item-link" href="https://www.thenorthface.com/en-us/mens">Men's</a>
-            <MensComponent onMouseOver={(e) => {changeNav(e.target.id)}} id="mens" ></MensComponent>
+            <MensComponent scrollPosition={scrollPosition} onMouseOver={(e) => {changeNav(e.target.id)}} id="mens" ></MensComponent>
         </div>
         <div className="nav-component-item">
             <a className="nav-component-item-link"  onMouseOver={(e) => {changeNav(e.target.id)}} onMouseLeave={() => {changeNav("none")}} id="womens" href="https://www.thenorthface.com/en-us/womens">Women's</a>
@@ -119,7 +133,7 @@ const NavComponent = () => {
         </div>
         <div className="nav-component-item" onMouseLeave={() => {changeNav("none")}}>
             <a className="nav-component-item-link" href="https://www.thenorthface.com/en-us/womens">Women's</a>
-            <WomensComponent onMouseOver={(e) => {changeNav(e.target.id)}} id="womens"></WomensComponent>
+            <WomensComponent scrollPosition={scrollPosition} onMouseOver={(e) => {changeNav(e.target.id)}} id="womens"></WomensComponent>
         </div>
         <div className="nav-component-item">
             <a className="nav-component-item-link"  onMouseOver={(e) => {changeNav(e.target.id)}} onMouseLeave={() => {changeNav("none")}} id="kids" href="https://www.thenorthface.com/en-us/kids">Kids'</a>
@@ -154,7 +168,7 @@ const NavComponent = () => {
         </div>
         <div className="nav-component-item"  onMouseLeave={() => {changeNav("none")}} >
             <a className="nav-component-item-link" href="https://www.thenorthface.com/en-us/kids">Kids'</a>
-            <KidsComponent onMouseOver={(e) => {changeNav(e.target.id)}} id="kids" ></KidsComponent>
+            <KidsComponent scrollPosition={scrollPosition} onMouseOver={(e) => {changeNav(e.target.id)}} id="kids" ></KidsComponent>
         </div>
         <div className="nav-component-item">
             <a className="nav-component-item-link"  onMouseOver={(e) => {changeNav(e.target.id)}} onMouseLeave={() => {changeNav("none")}} id="footwear" href="https://www.thenorthface.com/en-us/shop-all/footwear-c747784">Footwear</a>
@@ -189,7 +203,7 @@ const NavComponent = () => {
         </div>
         <div className="nav-component-item" onMouseLeave={() => {changeNav("none")}}>
             <a className="nav-component-item-link"  href="https://www.thenorthface.com/en-us/shop-all/footwear-c747784">Footwear</a>
-            <FootwearComponent  onMouseOver={(e) => {changeNav(e.target.id)}} id="footwear" ></FootwearComponent>
+            <FootwearComponent scrollPosition={scrollPosition}  onMouseOver={(e) => {changeNav(e.target.id)}} id="footwear" ></FootwearComponent>
         </div>
         <div className="nav-component-item">
             <a className="nav-component-item-link"  onMouseOver={(e) => {changeNav(e.target.id)}} onMouseLeave={() => {changeNav("none")}} id="bags/gear" href="https://www.thenorthface.com/en-us/equipment">Bags & Gear</a>
@@ -224,7 +238,7 @@ const NavComponent = () => {
         </div>
         <div className="nav-component-item"  onMouseLeave={() => {changeNav("none")}} >
             <a className="nav-component-item-link"href="https://www.thenorthface.com/en-us/equipment">Bags & Gear</a>
-            <BagsGearComponent onMouseOver={(e) => {changeNav(e.target.id)}} id="bags/gear" ></BagsGearComponent>
+            <BagsGearComponent scrollPosition={scrollPosition} onMouseOver={(e) => {changeNav(e.target.id)}} id="bags/gear" ></BagsGearComponent>
         </div>
         <div className="nav-component-item">
             <a className="nav-component-item-link"  href="https://www.thenorthfacerenewed.com/?_gl=1*1b9r8a2*_ga*MTQyNjI2MTI3OC4xNjg5Nzk0Nzk4*_ga_950L7P08N5*MTY5MDI0ODc0MC4yNy4xLjE2OTAyNDk3MjQuMzMuMC4w&_ga=2.254447176.1987180916.1689794798-1426261278.1689794798&_gac=1.123008505.1690249627.Cj0KCQjwk96lBhDHARIsAEKO4xZIGsioS3ccCqvaUqedLQkFgo1FK9R1VvjpFDlFTvocq1ZWqY9mJSUaAkAMEALw_wcB">Renewed</a>
@@ -262,7 +276,7 @@ const NavComponent = () => {
         </div>
         <div className="nav-component-item" onMouseLeave={() => {changeNav("none")}} >
             <a className="nav-component-item-link"  href="https://www.thenorthface.com/en-us/about-us">About Us</a>
-            <AboutUsComponent onMouseOver={(e) => {changeNav(e.target.id)}} id="aboutUs" ></AboutUsComponent>
+            <AboutUsComponent scrollPosition={scrollPosition} onMouseOver={(e) => {changeNav(e.target.id)}} id="aboutUs" ></AboutUsComponent>
         </div>
         </nav>
     )

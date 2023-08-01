@@ -3,7 +3,9 @@ import NavTools from "./NavTools"
 import logo from "../Footer/img/south_face_removebg.png";
 
 
+
 const NavHeader = () => {
+ 
     return (
         <header className="nav-header">
             <a className="southface-logo" href="https://www.thenorthface.com/en-us">
