@@ -1,28 +1,3 @@
-.nav-list {
-    font-size: 12px;                                      
-    display: flex;  
-    color: #2A2A2A;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.sticky-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    z-index: 5;
-}
-
-.southface-logo {
-    margin-left: .5rem;
-    margin-right: 4rem;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-
-}
-
 .body {
     padding-top: 5.8rem;
   }
@@ -31,6 +6,14 @@
     .body {
         padding-top: 4rem;
     }
+}
+
+.nav-list {
+    font-size: 12px;                                      
+    display: flex;  
+    color: #2A2A2A;
+    font-weight: 500;
+    text-decoration: none;
 }
 
 .nav-list-cont {
@@ -48,14 +31,13 @@
     align-items: center;
     text-decoration: none;
     font-weight: 500;
-    /* width: 120px; */
     justify-content: center;
 }
 
 .nav-list-text {
     color: #2A2A2A;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .nav-list-text:hover {
@@ -79,6 +61,38 @@
     margin-right: .5rem;
 }
 
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 5;
+}
+
+.nav-header {
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
+    color: #2A2A2A;
+    flex: 1;
+}
+
+.header-actions {
+    display: flex;
+    align-items: end;
+}
+
+.southface-logo {
+    margin-left: .5rem;
+    margin-right: 4rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+
+}
+
 .nav-compnents {
     display: flex;
 }
@@ -94,15 +108,28 @@
 .nav-component-item-link {
     color: #2A2A2A;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-component-item-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    background-color: #2A2A2A;
+    transition: width 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.nav-component-item-link:hover::after {
+    width: 100%;
 }
 
 .nav-component-item-link:hover {
-    cursor: pointer;
     color: #2A2A2A;
-    font-weight: 500;
-    transition-timing-function: ease-in-out, ease-in-out;
-    border-bottom: #2A2A2A 2px solid;
     text-decoration: none;
 }
 
@@ -121,9 +148,23 @@
 }
 
 .search-comp {
+    position: relative;
     display: flex;
     white-space: nowrap;
     align-items: center;
+    right: -10rem;
+}
+
+@media (max-width: 1430px) {
+    .search-comp {
+      right: 0px;
+    }
+}
+
+@media (max-width: 1430px) {
+    .search-comp {
+      right: 5rem;
+    }
 }
 
 .search-comp-mg {
@@ -168,21 +209,6 @@
 
 .vf-search-bar {
     border-bottom: #2A2A2A 1px solid;
-}
-
-.nav-header {
-    display: flex;
-    font-size: 16px;
-    font-weight: 400;
-    justify-content: space-between;
-    margin: 0%;
-    padding: 0%;
-    color: #2A2A2A;
-}
-
-.header-actions {
-    display: flex;
-    align-items: end;
 }
 
 .nav-routes {
@@ -264,7 +290,6 @@
 
 .menu-content {
     position: relative;
-    transition: opacity 0.3s ease-in-out;;
     margin-left: 94px;
     margin-right: 464px;
     padding-top: 40px;
@@ -284,16 +309,44 @@
     position: absolute;
     width: 100vw;
     z-index: 2000;
+    top: 85px;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn .8s forwards;
+}
+
+.mega-menu-scroll {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    height: 530px;
+    justify-content: space-between;
+    position: absolute;
+    width: 100vw;
+    z-index: 2000;
     top: 61px;
     display: flex;
     flex-direction: column;
     left: 0;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn .8s forwards;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
 .navbar-img {
     height: 68px;
     aspect-ratio: auto 68 / 68;
     margin: .5rem;
+    margin-left: 1rem;
 }
 
 .third-nav-productinfo {
@@ -355,17 +408,16 @@
     margin-left: 1rem;
 }
 
-/* this is the hover effects over the favorite button */
 .favBtn-navbar:hover {
     background-color: black;
 }
 
-/* this is for when the button is clicked */
+
 .favBtn-navbar.clicked {
     background-color: gray;
 }
 
-/* this is for the heart inside the hover button */
+
 .heart-navbar {
     margin-top: .5rem;
     height: 27px;

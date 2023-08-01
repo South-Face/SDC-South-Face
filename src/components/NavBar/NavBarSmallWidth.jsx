@@ -29,7 +29,7 @@ const NavBarSmallWidth = () => {
             </a>
             <div>
                 <CiSearch id="search" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-sw"></CiSearch>
-                <a href=""><PiBag className="search-comp-bag-sw"></PiBag></a>
+                <a href="https://www.thenorthface.com/en-us/cart"><PiBag className="search-comp-bag-sw"></PiBag></a>
                 <CiMenuBurger id="menu" onClick={(e) => {changeBar(e.target.id)}} className="search-comp-menu"></CiMenuBurger>           
             </div>
         </div>

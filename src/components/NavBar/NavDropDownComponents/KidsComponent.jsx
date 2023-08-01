@@ -1,8 +1,8 @@
 
 
-const KidsComponent = () => {
+const KidsComponent = ({scrollPosition}) => {
     return (
-        <div className="mega-menu">
+        <div className={`mega-menu fade in ${scrollPosition > 10 ? "mega-menu-scroll fade-in" : ""}`}>
         <div className="menu-content">
         <h2>
             <a className="menu-content-headers" href="https://www.thenorthface.com/en-us/kids">Shop All Kids'</a>

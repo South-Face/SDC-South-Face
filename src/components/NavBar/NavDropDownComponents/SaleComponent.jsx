@@ -1,8 +1,9 @@
 
 
-const SaleComponent = () => {
+const SaleComponent = ({scrollPosition}) => {
+
     return (
-    <div className="mega-menu">
+    <div className={`mega-menu fade in ${scrollPosition > 10 ? "mega-menu-scroll fade-in" : ""}`}>
         <div className="menu-content">
             <div>
                 <h2>
