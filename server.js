@@ -85,7 +85,6 @@ app.get('/features/:id', async (req, res) => {
     }
 });
 
-
 app.post('/products', async (req, res) => {
     const { name, description, price, imageUrl, averageRating } = req.body;
     try {
@@ -134,10 +133,7 @@ app.delete('/products/:id', async (req, res) => {
     }
 });
 
-
-
 //These are the routes for the "reviews" table
-
 app.get('/reviews/:category/:order', async (req, res) => {
     const { order, category } = req.params;
 
@@ -215,8 +211,6 @@ app.delete('/reviews/:id', async (req, res) => {
     }
 });
 
-
-
 //These are the routes for the "reccomendedProducts" table
 app.get('/recommendedProducts', async (req, res) => {
     console.log('Hello');
@@ -243,7 +237,6 @@ app.get('/recommendedProducts/:id', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
-
 
 app.post('/recommendedProducts', async (req, res) => {
     const { name, description, price, imageUrl, averageRating } = req.body;
@@ -277,8 +270,6 @@ app.put('/recommendedProducts/:id', async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
-
-
 
 app.delete('/recommendedProducts/:id', async (req, res) => {
     const { id } = req.params;
