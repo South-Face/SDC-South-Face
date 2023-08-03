@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+ southface:
+   image: node:16-bullseye
+   container_name: southface
+   entrypoint: /bin/sh
+   ports:
+     - 8000:8000
+   working_dir: /app
+   volumes:
+     - type: bind
+       source: ./
+       target: /app
+   tty: true
