@@ -6,6 +6,9 @@ import dotenv from 'dotenv';
 import pkg from 'pg';
 import cors from 'cors';
 
+// import validator
+import { validationResult, param, query } from 'express-validator';
+
 // initialize app
 const app = express();
 
@@ -32,7 +35,11 @@ app.get('/products', async (req, res) => {
     }
 });
 
-app.get('/productImages/:id', async (req, res) => {
+app.get('/productImages/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     try {
         const result = await pool.query('SELECT imageUrl FROM productImages WHERE productId = $1', [id]);
@@ -47,7 +54,11 @@ app.get('/productImages/:id', async (req, res) => {
     }
 });
 
-app.get('/products/:id', async (req, res) => {
+app.get('/products/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     try {
         const result = await pool.query('SELECT name, price, description FROM products WHERE productId = $1', [id]);
@@ -62,7 +73,11 @@ app.get('/products/:id', async (req, res) => {
     }
 });
 
-app.get('/features/:id', async (req, res) => {
+app.get('/features/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     try {
         const result = await pool.query('SELECT feature FROM features WHERE productId = $1', [id]);
@@ -90,7 +105,11 @@ app.post('/products', async (req, res) => {
     }
 });
 
-app.put('/products/:id', async (req, res) => {
+app.put('/products/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     const { name, description, price, imageUrl, averageRating } = req.body;
     try {
@@ -108,7 +127,11 @@ app.put('/products/:id', async (req, res) => {
     }
 });
 
-app.delete('/products/:id', async (req, res) => {
+app.delete('/products/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     try {
         //check that the product exists in the database
@@ -140,7 +163,11 @@ app.get('/reviews/:category/:order', async (req, res) => {
     }
 });
 
-app.get('/reviews/:id', async (req, res) => {
+app.get('/reviews/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     try {
         const result = await pool.query('SELECT * FROM reviews WHERE id = $1', [id]);
@@ -168,7 +195,11 @@ app.post('/reviews', async (req, res) => {
     }
 });
 
-app.put('/reviews/:id', async (req, res) => {
+app.put('/reviews/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     const { rating, ratingTitle, comment, userName } = req.body;
     try {
@@ -187,7 +218,11 @@ app.put('/reviews/:id', async (req, res) => {
     }
 });
 
-app.delete('/reviews/:id', async (req, res) => {
+app.delete('/reviews/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     try {
         const existingReviews = await pool.query('SELECT * FROM reviews WHERE id = $1', [id]);
@@ -217,7 +252,11 @@ app.get('/recommendedProducts', async (req, res) => {
     }
 });
 
-app.get('/recommendedProducts/:id', async (req, res) => {
+app.get('/recommendedProducts/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     try {
         const result = await pool.query('SELECT * FROM recommendedProducts WHERE recommendedProductsId = $1', [id]);
@@ -232,7 +271,7 @@ app.get('/recommendedProducts/:id', async (req, res) => {
     }
 });
 
-app.post('/recommendedProducts', async (req, res) => {
+app.post('/recommendedProducts', param('id').isInt(), async (req, res) => {
     const { name, description, price, imageUrl, averageRating } = req.body;
     try {
         const newRecommendedProduct = await pool.query(
@@ -245,7 +284,11 @@ app.post('/recommendedProducts', async (req, res) => {
     }
 });
 
-app.put('/recommendedProducts/:id', async (req, res) => {
+app.put('/recommendedProducts/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     const { name, description, price, imageUrl, averageRating } = req.body;
     try {
@@ -265,7 +308,11 @@ app.put('/recommendedProducts/:id', async (req, res) => {
     }
 });
 
-app.delete('/recommendedProducts/:id', async (req, res) => {
+app.delete('/recommendedProducts/:id', param('id').isInt(), async (req, res) => {
+    // validate incoming id
+    const result = validationResult(req);
+    if (!result.isEmpty()) { res.status(400).json({ errors: result.array() }); return; }
+
     const { id } = req.params;
     try {
         const existingRecommendedProducts = await pool.query('SELECT * FROM recommendedProducts WHERE id = $1', [id]);
