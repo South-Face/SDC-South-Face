@@ -30,7 +30,7 @@ const pool = new Pool({
 
 
 //These are the routes for the "products" table
-app.get('/products', async (req, res) => {
+app.get('/', async (req, res) => { // should be '/products'
     try{
         const result = await pool.query('SELECT * FROM products');
         res.json(result.rows);
