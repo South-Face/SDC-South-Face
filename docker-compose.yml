@@ -1,14 +1,17 @@
 version: "3.4"
-services:
- southface:
-   image: node:16-bullseye
-   container_name: southface
-   entrypoint: /bin/sh
-   ports:
-     - 8000:8000
-   working_dir: /app
-   volumes:
-     - type: bind
-       source: ./
-       target: /app
-   tty: true
+services: 
+  api:
+    build: ./server.js
+    container_name: southfaceAPI
+    ports: 
+    - 3000:3000
+  southface:
+    build: .
+    image: node:16-bullseye
+    container_name: southface
+    entrypoint: /bin/sh
+    ports:
+      - 8000:8000
+    working_dir: /app
+    stdin_open: true
+    tty: true
