@@ -1,17 +1,9 @@
-version: "3.4"
+version: "3.8"
 services: 
-  api:
-    build: ./server.js
-    container_name: southfaceAPI
-    ports: 
-    - 3000:3000
   southface:
-    build: .
-    image: node:16-bullseye
-    container_name: southface
-    entrypoint: /bin/sh
+    image: react
     ports:
-      - 8000:8000
+      - 3000:3000
     working_dir: /app
-    stdin_open: true
     tty: true
+  

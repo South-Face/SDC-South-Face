@@ -1,13 +1,11 @@
-FROM node:16-bullseye
+FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package.json .
-
-RUN npm install
+ENV PATH="./node_modules/.bin:$PATH"
 
 COPY . .
-
-EXPOSE 3000
+RUN npm install
+RUN npm run build
 
 CMD ["npm", "start"]
