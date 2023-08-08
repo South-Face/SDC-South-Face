@@ -1,14 +1,39 @@
-version: "3.4"
+version: '3.4'
 services:
- southface:
-   image: node:16-bullseye
-   container_name: southface
-   entrypoint: /bin/sh
-   ports:
-     - 8000:8000
-   working_dir: /app
-   volumes:
-     - type: bind
-       source: ./
-       target: /app
-   tty: true
+  server-1:
+    image: ealen/echo-server:latest
+    restart: always
+    environment:
+      - ENABLE__ENVIRONMENT = false
+
+  server-2:
+    image: ealen/echo-server:latest
+    restart: always
+    environment:
+      - ENABLE__ENVIRONMENT = false
+
+  server-3:
+    image: ealen/echo-server:latest
+    restart: always
+    environment:
+      - ENABLE__ENVIRONMENT = false
+
+  nginx:
+    image: nginx
+    volumes:
+      - './nginx.conf:/etc/nginx/nginx.conf'
+    ports:
+      - 9999:9999
+
+  southface:
+    image: node:16-bullseye
+    container_name: southface
+    entrypoint: /bin/sh
+    ports:
+      - 8000:8000
+    working_dir: /app
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+    tty: true
