@@ -17,7 +17,7 @@ services:
     restart: always
     environment:
       - ENABLE__ENVIRONMENT = false
-
+#Serving as Reverse Proxy and Load Balancer
   nginx:
     image: nginx
     volumes:
@@ -26,14 +26,21 @@ services:
       - 9999:9999
 
   southface:
-    image: node:16-bullseye
-    container_name: southface
-    entrypoint: /bin/sh
+    image: southface/demo:1.9
     ports:
-      - 8000:8000
-    working_dir: /app
-    volumes:
-      - type: bind
-        source: ./
-        target: /app
+      - 3000:3000
+    working_dir: /FEC-South-Face
     tty: true
+
+  # southface:
+  #   image: node:16-bullseye
+  #   container_name: southface
+  #   entrypoint: /bin/sh
+  #   ports:
+  #     - 8080:8080
+  #   working_dir: /app
+  #   volumes:
+  #     - type: bind
+  #       source: ./
+  #       target: /app
+  #   tty: true
