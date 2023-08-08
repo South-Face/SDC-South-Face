@@ -438,8 +438,8 @@ app.delete('/recommendedProducts/:id',
 
 
 /* --- listener --- */
-app.listen(PORT, () => {
-    console.log(
-        "Server listening on port", PORT, "with database URL '" + DATABASE_URL + "'"
-    );
-});
+app.listen(PORT,
+    () => {
+        console.log("Server listening on port", PORT, "with database URL '" + DATABASE_URL + "'");
+    }
+);
